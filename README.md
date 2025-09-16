@@ -1,0 +1,21 @@
+Configuration files for shell and shell-related utilities
+
+## Nvim keybindings
+
+| key           | mode   | usage            |
+| ------------- | ------ | ---------------- |
+| J             | Visual | 將選取文字下移          |
+| K             | Visual | 將選取文字上移          |
+| space + y     | Visual | 將選取文字複製          |
+| ctrl + j      | Insert | 虛心接受 Copilot 建議  |
+| ctrl + n      | Insert | 下一個自動補全          |
+| ctrl + p      | Insert | 上一個自動補全          |
+| ctrl + y      | Insert | 虛心接受 LSP 的自動補全建議 |
+| space + p + f | Normal | 尋找 Project File  |
+| space + f + s | Normal | 尋找包含 （某某內文） 的文件  |
+| space + f + b | Normal | 打開 File Browser  |
+| space + z + z | Normal | 打開禪修模式           |
+| space + r     | Normal | 執行當前 .c .py 檔案   |
+| space + u     | Normal | 打開 undotree      |
+
+
