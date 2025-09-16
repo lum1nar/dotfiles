@@ -1,5 +1,19 @@
 Configuration files for shell and shell-related utilities
 
+## Requirement
+```
+- nvim >= 0.11
+- nodejs >= 20
+- ripgrip
+- tmux
+- alacritty
+- zsh
+- oh-my-zsh
+- p10k
+```
+
+
+
 ## Nvim keybindings
 
 | key           | mode   | usage            |
