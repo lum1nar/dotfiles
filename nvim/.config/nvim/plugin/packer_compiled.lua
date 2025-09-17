@@ -135,6 +135,11 @@ _G.packer_plugins = {
     path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["hardtime.nvim"] = {
+    loaded = true,
+    path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/hardtime.nvim",
+    url = "https://github.com/m4xshen/hardtime.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -159,6 +164,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-treesitter"] = {
     loaded = true,

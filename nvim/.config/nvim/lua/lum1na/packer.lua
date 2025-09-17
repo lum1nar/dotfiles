@@ -68,4 +68,7 @@ return require('packer').startup(function(use)
 
     use 'https://github.com/goolord/alpha-nvim'
     
+    use 'm4xshen/hardtime.nvim'
+    
+    use 'rcarriga/nvim-notify'
 end)
