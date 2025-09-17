@@ -10,6 +10,9 @@ Configuration files for shell and shell-related utilities
 - zsh
 - oh-my-zsh
 - p10k
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+- zsh-vi-mode
 ```
 
 
