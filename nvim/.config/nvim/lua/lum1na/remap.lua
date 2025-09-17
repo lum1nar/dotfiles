@@ -18,7 +18,8 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "Q", "<nop>")
 
 
-
+-- harder time
+vim.keymap.set("i", "<BS>", "<nop>")
 
 
 
