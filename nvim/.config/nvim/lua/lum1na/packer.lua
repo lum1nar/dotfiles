@@ -28,12 +28,16 @@ return require('packer').startup(function(use)
 
 	use 'mbbill/undotree'
 
+    use {
+        "neovim/nvim-lspconfig",
+        tag = "v2.3.0"
+    }
+
 	use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
 	  requires = {
 	    -- LSP Support
-	    {'neovim/nvim-lspconfig'},             -- Required
 	    {'williamboman/mason.nvim'},           -- Optional
 	    {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
