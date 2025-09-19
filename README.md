@@ -27,6 +27,8 @@ Configuration files for shell and shell-related utilities
 | J             | Visual | 將選取文字下移          |
 | K             | Visual | 將選取文字上移          |
 | space + y     | Visual | 將選取文字複製          |
+| ctrl + w      | Insert | 向左刪除一整個字 |
+| ctrl + h      | Insert | 向左刪除一個字 取代回車鍵 |
 | ctrl + j      | Insert | 虛心接受 Copilot 建議  |
 | ctrl + n      | Insert | 下一個自動補全          |
 | ctrl + p      | Insert | 上一個自動補全          |
