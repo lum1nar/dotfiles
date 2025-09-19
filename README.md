@@ -3,6 +3,7 @@ Configuration files for shell and shell-related utilities
 ## Requirement
 ```
 - nvim >= 0.11
+- packer.nvim
 - nodejs >= 20
 - ripgrip
 - tmux
@@ -13,6 +14,8 @@ Configuration files for shell and shell-related utilities
 - zsh-autosuggestions
 - zsh-syntax-highlighting
 - zsh-vi-mode
+- stow 
+- JetBrainsMono Nerd Font
 ```
 
 
@@ -29,6 +32,7 @@ Configuration files for shell and shell-related utilities
 | ctrl + p      | Insert | 上一個自動補全          |
 | ctrl + y      | Insert | 虛心接受 LSP 的自動補全建議 |
 | space + p + f | Normal | 尋找 Project File  |
+| space + p + r | Normal | 尋找 Recently opened File |
 | space + f + s | Normal | 尋找包含 （某某內文） 的文件  |
 | space + f + b | Normal | 打開 File Browser  |
 | space + z + z | Normal | 打開禪修模式           |
