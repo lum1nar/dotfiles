@@ -23,7 +23,7 @@ dashboard.section.header.val = {
 -- [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠈⠢⣀⠑⠠⠤⣤⠴⠂⠀⠀⠀⠀]],
 
 [[  ⠀ ／l、  ]],
-[[  （ﾟ､ ｡ ７  sa yu]],
+[[  （ﾟO､ o ７ sayu]],
 [[  ⠀ l、ﾞ ~ヽ  ]],
 [[    じしf_, )ノ   ]],
 
@@ -77,7 +77,7 @@ dashboard.section.footer.opts = { position = "center", hl = "Comment" }
 
 -- 設定 layout
 dashboard.config.layout = {
-    { type = "padding", val = 13 },
+    { type = "padding", val = 12 },
     dashboard.section.header,
     { type = "padding", val = 1 },
     dashboard.section.datetime,   -- 放在 header 下方
