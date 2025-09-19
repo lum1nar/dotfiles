@@ -31,8 +31,12 @@ dashboard.section.header.val = {
 
 
 dashboard.section.buttons.val = {
-    dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-    dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
+    dashboard.button("r", "  Recently Used Files", ":Telescope oldfiles <CR>"),
+    dashboard.button("f", "  Find File", ":Telescope find_files <CR>"),
+    dashboard.button("s", "󰊄  Find Text", function()
+        local search_term = vim.fn.input("Grep > ")
+        require("telescope.builtin").grep_string({search = search_term})
+    end),
     dashboard.button("q", "󰩈  Quit", ":qa<CR>"),
 }
 

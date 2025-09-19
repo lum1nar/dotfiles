@@ -205,6 +205,11 @@ _G.packer_plugins = {
     path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
   },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",

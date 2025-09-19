@@ -35,8 +35,8 @@ Configuration files for shell and shell-related utilities
 | ctrl + y      | Insert | 虛心接受 LSP 的自動補全建議 |
 | space + p + f | Normal | 尋找 Project File  |
 | space + p + r | Normal | 尋找 Recently opened File |
-| space + f + s | Normal | 尋找包含 （某某內文） 的文件  |
-| space + f + b | Normal | 打開 File Browser  |
+| space + p + s | Normal | 尋找包含 （某某內文） 的文件  |
+| space + p + b | Normal | 打開 File Browser  |
 | space + z + z | Normal | 打開禪修模式           |
 | space + r     | Normal | 執行當前 .c .py 檔案   |
 | space + u     | Normal | 打開 undotree      |

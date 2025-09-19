@@ -75,4 +75,6 @@ return require('packer').startup(function(use)
     use 'm4xshen/hardtime.nvim'
     
     use 'rcarriga/nvim-notify'
+
+    use 'folke/which-key.nvim'
 end)
