@@ -40,5 +40,11 @@ Configuration files for shell and shell-related utilities
 | space + z + z | Normal | 打開禪修模式           |
 | space + r     | Normal | 執行當前 .c .py 檔案   |
 | space + u     | Normal | 打開 undotree      |
+| <leader>en     | Normal | 尋找下一個錯誤      |
+| <leader>pn     | Normal | 尋找上一個錯誤      |
+| gcc     | Normal | 開啓/關閉註解      |
+| gd     | Normal | 打開定義鼠標底下函式的文件      |
+| gf     | Normal | 打開鼠標下的文件      |
+| ctrl + O     | Normal | 回到原本跳轉位置      |
 
 
