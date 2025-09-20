@@ -37,6 +37,7 @@ dashboard.section.buttons.val = {
         local search_term = vim.fn.input("Grep > ")
         require("telescope.builtin").grep_string({search = search_term})
     end),
+    dashboard.button("g", "  Vim Game", ":VimBeGood<CR>"),
     dashboard.button("q", "󰩈  Quit", ":qa<CR>"),
 }
 
