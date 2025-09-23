@@ -18,8 +18,6 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], {desc="Copy Selection to Syst
 vim.keymap.set("n", "Q", "<nop>")
 
 
--- harder time
-vim.keymap.set("i", "<BS>", "<nop>")
 
 
 
