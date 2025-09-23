@@ -14,9 +14,8 @@ vim.keymap.set("n", "=ap", "ma=ap'a")
 
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], {desc="Copy Selection to System clipboard"})
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "Q", "<nop>")
-
 
 
 
