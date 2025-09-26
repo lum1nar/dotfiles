@@ -17,7 +17,8 @@ vim.keymap.set("n", "=ap", "ma=ap'a")
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "Q", "<nop>")
 
-
+-- format code
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 
 

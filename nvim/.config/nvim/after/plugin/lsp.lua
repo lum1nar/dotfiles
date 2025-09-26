@@ -20,5 +20,6 @@ vim.api.nvim_create_autocmd("CursorHold", {
 vim.keymap.set("n", "<leader>ep", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { desc = "Go to previous diagnostic message" })
 vim.keymap.set("n", "<leader>en", "<cmd>lua vim.diagnostic.goto_next()<CR>", { desc = "Go to next diagnostic message" })
 
+
 lsp.setup()
 

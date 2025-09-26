@@ -1,3 +1,4 @@
+
 require("lum1na")
 
 local orig_notify = vim.notify

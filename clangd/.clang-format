@@ -1,0 +1,4 @@
+BasedOnStyle: Google  # 可選 Google、LLVM、Chromium、Mozilla 等
+IndentWidth: 4        # tab 寬度
+TabWidth: 4           # tab 視覺寬度
+UseTab: Never         # 用空格而不是 tab
