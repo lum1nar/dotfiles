@@ -14,11 +14,11 @@ vim.keymap.set("n", "=ap", "ma=ap'a")
 
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], {desc = "Yank to system clipboard"})
 vim.keymap.set("n", "Q", "<nop>")
 
 -- format code
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {desc = "Format code"})
 
 
 
