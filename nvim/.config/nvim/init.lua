@@ -1,6 +1,4 @@
 
-require("lum1na")
-
 local orig_notify = vim.notify
 
 vim.notify = function(msg, level, opts)
@@ -12,3 +10,4 @@ vim.notify = function(msg, level, opts)
   orig_notify(msg, level, opts)
 end
 
+require("lum1na")

@@ -15,10 +15,6 @@ return require('packer').startup(function(use)
 
 	use {
 		'sainnhe/everforest',
-		config = function()
-			vim.g.everforest_enable_italic = true
-			vim.cmd.colorscheme('everforest')
-		end
 	}
 
 	use {
@@ -83,4 +79,11 @@ return require('packer').startup(function(use)
     use 'folke/which-key.nvim'
 
     use 'norcalli/nvim-colorizer.lua'
+
+    use {
+	"rose-pine/neovim",
+	config = function()
+		vim.cmd("colorscheme rose-pine")
+	end
+    }
 end)
