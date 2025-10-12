@@ -125,6 +125,7 @@ alias vim='nvim'
 alias cls='clear'
 alias vls='clear'
 alias sudo='sudo '
+alias gl='git log --graph --oneline --all'
 
 # nvm for installing node20 for copilot
 export NVM_DIR="$HOME/.nvm"
