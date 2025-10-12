@@ -16,6 +16,7 @@ Configuration files for shell and shell-related utilities
 - zsh-vi-mode
 - stow 
 - JetBrainsMono Nerd Font
+- Monocraft
 ```
 
 
@@ -47,4 +48,7 @@ Configuration files for shell and shell-related utilities
 | gf     | Normal | 打開鼠標下的文件      |
 | ctrl + O     | Normal | 回到原本跳轉位置      |
 
-
+## 設定 Git Editor
+```bash
+git config --global core.editor "nvim"
+```

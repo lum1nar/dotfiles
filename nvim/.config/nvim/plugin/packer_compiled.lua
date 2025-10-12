@@ -125,7 +125,6 @@ _G.packer_plugins = {
     url = "https://github.com/github/copilot.vim"
   },
   everforest = {
-    config = { "\27LJ\2\ni\0\0\3\0\6\0\n6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\3\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0\15everforest\16colorscheme\bcmd\29everforest_enable_italic\6g\bvim\0" },
     loaded = true,
     path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
@@ -155,10 +154,21 @@ _G.packer_plugins = {
     path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neovim = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/lum1na/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -218,10 +228,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: everforest
-time([[Config for everforest]], true)
-try_loadstring("\27LJ\2\ni\0\0\3\0\6\0\n6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\3\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0\15everforest\16colorscheme\bcmd\29everforest_enable_italic\6g\bvim\0", "config", "everforest")
-time([[Config for everforest]], false)
+-- Config for: neovim
+time([[Config for neovim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "neovim")
+time([[Config for neovim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
