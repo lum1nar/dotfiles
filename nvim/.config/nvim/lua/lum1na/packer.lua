@@ -55,7 +55,11 @@ return require('packer').startup(function(use)
 	  }
 	}
 
-	use 'github/copilot.vim'
+	use {
+        'github/copilot.vim',
+        tag = 'v1.55.0',
+        
+    }
 
 	use {
 		"nvim-telescope/telescope-file-browser.nvim",
@@ -77,4 +81,6 @@ return require('packer').startup(function(use)
     use 'rcarriga/nvim-notify'
 
     use 'folke/which-key.nvim'
+
+    use 'norcalli/nvim-colorizer.lua'
 end)
