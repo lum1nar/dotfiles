@@ -52,7 +52,8 @@ require("rose-pine").setup({
         dawn = {
             base = '#fcf1e1',
             surface = '#fff5e7',
-            subtle = '#84828f'
+            subtle = '#84828f',
+            text = '#5e5a78'
         },
     },
 
