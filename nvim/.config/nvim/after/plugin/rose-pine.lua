@@ -51,6 +51,8 @@ require("rose-pine").setup({
         -- Override the builtin palette per variant
         dawn = {
             base = '#fcf1e1',
+            surface = '#fff5e7',
+            subtle = '#84828f'
         },
     },
 
