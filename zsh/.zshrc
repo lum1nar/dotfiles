@@ -184,3 +184,7 @@ mi=01;31:\
 *.ppt=01;31:\
 *.pptx=01;31"
 
+# Read DeepSeek API key
+if [ -f ~/.zshrc.local ];
+    then source ~/.zshrc.local
+fi
