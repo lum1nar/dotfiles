@@ -86,4 +86,11 @@ return require('packer').startup(function(use)
 		vim.cmd("colorscheme rose-pine")
 	end
     }
+
+    
+    use {
+        'olimorris/codecompanion.nvim',
+        tag = "v17.26.0"
+    }
+
 end)

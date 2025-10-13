@@ -52,3 +52,12 @@ Configuration files for shell and shell-related utilities
 ```bash
 git config --global core.editor "nvim"
 ```
+
+
+## setup codecompanion
+In my configuration, I use Deepseek V3 due to its low cost
+
+```bash
+# In you ~/.zshrc.local
+export DEEPSEEK_API_KEY="YOUR_API_KEY"
+```
