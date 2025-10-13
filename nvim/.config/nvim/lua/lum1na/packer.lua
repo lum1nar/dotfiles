@@ -95,5 +95,7 @@ return require('packer').startup(function(use)
 
     use "MeanderingProgrammer/render-markdown.nvim"
 
+    use "sphamba/smear-cursor.nvim"
 
+    use 'karb94/neoscroll.nvim'
 end)
