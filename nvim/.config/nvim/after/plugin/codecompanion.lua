@@ -21,3 +21,8 @@ require("codecompanion").setup {
         agent = { adapter = "deepseek" },
     },
 }
+
+
+vim.keymap.set('n', '<leader>cc', ':CodeCompanionChat Toggle<CR>', { desc = 'AI Chat' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ca', ':CodeCompanionActions <CR>', { desc = 'AI Actions' })
+
