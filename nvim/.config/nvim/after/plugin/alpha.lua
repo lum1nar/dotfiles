@@ -21,11 +21,12 @@ dashboard.section.header.val = {
 -- [[⠀⠀⠀⠀⠀⠈⠑⠠⣀⠈⠂⠤⠤⣤⢔⣞⣀⡠⠔⢈⠔⠁⠀⠀⠀⠀⠀⠀⠀⠀]],
 -- [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠑⢂⠄⠀⠨⠤⢄⡀⠀⢎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀]],
 -- [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠈⠢⣀⠑⠠⠤⣤⠴⠂⠀⠀⠀⠀]],
+--
 
-[[  ⠀ ／l、  ]],
-[[  （ﾟO､ o７ sayu]],
-[[  ⠀ l、ﾞ ~ヽ  ]],
-[[    じしf_, )ノ   ]],
+[[      へ   ♡    へ_へ ]],
+[[   ૮ - ՛) sayu (- - 7 ]],
+[[    / ⁻  >     < ` ⁻〵 ]],
+[[ 乀(__,ل ل      じし__,)ノ ]],
 
 }
 
@@ -63,20 +64,8 @@ dashboard.section.datetime = {
     }
 }
 
--- 《Atomic Habits》名言列表
-local atomic_quotes = {
-    "You do not rise to the level of your goals. You fall to the level of your systems.",
-    "Habits are the compound interest of self-improvement.",
-    "Every action you take is a vote for the type of person you wish to become.",
-    "Be the designer of your world and not merely the consumer of it.",
-    "Success is the product of daily habits not once-in-a-lifetime transformations.",
-    "Small habits make a big difference when repeated over time.",
-    "Focus on the system, not the goal."
-}
 
--- 隨機選一個
-math.randomseed(os.time())
-dashboard.section.footer.val = atomic_quotes[math.random(#atomic_quotes)]
+dashboard.section.footer.val = "山高萬仞，只登一步"
 dashboard.section.footer.opts = { position = "center", hl = "Comment" }
 
 
