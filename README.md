@@ -77,9 +77,8 @@ git config --global core.editor "nvim"
 ```
 
 ## Setup DeepSeek API Key
+
 ```bash
 #~/.zshrc.local
 export DEEPSEEK_API_KEY="YOUR_API_KEY"
 ```
-````
-
