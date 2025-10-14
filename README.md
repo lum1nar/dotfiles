@@ -1,8 +1,11 @@
+[Chinese Version](./README_zh.md)
 # Development Environment Configuration
 
 Modern development setup for shell and editor utilities.
 
-## Requirements ### Core Applications
+## Requirements
+
+### Core Applications
 - **nvim** >= 0.11
 - **packer.nvim** - Plugin manager
 - **nodejs** >= 20 - JavaScript runtime
@@ -25,60 +28,63 @@ Modern development setup for shell and editor utilities.
 ## Neovim Keybindings
 
 ### Text Manipulation & Navigation
-| Key Combination | Mode   | Description                          |
-|-----------------|--------|--------------------------------------|
-| `J`             | Visual | Move selection down                  |
-| `K`             | Visual | Move selection up                    |
-| `space + y`     | Visual | Copy selection                       |
-| `ctrl + w`      | Insert | Delete word to the left              |
-| `ctrl + h`      | Insert | Delete character to the left         |
-| `ctrl + o`      | Normal | Return to previous jump location     |
-| `space + f`     | Normal | Format code                          |
+| Key Combination      | Mode   | Description                          |
+|----------------------|--------|--------------------------------------|
+| `J`                  | Visual | Move selection down                  |
+| `K`                  | Visual | Move selection up                    |
+| `space + y`          | Visual | Copy selection                       |
+| `ctrl + w`           | Insert | Delete word to the left              |
+| `ctrl + h`           | Insert | Delete character to the left         |
+| `ctrl + o`           | Normal | Return to previous jump location     |
+| `space + f`          | Normal | Format code                          |
 
 ### Project & File Management
-| Key Combination | Mode   | Description                          |
-|-----------------|--------|--------------------------------------|
-| `space + p + f` | Normal | Find project files                   |
-| `space + p + r` | Normal | Find recently opened files           |
-| `space + p + s` | Normal | Search files by content              |
-| `space + p + b` | Normal | Open file browser                    |
-| `space + u`     | Normal | Open undotree                        |
+| Key Combination      | Mode   | Description                          |
+|----------------------|--------|--------------------------------------|
+| `space + p + f`      | Normal | Find project files                   |
+| `space + p + r`      | Normal | Find recently opened files           |
+| `space + p + s`      | Normal | Search files by content              |
+| `space + p + b`      | Normal | Open file browser                    |
+| `space + u`          | Normal | Open undotree                        |
 
 ### Code Intelligence & LSP
-| Key Combination | Mode   | Description                          |
-|-----------------|--------|--------------------------------------|
-| `ctrl + n` / `tab` | Insert | Next completion item               |
+| Key Combination      | Mode   | Description                          |
+|----------------------|--------|--------------------------------------|
+| `ctrl + n` / `tab`   | Insert | Next completion item                 |
 | `ctrl + p` / `shift + tab` | Insert | Previous completion item      |
-| `ctrl + y` / `Enter` | Insert | Accept LSP completion           |
-| `space + d + d` | Normal | Go to definition under cursor        |
-| `space + d + f` | Normal | Find references                      |
-| `space + d + n` | Normal | Go to next error                     |
-| `space + d + p` | Normal | Go to previous error                 |
-| `gcc`           | Normal | Toggle comment                       |
+| `ctrl + y` / `Enter` | Insert | Accept LSP completion                |
+| `space + d + d`      | Normal | Go to definition under cursor        |
+| `space + d + f`      | Normal | Find references                      |
+| `space + d + n`      | Normal | Go to next error                     |
+| `space + d + p`      | Normal | Go to previous error                 |
+| `gcc`                | Normal | Toggle comment                       |
 
 ### AI Integration
-| Key Combination | Mode   | Description                          |
-|-----------------|--------|--------------------------------------|
-| `space + c + c` | Insert | Open AI chat                         |
-| `space + c + a` | Insert | Open AI actions                      |
+| Key Combination      | Mode   | Description                          |
+|----------------------|--------|--------------------------------------|
+| `space + c + c`      | Insert | Open AI chat                         |
+| `space + c + a`      | Insert | Open AI actions                      |
 
 ### Focus & Execution
-| Key Combination | Mode   | Description                          |
-|-----------------|--------|--------------------------------------|
-| `space + z + z` | Normal | Toggle zen mode                      |
-| `space + r`     | Normal | Execute current file (.c, .py)      |
+| Key Combination      | Mode   | Description                          |
+|----------------------|--------|--------------------------------------|
+| `space + z + z`      | Normal | Toggle zen mode                      |
+| `space + r`          | Normal | Execute current file (.c, .py)      |
 
 ## Git Configuration
 
-Set Neovim as your default Git editor:
+### Set Neovim as your default Git editor:
 
 ```bash
 git config --global core.editor "nvim"
 ```
 
-## Setup DeepSeek API Key
 
+### Add DeepSeek API
 ```bash
 #~/.zshrc.local
 export DEEPSEEK_API_KEY="YOUR_API_KEY"
 ```
+
+
+
