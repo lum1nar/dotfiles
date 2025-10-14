@@ -20,6 +20,9 @@ require("codecompanion").setup {
         inline = { adapter = "deepseek" },
         agent = { adapter = "deepseek" },
     },
+    opts = {
+        language = "zh_TW",
+    },
 }
 
 
