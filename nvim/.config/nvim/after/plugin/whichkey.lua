@@ -3,4 +3,5 @@ wk.add({
   { "<leader>p", group = "Project / File" }, -- group
   { "<leader>z", group = "Zenmode" }, -- group
   { "<leader>d", group = "Debug" }, -- group
+  { "<leader>c", group = "AI", mode={"n","v"} }, -- group
 })

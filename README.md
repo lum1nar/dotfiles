@@ -1,63 +1,90 @@
-Configuration files for shell and shell-related utilities
+[Chinese Version](./README_zh.md)
+# Development Environment Configuration
 
-## Requirement
-```
-- nvim >= 0.11
-- packer.nvim
-- nodejs >= 20
-- ripgrip
-- tmux
-- alacritty
-- zsh
-- oh-my-zsh
-- p10k
-- zsh-autosuggestions
-- zsh-syntax-highlighting
-- zsh-vi-mode
-- stow 
-- JetBrainsMono Nerd Font
-- Monocraft
-```
+Modern development setup for shell and editor utilities.
 
+## Requirements
 
+### Core Applications
+- **nvim** >= 0.11
+- **packer.nvim** - Plugin manager
+- **nodejs** >= 20 - JavaScript runtime
+- **ripgrep** - Fast file search
+- **tmux** - Terminal multiplexer
+- **alacritty** - GPU-accelerated terminal
 
-## Nvim keybindings
+### Shell Environment
+- **zsh** with **oh-my-zsh**
+- **p10k** - Powerlevel10k theme
+- **zsh-autosuggestions**
+- **zsh-syntax-highlighting**
+- **zsh-vi-mode**
 
-| key           | mode   | usage            |
-| ------------- | ------ | ---------------- |
-| J             | Visual | 將選取文字下移          |
-| K             | Visual | 將選取文字上移          |
-| space + y     | Visual | 將選取文字複製          |
-| ctrl + w      | Insert | 向左刪除一整個字 |
-| ctrl + h      | Insert | 向左刪除一個字 取代回車鍵 |
-| ctrl + j      | Insert | 虛心接受 Copilot 建議  |
-| ctrl + n      | Insert | 下一個自動補全          |
-| ctrl + p      | Insert | 上一個自動補全          |
-| ctrl + y      | Insert | 虛心接受 LSP 的自動補全建議 |
-| space + p + f | Normal | 尋找 Project File  |
-| space + p + r | Normal | 尋找 Recently opened File |
-| space + p + s | Normal | 尋找包含 （某某內文） 的文件  |
-| space + p + b | Normal | 打開 File Browser  |
-| space + z + z | Normal | 打開禪修模式           |
-| space + r     | Normal | 執行當前 .c .py 檔案   |
-| space + u     | Normal | 打開 undotree      |
-| space + e + n     | Normal | 尋找下一個錯誤      |
-| space + p + n     | Normal | 尋找上一個錯誤      |
-| gcc     | Normal | 開啓/關閉註解      |
-| gd     | Normal | 打開定義鼠標底下函式的文件      |
-| gf     | Normal | 打開鼠標下的文件      |
-| ctrl + O     | Normal | 回到原本跳轉位置      |
+### Utilities & Fonts
+- **stow** - Dotfile management
+- **JetBrainsMono Nerd Font**
+- **Monocraft** - Minecraft-inspired font
 
-## 設定 Git Editor
+## Neovim Keybindings
+
+### Text Manipulation & Navigation
+| Key Combination      | Mode   | Description                          |
+|----------------------|--------|--------------------------------------|
+| `J`                  | Visual | Move selection down                  |
+| `K`                  | Visual | Move selection up                    |
+| `space + y`          | Visual | Copy selection                       |
+| `ctrl + w`           | Insert | Delete word to the left              |
+| `ctrl + h`           | Insert | Delete character to the left         |
+| `ctrl + o`           | Normal | Return to previous jump location     |
+| `space + f`          | Normal | Format code                          |
+
+### Project & File Management
+| Key Combination      | Mode   | Description                          |
+|----------------------|--------|--------------------------------------|
+| `space + p + f`      | Normal | Find project files                   |
+| `space + p + r`      | Normal | Find recently opened files           |
+| `space + p + s`      | Normal | Search files by content              |
+| `space + p + b`      | Normal | Open file browser                    |
+| `space + u`          | Normal | Open undotree                        |
+
+### Code Intelligence & LSP
+| Key Combination      | Mode   | Description                          |
+|----------------------|--------|--------------------------------------|
+| `ctrl + n` / `tab`   | Insert | Next completion item                 |
+| `ctrl + p` / `shift + tab` | Insert | Previous completion item      |
+| `ctrl + y` / `Enter` | Insert | Accept LSP completion                |
+| `space + d + d`      | Normal | Go to definition under cursor        |
+| `space + d + f`      | Normal | Find references                      |
+| `space + d + n`      | Normal | Go to next error                     |
+| `space + d + p`      | Normal | Go to previous error                 |
+| `gcc`                | Normal | Toggle comment                       |
+
+### AI Integration
+| Key Combination      | Mode   | Description                          |
+|----------------------|--------|--------------------------------------|
+| `space + c + c`      | Insert | Open AI chat                         |
+| `space + c + a`      | Insert | Open AI actions                      |
+
+### Focus & Execution
+| Key Combination      | Mode   | Description                          |
+|----------------------|--------|--------------------------------------|
+| `space + z + z`      | Normal | Toggle zen mode                      |
+| `space + r`          | Normal | Execute current file (.c, .py)      |
+
+## Git Configuration
+
+### Set Neovim as your default Git editor:
+
 ```bash
 git config --global core.editor "nvim"
 ```
 
 
-## setup codecompanion
-In my configuration, I use Deepseek V3 due to its low cost
-
+### Add DeepSeek API
 ```bash
-# In you ~/.zshrc.local
+#~/.zshrc.local
 export DEEPSEEK_API_KEY="YOUR_API_KEY"
 ```
+
+
+
