@@ -98,4 +98,8 @@ return require('packer').startup(function(use)
     use "sphamba/smear-cursor.nvim"
 
     use 'karb94/neoscroll.nvim'
+
+    use 'ravitemer/codecompanion-history.nvim'
+
+
 end)

@@ -20,5 +20,3 @@ vim.keymap.set("n", "Q", "<nop>")
 -- format code
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {desc = "Format code"})
 
-
-
