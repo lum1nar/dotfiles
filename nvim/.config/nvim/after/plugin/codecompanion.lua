@@ -85,7 +85,21 @@ require("codecompanion").setup {
                         model = nil, -- defaults to current chat model
                         context_size = 90000, -- max tokens that the model supports
                         include_references = true, -- include slash command content include_tool_outputs = true, -- include tool execution results
-                        system_prompt = nil, -- custom system prompt (string or function)
+                        system_prompt = function()
+                            return [[
+                            你是一個專業的編碼助手和對話摘要器。你的目標是建立技術對話的全面、結構化摘要，這些摘要將用於未來參考和語義搜索。
+
+                            請用繁體中文生成摘要。
+
+                            你的摘要應該：
+                            1. 捕捉關鍵技術概念、決策和解決方案
+                            2. 包含特定的函式庫名稱、函數名稱和技術術語
+                            3. 專注於可重用的知識和模式
+                            4. 保持一致的結構以便搜索
+                            5. 簡潔但資訊豐富
+
+                            ]]
+                        end,
                         format_summary = nil, -- custom function to format generated summary e.g to remove <think/> tags from summary
                     },
                 },
