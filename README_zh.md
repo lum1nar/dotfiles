@@ -1,5 +1,5 @@
 # 開發環境配置
-
+![image](./static/nvim_start.png)
 現代化開發環境設定，包含 shell 和編輯器工具。
 
 ## 需求
