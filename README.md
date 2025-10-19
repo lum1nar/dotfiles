@@ -1,4 +1,5 @@
 [Chinese Version](./README_zh.md)
+![image](./static/nvim_start.png)
 # Development Environment Configuration
 
 Modern development setup for shell and editor utilities.
