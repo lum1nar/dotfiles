@@ -63,8 +63,11 @@ Modern development setup for shell and editor utilities.
 ### AI Integration
 | Key Combination      | Mode   | Description                          |
 |----------------------|--------|--------------------------------------|
-| `space + c + c`      | Insert | Open AI chat                         |
-| `space + c + a`      | Insert | Open AI actions                      |
+| `space + c + c`      | NORMAL | Open AI chat                         |
+| `space + c + a`      | NORMAL | Open AI actions                      |
+| `space + c + h`      | NORMAL | Open AI Chat History      |
+| `gcs`                | In CHAT | Create summary for current chat                  |
+| `gbs`                | In CHAT | Browse saved chat summary                         |
 
 ### Focus & Execution
 | Key Combination      | Mode   | Description                          |
