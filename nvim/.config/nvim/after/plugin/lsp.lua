@@ -69,7 +69,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*", -- support all the file
     callback = function()
         vim.lsp.buf.format({ async = false })
-        vim.cmd([[%s/\n\{2,\}/\r\r]]) -- Remove Empty Lines
+        vim.cmd([[%s/\n\{2,\}/\r\r/e]]) -- Remove Empty Lines
+        -- \r -> newline
+        -- \e -> ignore errors
     end,
 })
 
