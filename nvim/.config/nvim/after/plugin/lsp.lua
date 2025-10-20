@@ -66,7 +66,7 @@ none_ls.setup({
 
 -- Format on save
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*", -- support all the file
+    pattern = { "*.py", "*.js", "*.lua", "*.c" },
     callback = function()
         vim.lsp.buf.format({ async = false })
         vim.cmd([[%s/\n\{2,\}/\r\r/e]]) -- Remove Empty Lines
