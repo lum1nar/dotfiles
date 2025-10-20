@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
             -- LSP Support
             { 'williamboman/mason.nvim' },           -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+            { 'WhoIsSethDaniel/mason-tool-installer.nvim'},
 
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },         -- Required
@@ -100,4 +101,7 @@ return require('packer').startup(function(use)
     use 'karb94/neoscroll.nvim'
 
     use 'ravitemer/codecompanion-history.nvim'
+
+
+    use 'nvimtools/none-ls.nvim'
 end)
