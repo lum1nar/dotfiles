@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
             -- LSP Support
             { 'williamboman/mason.nvim' },           -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
-            { 'WhoIsSethDaniel/mason-tool-installer.nvim'},
+            { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
 
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },         -- Required
@@ -88,7 +88,6 @@ return require('packer').startup(function(use)
         end
     }
 
-
     use {
         'olimorris/codecompanion.nvim',
         tag = "v17.26.0"
@@ -102,6 +101,7 @@ return require('packer').startup(function(use)
 
     use 'ravitemer/codecompanion-history.nvim'
 
-
     use 'nvimtools/none-ls.nvim'
+
+    use 'windwp/nvim-ts-autotag'
 end)
