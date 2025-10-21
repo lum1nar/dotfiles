@@ -8,6 +8,26 @@ local lsp = require('lsp-zero').preset({
     suggest_lsp_servers = false,
 })
 
+require("lspconfig").lua_ls.setup {
+    settings = {
+        Lua = {
+            runtime = {
+                version = "LuaJIT", -- Neovim 內部使用 LuaJIT
+            },
+            diagnostics = {
+                globals = { "vim" }, -- 告訴語言伺服器這是全域變數
+            },
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true), -- 讓它知道 Neovim 的 API
+                checkThirdParty = false,                           -- 關掉第三方檢查提示
+            },
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
+}
+
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
@@ -68,10 +88,15 @@ none_ls.setup({
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = { "*.py", "*.js", "*.lua", "*.c" },
     callback = function()
+        -- record current position, 0 is the window ID
+        local pos = vim.api.nvim_win_get_cursor(0)
         vim.lsp.buf.format({ async = false })
         vim.cmd([[%s/\n\{2,\}/\r\r/e]]) -- Remove Empty Lines
         -- \r -> newline
         -- \e -> ignore errors
+        -- Jump back to pos before formatting
+        -- DEBUG: vim.notify(vim.inspect(pos))
+        vim.api.nvim_win_set_cursor(0, pos)
     end,
 })
 
