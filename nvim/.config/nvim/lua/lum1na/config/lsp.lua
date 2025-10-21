@@ -75,6 +75,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end,
 })
 
+-- Keymap for format code
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format code" })
+
 -- ==================================================
 -- LSP DEBUG SESSION
 -- ==================================================

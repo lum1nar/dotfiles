@@ -1,7 +1,7 @@
 require("notify").setup({
     -- 選項範例
     fps = 60,
-    timeout = 1000,
+    timeout = 3000,
     stages = "fade",
 })
 
