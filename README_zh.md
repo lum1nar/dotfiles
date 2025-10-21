@@ -8,7 +8,7 @@
 ### 核心應用程式
 
 - **nvim** >= 0.11
-- **packer.nvim** - 插件管理器
+- **lazy.nvim** - 插件管理器
 - **nodejs** >= 20 - JavaScript 執行環境
 - **ripgrep** - 快速檔案搜尋
 - **tmux** - 終端機多工器

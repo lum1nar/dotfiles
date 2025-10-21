@@ -10,7 +10,7 @@ Modern development setup for shell and editor utilities.
 ### Core Applications
 
 - **nvim** >= 0.11
-- **packer.nvim** - Plugin manager
+- **lazy.nvim** - Plugin manager
 - **nodejs** >= 20 - JavaScript runtime
 - **ripgrep** - Fast file search
 - **tmux** - Terminal multiplexer
