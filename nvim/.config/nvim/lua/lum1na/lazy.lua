@@ -179,4 +179,21 @@ return require("lazy").setup({
         end
     },
 
+    {
+        "nvim-tree/nvim-tree.lua",
+        dependencies = {
+            { "nvim-tree/nvim-web-devicons" },
+        },
+        config = function()
+            require("lum1na.config.nvim-tree")
+        end
+    },
+
+    {
+        "stevearc/oil.nvim",
+        config = function()
+            require("lum1na.config.oil")
+        end
+
+    }
 })
