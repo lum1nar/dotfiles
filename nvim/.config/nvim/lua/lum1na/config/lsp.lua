@@ -96,7 +96,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         -- \e -> ignore errors
         -- Jump back to pos before formatting
         -- DEBUG: vim.notify(vim.inspect(pos))
-        vim.api.nvim_win_set_cursor(0, pos)
+        local line_count = vim.api.nvim_buf_line_count(0)
+        local new_row = math.min(pos[1], line_count)
+        local new_col = pos[2]
+
+        -- 設定游標
+        vim.api.nvim_win_set_cursor(0, { new_row, new_col })
     end,
 })
 
