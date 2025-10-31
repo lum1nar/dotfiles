@@ -44,6 +44,7 @@ local servers = {
     'lua_ls',   -- lua-language-server
     'marksman', -- markdown formatter
     'ts_ls',    -- typescript-language-server
+    'html',     -- html-lsp
 }
 
 local linter_formatters = {
