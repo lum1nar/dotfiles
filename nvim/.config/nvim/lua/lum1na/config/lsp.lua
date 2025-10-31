@@ -72,11 +72,10 @@ local none_ls = require("null-ls")
 local formatting_sources = {
     -- Python
     none_ls.builtins.formatting.black,
-    -- none_ls.builtins.formatting.isort,
 
-    -- Markdown
+    -- Markdown, HTML, CSS, Js
     none_ls.builtins.formatting.prettier.with({
-        filetypes = { "markdown" },
+        filetypes = { "markdown", "html", "css", "javascript" },
     }),
 }
 
