@@ -86,7 +86,7 @@ none_ls.setup({
 
 -- Format on save
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.py", "*.js", "*.lua", "*.c" },
+    pattern = { "*.py", "*.js", "*.lua", "*.c", "*.html", "*.css" },
     callback = function()
         -- record current position, 0 is the window ID
         local pos = vim.api.nvim_win_get_cursor(0)

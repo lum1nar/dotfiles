@@ -195,5 +195,10 @@ return require("lazy").setup({
             require("lum1na.config.oil")
         end
 
+    },
+
+    {
+        'brianhuster/live-preview.nvim',
     }
+
 })
