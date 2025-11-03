@@ -3,6 +3,7 @@ require("notify").setup({
     fps = 60,
     timeout = 3000,
     stages = "fade",
+    background_colour = "#EA9d34"
 })
 
 -- 將全域通知改成 nvim-notify

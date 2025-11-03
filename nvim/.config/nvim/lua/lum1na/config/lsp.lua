@@ -45,6 +45,7 @@ local servers = {
     'marksman', -- markdown formatter
     'ts_ls',    -- typescript-language-server
     'html',     -- html-lsp
+    'cssls',    -- css-lsp
 }
 
 local linter_formatters = {
