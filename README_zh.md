@@ -11,6 +11,7 @@
 - **lazy.nvim** - 插件管理器
 - **nodejs** >= 20 - JavaScript 執行環境
 - **ripgrep** - 快速檔案搜尋
+- **fzf** - 模糊搜索
 - **tmux** - 終端機多工器
 - **alacritty** - GPU 加速終端機
 

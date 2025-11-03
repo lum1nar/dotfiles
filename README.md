@@ -13,6 +13,7 @@ Modern development setup for shell and editor utilities.
 - **lazy.nvim** - Plugin manager
 - **nodejs** >= 20 - JavaScript runtime
 - **ripgrep** - Fast file search
+- **fzf** - Fuzzy Finder
 - **tmux** - Terminal multiplexer
 - **alacritty** - GPU-accelerated terminal
 
