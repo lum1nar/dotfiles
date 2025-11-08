@@ -46,6 +46,7 @@ local servers = {
     'ts_ls',    -- typescript-language-server
     'html',     -- html-lsp
     'cssls',    -- css-lsp
+    'emmet_ls', -- emmet-lsp
 }
 
 local linter_formatters = {

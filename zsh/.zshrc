@@ -126,6 +126,8 @@ alias cls='clear'
 alias vls='clear'
 alias sudo='sudo '
 alias gl='git log --graph --oneline --all'
+alias ga='git add --all' 
+alias gc='git commit'
 alias fcd='cd $(find ~ -type d -print | fzf)'
 
 # nvm for installing node20 for copilot
