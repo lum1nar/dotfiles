@@ -199,6 +199,13 @@ return require("lazy").setup({
 
     {
         'brianhuster/live-preview.nvim',
+    },
+
+    {
+        'voldikss/vim-floaterm',
+        config = function()
+            require('lum1na.config.vim-floaterm')
+        end
     }
 
 })
