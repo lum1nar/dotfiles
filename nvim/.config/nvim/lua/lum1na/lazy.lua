@@ -206,6 +206,21 @@ return require("lazy").setup({
         config = function()
             require('lum1na.config.vim-floaterm')
         end
-    }
+    },
 
+    {
+        "eero-lehtinen/oklch-color-picker.nvim",
+        event = "VeryLazy",
+        version = "*",
+        keys = {
+            -- One handed keymap recommended, you will be using the mouse
+            {
+                "<leader>v",
+                function() require("oklch-color-picker").pick_under_cursor() end,
+                desc = "Color pick under cursor",
+            },
+        },
+        ---@type oklch.Opts
+        opts = {},
+    }
 })
