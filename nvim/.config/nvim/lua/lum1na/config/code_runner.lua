@@ -19,9 +19,6 @@ require('code_runner').setup({
             "&& /tmp/$fileNameWithoutExt &&",
             "rm /tmp/$fileNameWithoutExt",
         },
-        html = function()
-            vim.cmd("LivePreview start")
-        end,
     },
 })
 

@@ -192,6 +192,9 @@ return require("lazy").setup({
 
     {
         'brianhuster/live-preview.nvim',
+        config = function()
+            require('lum1na.config.live-preview')
+        end
     },
 
     {
