@@ -123,13 +123,6 @@ return require("lazy").setup({
     },
 
     {
-        "norcalli/nvim-colorizer.lua",
-        config = function()
-            require("lum1na.config.colorizer")
-        end
-    },
-
-    {
         "rose-pine/neovim",
         config = function()
             vim.cmd("colorscheme rose-pine")
