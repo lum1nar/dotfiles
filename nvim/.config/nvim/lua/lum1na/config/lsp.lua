@@ -47,6 +47,7 @@ local servers = {
     'html',     -- html-lsp
     'cssls',    -- css-lsp
     'emmet_ls', -- emmet-lsp
+    'jsonls',   -- json-lsp
 }
 
 local linter_formatters = {
@@ -78,7 +79,7 @@ local formatting_sources = {
 
     -- Markdown, HTML, CSS, Js
     none_ls.builtins.formatting.prettier.with({
-        filetypes = { "markdown", "html", "css", "javascript" },
+        filetypes = { "markdown", "html", "css", "javascript", "json" },
     }),
 }
 
@@ -88,7 +89,7 @@ none_ls.setup({
 
 -- Format on save
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.py", "*.js", "*.lua", "*.c", "*.html", "*.css" },
+    pattern = { "*.py", "*.js", "*.lua", "*.c", "*.html", "*.css", "*.json" },
     callback = function()
         -- record current position, 0 is the window ID
         local pos = vim.api.nvim_win_get_cursor(0)
