@@ -112,18 +112,9 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
 alias vim='nvim'
+alias v='nvim'
 alias cls='clear'
-alias vls='clear'
 alias sudo='sudo '
 alias gl='git log --graph --oneline --all'
 alias ga='git add --all' 
@@ -132,13 +123,37 @@ alias gs='git status'
 alias gd='git diff'
 alias fcd='cd $(find ~ -type d -print | fzf)'
 
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
 # nvm for installing node20 for copilot
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# Read DeepSeek API key
+if [ -f ~/.zshrc.local ];
+    then source ~/.zshrc.local
+fi
+
+# Sets the maximum number of file descriptors
+# the default value on MacOS is 256, which is very low
+# sometimes neovim crash because nvim-telescope takes too much
+# fd and kills neovim itself
+
+ulimit -n 65535
+
+
+
 # Everforest LS_COLORS
+# I'm not sure if this still works ? 
+# I'll just keep it here for now
 export LS_COLORS="\
 di=01;36:\
 ln=01;34:\
@@ -189,7 +204,3 @@ mi=01;31:\
 *.ppt=01;31:\
 *.pptx=01;31"
 
-# Read DeepSeek API key
-if [ -f ~/.zshrc.local ];
-    then source ~/.zshrc.local
-fi
