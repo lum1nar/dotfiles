@@ -113,7 +113,6 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 alias vim='nvim'
-alias v='nvim'
 alias cls='clear'
 alias sudo='sudo '
 alias gl='git log --graph --oneline --all'
@@ -122,6 +121,7 @@ alias gc='git commit'
 alias gs='git status'
 alias gd='git diff'
 alias fcd='cd $(find ~ -type d -print | fzf)'
+alias v='nvim $(find ~ -type f \( ! -path "*/.git/*" \) -print | fzf)'
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
