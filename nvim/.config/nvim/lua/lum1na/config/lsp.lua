@@ -43,7 +43,7 @@ local servers = {
     'clangd',   -- c
     'lua_ls',   -- lua-language-server
     'marksman', -- markdown formatter
-    'ts_ls',    -- typescript-language-server
+    'vtsls',    -- typescript-language-server
     'html',     -- html-lsp
     'cssls',    -- css-lsp
     'emmet_ls', -- emmet-lsp

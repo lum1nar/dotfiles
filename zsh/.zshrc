@@ -204,3 +204,4 @@ mi=01;31:\
 *.ppt=01;31:\
 *.pptx=01;31"
 
+export PATH=/home/lum1na/.local/bin:/home/lum1na/.nvm/versions/node/v20.19.5/bin:/home/lum1na/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
