@@ -80,19 +80,19 @@ style = "Block"
 size = 20.0
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "0xProto"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
+family = "0xProto"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "0xProto"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "0xProto"
 style = "Regular"
 
 [scrolling]
