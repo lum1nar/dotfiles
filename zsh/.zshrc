@@ -112,7 +112,17 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
+alias vim='nvim'
+alias cls='clear'
+alias sudo='sudo '
+alias gl='git log --graph --oneline --all'
+alias ga='git add --all' 
+alias gc='git commit'
+alias gs='git status'
+alias gd='git diff'
+alias fcd='cd $(find ~ -type d -print | fzf)'
+alias v='nvim $(find ~ -type f \( ! -path "*/.git/*" \) -print | fzf)'
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -121,19 +131,29 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-alias vim='nvim'
-alias cls='clear'
-alias vls='clear'
-alias sudo='sudo '
-alias gl='git log --graph --oneline --all'
-
 # nvm for installing node20 for copilot
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# Read DeepSeek API key
+if [ -f ~/.zshrc.local ];
+    then source ~/.zshrc.local
+fi
+
+# Sets the maximum number of file descriptors
+# the default value on MacOS is 256, which is very low
+# sometimes neovim crash because nvim-telescope takes too much
+# fd and kills neovim itself
+
+ulimit -n 65535
+
+
+
 # Everforest LS_COLORS
+# I'm not sure if this still works ? 
+# I'll just keep it here for now
 export LS_COLORS="\
 di=01;36:\
 ln=01;34:\
@@ -184,7 +204,4 @@ mi=01;31:\
 *.ppt=01;31:\
 *.pptx=01;31"
 
-# Read DeepSeek API key
-if [ -f ~/.zshrc.local ];
-    then source ~/.zshrc.local
-fi
+export PATH=/home/lum1na/.local/bin:/home/lum1na/.nvm/versions/node/v20.19.5/bin:/home/lum1na/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin

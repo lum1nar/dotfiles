@@ -36,9 +36,9 @@ require("codecompanion").setup {
                 -- Number of days after which chats are automatically deleted (0 to disable)
                 expiration_days = 0,
                 -- Picker interface (auto resolved to a valid picker)
-                picker = "telescope", --- ("telescope", "snacks", "fzf-lua", or "default") 
+                picker = "telescope", --- ("telescope", "snacks", "fzf-lua", or "default")
                 ---Optional filter function to control which chats are shown when browsing
-                chat_filter = nil, -- function(chat_data) return boolean end
+                chat_filter = nil,    -- function(chat_data) return boolean end
                 -- Customize picker keymaps (optional)
                 picker_keymaps = {
                     rename = { n = "r", i = "<M-r>" },
@@ -48,10 +48,10 @@ require("codecompanion").setup {
                 ---Automatically generate titles for new chats
                 auto_generate_title = true,
                 title_generation_opts = {
-                    ---Adapter for generating titles (defaults to current chat adapter) 
-                    adapter = nil, -- "copilot"
+                    ---Adapter for generating titles (defaults to current chat adapter)
+                    adapter = nil,               -- "copilot"
                     ---Model for generating titles (defaults to current chat model)
-                    model = nil, -- "gpt-4o"
+                    model = nil,                 -- "gpt-4o"
                     ---Number of user prompts after which to refresh the title (0 to disable)
                     refresh_every_n_prompts = 0, -- e.g., 3 to refresh after every 3rd user prompt
                     ---Maximum number of times to refresh the title (default: 3)
@@ -79,11 +79,11 @@ require("codecompanion").setup {
                     create_summary_keymap = "gcs",
                     -- Keymap to browse summaries (default: "gbs")
                     browse_summaries_keymap = "gbs",
-                    
+
                     generation_opts = {
-                        adapter = nil, -- defaults to current chat adapter
-                        model = nil, -- defaults to current chat model
-                        context_size = 90000, -- max tokens that the model supports
+                        adapter = nil,             -- defaults to current chat adapter
+                        model = nil,               -- defaults to current chat model
+                        context_size = 90000,      -- max tokens that the model supports
                         include_references = true, -- include slash command content include_tool_outputs = true, -- include tool execution results
                         system_prompt = function()
                             return [[
@@ -103,7 +103,7 @@ require("codecompanion").setup {
                         format_summary = nil, -- custom function to format generated summary e.g to remove <think/> tags from summary
                     },
                 },
-                
+
                 -- Memory system (requires VectorCode CLI)
                 memory = {
                     -- Automatically index summaries when they are generated
@@ -111,9 +111,9 @@ require("codecompanion").setup {
                     -- Path to the VectorCode executable
                     vectorcode_exe = "vectorcode",
                     -- Tool configuration
-                    tool_opts = { 
+                    tool_opts = {
                         -- Default number of memories to retrieve
-                        default_num = 10 
+                        default_num = 10
                     },
                     -- Enable notifications for indexing progress
                     notify = true,
@@ -125,7 +125,6 @@ require("codecompanion").setup {
         }
     },
 }
-
 
 vim.keymap.set('n', '<leader>cc', ':CodeCompanionChat Toggle<CR>', { desc = 'AI Chat' })
 vim.keymap.set({ 'n', 'v' }, '<leader>ca', ':CodeCompanionActions <CR>', { desc = 'AI Actions' })

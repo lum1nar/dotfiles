@@ -1,0 +1,16 @@
+{
+    "css-snippet": {
+        "prefix": [
+            "cssreset",
+        ],
+        "body": [
+            "* {",
+            "    padding: 0;",
+            "    margin: 0;",
+            "    box-sizing: border-box;",
+            "}",
+        ],
+        "description": "A description of the snippet.",
+        "scope": "css"
+    },
+}

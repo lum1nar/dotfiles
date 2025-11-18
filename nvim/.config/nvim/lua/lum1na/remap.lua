@@ -1,4 +1,3 @@
-
 vim.g.mapleader = " "
 
 -- When in visual mode, pressing J will move the selected lines down by one line
@@ -12,11 +11,5 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "=ap", "ma=ap'a")
 
-
--- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], {desc = "Yank to system clipboard"})
+-- Disable keys
 vim.keymap.set("n", "Q", "<nop>")
-
--- format code
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {desc = "Format code"})
-

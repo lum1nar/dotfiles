@@ -1,5 +1,3 @@
-vim.notify = require("notify"), -- use notify for messages
-
 require("hardtime").setup({
     -- I need my hjkl smooth
     restricted_keys = {
@@ -15,11 +13,4 @@ require("hardtime").setup({
         ["<C-P>"] = { "n", "x" },
     },
     disable_mouse = false, -- Enalbe mouse support
-}
-)
-
-
-
-
-
-
+})

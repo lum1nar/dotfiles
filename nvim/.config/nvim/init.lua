@@ -1,13 +1,11 @@
-
-local orig_notify = vim.notify
-
-vim.notify = function(msg, level, opts)
-  -- 過濾掉特定訊息
-  if type(msg) == "string" and msg:match("require%(.'lspconfig'%)") then
-    return
-  end
-  -- 否則用原本的 notify
-  orig_notify(msg, level, opts)
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git", "clone", "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", lazypath,
+    })
 end
+vim.opt.rtp:prepend(lazypath)
 
 require("lum1na")

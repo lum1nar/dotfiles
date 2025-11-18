@@ -6,14 +6,13 @@ foreground = "#575279"
 background = "#fcf1e1"
 dim_foreground = "#797593"
 bright_foreground = "#575279"
-
 [colors.cursor]
 text = "#575279"
-cursor = "#cecacd"
+cursor = "#d7827d"
 
 [colors.vi_mode_cursor]
 text = "#575279"
-cursor = "#cecacd"
+cursor = "#d7827d"
 
 [colors.search.matches]
 foreground = "#797593"
@@ -106,7 +105,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [window]
 dynamic_title = true
-opacity = 1
+opacity = 0.97
 
 [window.dimensions]
 columns = 120
