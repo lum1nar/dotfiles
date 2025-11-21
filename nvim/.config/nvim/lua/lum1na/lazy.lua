@@ -66,7 +66,6 @@ return require("lazy").setup({
     ---------------------------------------------------------------------------
     { -- 負擔小，直接載入
         "mbbill/undotree",
-        cmd = "UndotreeToggle",
         config = function()
             require("lum1na.config.undotree")
         end
@@ -164,7 +163,6 @@ return require("lazy").setup({
     ---------------------------------------------------------------------------
     { -- 負擔小，直接載入
         "CRAG666/code_runner.nvim",
-        cmd = { "RunCode", "RunFile", "RunProject" },
         config = function()
             require("lum1na.config.code_runner")
         end
@@ -205,7 +203,6 @@ return require("lazy").setup({
     ---------------------------------------------------------------------------
     { -- 直接載入
         "nvim-tree/nvim-tree.lua",
-        cmd = "NvimTreeToggle",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
             require("lum1na.config.nvim-tree")
@@ -214,7 +211,6 @@ return require("lazy").setup({
 
     { -- 直接載入
         "stevearc/oil.nvim",
-        cmd = "Oil",
         config = function()
             require("lum1na.config.oil")
         end
@@ -235,15 +231,14 @@ return require("lazy").setup({
 
     { -- 直接載入
         "voldikss/vim-floaterm",
-        cmd = "FloatermToggle",
         config = function()
             require("lum1na.config.vim-floaterm")
         end
     },
 
-    { -- 指令載入
+    { --
         'brianhuster/live-preview.nvim',
-        cmd = { "LivePreviewOpen", "LivePreviewStart" },
+        event = "VeryLazy",
         config = function()
             require('lum1na.config.live-preview')
         end
@@ -256,11 +251,11 @@ return require("lazy").setup({
     ---------------------------------------------------------------------------
     { -- vim 開啟後載入
         "eero-lehtinen/oklch-color-picker.nvim",
-        event = "VeryLazy",
         keys = {
             {
                 "<leader>v",
                 function() require("oklch-color-picker").pick_under_cursor() end,
+                event = "VeryLazy",
                 desc = "Color pick under cursor",
             },
         },
