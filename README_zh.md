@@ -27,6 +27,7 @@
 
 - **stow** - 點檔案管理
 - **JetBrainsMono Nerd Font** - 程式設計字型
+- **0xProto Mono Nerd Font** - 程式設計字型
 - **Monocraft** - Minecraft 風格字型
 
 ## Neovim 快捷鍵配置

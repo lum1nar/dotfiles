@@ -29,6 +29,7 @@ Modern development setup for shell and editor utilities.
 
 - **stow** - Dotfile management
 - **JetBrainsMono Nerd Font**
+- **0xProto Mono Nerd Font**
 - **Monocraft** - Minecraft-inspired font
 
 ## Neovim Keybindings
