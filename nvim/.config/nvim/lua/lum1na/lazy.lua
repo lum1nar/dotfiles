@@ -35,7 +35,6 @@ return require("lazy").setup({
         "nvim-telescope/telescope.nvim",
         tag = "0.1.8",
         dependencies = { "nvim-lua/plenary.nvim" },
-        cmd = "Telescope",
         config = function()
             require("lum1na.config.telescope")
         end
