@@ -6,7 +6,11 @@ require('code_runner').setup({
             "java $fileNameWithoutExt"
         },
         python = "python3 -u",
-        typescript = "deno run",
+        typescript = {
+            "cd &dir &&",
+            "tsc $fileNameWithoutExt",
+            "node $fileNameWithoutExt"
+        },
         rust = {
             "cd $dir &&",
             "rustc $fileName &&",
