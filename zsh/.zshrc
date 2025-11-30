@@ -121,7 +121,8 @@ alias gc='git commit'
 alias gs='git status'
 alias gd='git diff'
 alias fcd='cd $(find ~ -type d -print | fzf)'
-alias v='nvim $(find ~ -type f \( ! -path "*/.git/*" \) -print | fzf)'
+alias vr='nvim $(find ~ -type f \( ! -path "*/.git/*" \) -print | fzf )'
+alias v='nvim $(find . -type f \( ! -path "*/.git/*" \) -print | fzf --preview "cat {}")'
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"

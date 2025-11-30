@@ -89,11 +89,11 @@ style = "Bold Italic"
 
 [font.italic]
 family = "JetBrainsMono Nerd Font Mono"
-style = "Italic"
+style = "Bold Italic"
 
 [font.normal]
 family = "JetBrainsMono Nerd Font Mono"
-style = "Regular"
+style = "Bold"
 
 [scrolling]
 history = 10000

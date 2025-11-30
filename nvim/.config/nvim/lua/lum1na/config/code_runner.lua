@@ -8,8 +8,8 @@ require('code_runner').setup({
         python = "python3 -u",
         typescript = {
             "cd &dir &&",
-            "tsc $fileNameWithoutExt",
-            "node $fileNameWithoutExt"
+            "tsc $fileName &&",
+            "node $fileNameWithoutExt.js"
         },
         rust = {
             "cd $dir &&",
