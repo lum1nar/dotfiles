@@ -15,7 +15,7 @@ vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Find Files' })
 vim.keymap.set('n', '<leader>pr', builtin.oldfiles, { desc = 'Find Recent Files' })
 vim.keymap.set('n', '<leader>pp', builtin.git_files, { desc = 'Find Git files' })
 vim.keymap.set('n', '<leader>pn', function()
-    builtin.find_files({ cwd = "~/obsidian/4 - 筆記/" })
+    builtin.live_grep({ cwd = "~/obsidian/4 - 筆記/" })
 end, { desc = 'Find Obsidain Notes' })
 
 vim.keymap.set('n', '<leader>ps', function()
