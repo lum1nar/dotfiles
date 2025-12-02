@@ -6,7 +6,7 @@ require("no-neck-pain").setup({
     buffers = {
         colors = {
             background = "#fcf1e1",
-            blend = -0.005,
+            blend = -0.025,
         }
     },
     integrations = {
