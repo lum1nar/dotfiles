@@ -1,8 +1,6 @@
 return require("lazy").setup({
 
-    ---------------------------------------------------------------------------
-    -- Colorscheme
-    ---------------------------------------------------------------------------
+    --------------------------------------------------------------------------- Colorscheme ------------------------------------------------------------------------
     { -- UI 直接載入
         "rose-pine/neovim",
         lazy = false,
@@ -135,7 +133,6 @@ return require("lazy").setup({
 
     { -- 直接載入
         "folke/zen-mode.nvim",
-        cmd = "ZenMode",
         config = function()
             require("lum1na.config.zenmode")
         end
@@ -248,16 +245,20 @@ return require("lazy").setup({
     ---------------------------------------------------------------------------
     -- Color picker
     ---------------------------------------------------------------------------
-    { -- vim 開啟後載入
+
+    {
         "eero-lehtinen/oklch-color-picker.nvim",
+        event = "VeryLazy",
+        version = "*",
         keys = {
+            -- One handed keymap recommended, you will be using the mouse
             {
                 "<leader>v",
                 function() require("oklch-color-picker").pick_under_cursor() end,
-                event = "VeryLazy",
                 desc = "Color pick under cursor",
             },
         },
+        ---@type oklch.Opts
         opts = {},
     },
 

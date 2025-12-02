@@ -1,7 +1,7 @@
 require('code_runner').setup({
     mode = "float",
     float = {
-        close_key = "<ESC>",
+        close_key = "<CR>",
         -- Window border (see ':h nvim_open_win')
         border = "rounded",
 

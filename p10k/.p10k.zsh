@@ -55,7 +55,7 @@
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
   # Directory
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$pine
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$rose
 
   # Context
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$text}%n%f%F{$dim_text}@%m%f"
