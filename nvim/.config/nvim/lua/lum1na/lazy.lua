@@ -131,13 +131,6 @@ return require("lazy").setup({
         end
     },
 
-    { -- 直接載入
-        "folke/zen-mode.nvim",
-        config = function()
-            require("lum1na.config.zenmode")
-        end
-    },
-
     {
         "sphamba/smear-cursor.nvim",
         event = "VeryLazy",
@@ -260,6 +253,18 @@ return require("lazy").setup({
         },
         ---@type oklch.Opts
         opts = {},
+    },
+
+    ---------------------------------------------------------------------------
+    -- No Neck Pain
+    ---------------------------------------------------------------------------
+    {
+        "shortcuts/no-neck-pain.nvim",
+        version = "*",
+        config = function()
+            require("lum1na.config.no-neck-pain")
+        end,
+
     },
 
 })
