@@ -6,7 +6,16 @@ require("no-neck-pain").setup({
     buffers = {
         colors = {
             background = "#fcf1e1",
-            blend = -0.01,
+            blend = -0.005,
         }
     },
+    integrations = {
+        NvimTree = {
+            position = "left",
+            reopen = true,
+        },
+        undotree = {
+            position = "left",
+        },
+    }
 })
