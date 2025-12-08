@@ -12,6 +12,7 @@
   "codecompanion.nvim": { "branch": "main", "commit": "683242e59393ce877906956abe3e540613d42275" },
   "copilot.vim": { "branch": "release", "commit": "dfe0a3a1c256167d181488a73ec6ccab8d8931a9" },
   "everforest": { "branch": "master", "commit": "3fffb096f6ac11372944ac964c60f8af41d8809f" },
+  "float-toc.nvim": { "branch": "main", "commit": "0037a45b9e1c3695f8057de96dbd5a30afc61d7f" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
   "lazy.nvim": { "branch": "main", "commit": "1ea3c4085785f460fb0e46d2fe1ee895f5f9e7c1" },
   "live-preview.nvim": { "branch": "main", "commit": "a1bb1b3a851df5276e53908276f5ae1d724d4812" },
@@ -19,6 +20,7 @@
   "mason-lspconfig.nvim": { "branch": "main", "commit": "2304ff65ecc8cb2afc2484de3e2ed9a407edf0b9" },
   "mason-tool-installer.nvim": { "branch": "main", "commit": "517ef5994ef9d6b738322664d5fdd948f0fdeb46" },
   "mason.nvim": { "branch": "main", "commit": "ad7146aa61dcaeb54fa900144d768f040090bff0" },
+  "mini.nvim": { "branch": "main", "commit": "dca98843fab66d080779cd973e7139e258ff164c" },
   "neoscroll.nvim": { "branch": "master", "commit": "f957373912e88579e26fdaea4735450ff2ef5c9c" },
   "neovim": { "branch": "main", "commit": "72a04c4065345b51b56aed4859ea1d884f734097" },
   "no-neck-pain.nvim": { "branch": "main", "commit": "d871043474c06995c062413c91c987d0cb602632" },
@@ -39,6 +41,5 @@
   "undotree": { "branch": "master", "commit": "0f1c9816975b5d7f87d5003a19c53c6fd2ff6f7f" },
   "vim-be-good": { "branch": "master", "commit": "0ae3de14eb8efc6effe7704b5e46495e91931cc5" },
   "vim-floaterm": { "branch": "master", "commit": "a720490bd9dc02c5492e800aa08d4802f22b01f8" },
-  "which-key.nvim": { "branch": "main", "commit": "b4177e3eaf15fe5eb8357ebac2286d488be1ed00" },
-  "zen-mode.nvim": { "branch": "main", "commit": "438a59c33763d79e34ceb394e012c3bfd6aa1084" }
+  "which-key.nvim": { "branch": "main", "commit": "b4177e3eaf15fe5eb8357ebac2286d488be1ed00" }
 }

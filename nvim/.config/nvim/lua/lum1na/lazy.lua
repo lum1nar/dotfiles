@@ -115,9 +115,9 @@ return require("lazy").setup({
     ---------------------------------------------------------------------------
     -- UI / UX plugins
     ---------------------------------------------------------------------------
-    { -- 開啟 vim 後載入
+    {                    -- 開啟 vim 後載入
         "rcarriga/nvim-notify",
-        event = "VeryLazy",
+        priority = 1000, -- 載入順序很前面
         config = function()
             require("lum1na.config.nvim-notify")
         end
@@ -163,6 +163,9 @@ return require("lazy").setup({
     { -- 打開 markdown 才載入
         "MeanderingProgrammer/render-markdown.nvim",
         ft = { "markdown", "md" },
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' }, -- if you use the mini.nvim suite
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.icons' },        -- if you use standalone mini plugins
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
         config = function()
             require("lum1na.config.render-markdown")
         end
@@ -267,4 +270,22 @@ return require("lazy").setup({
 
     },
 
+    ---------------------------------------------------------------------------
+    -- floating-toc
+    ---------------------------------------------------------------------------
+    -- {
+    --     dir = "~/nvim/myplugin/float-toc",
+    --     name = "float-toc"
+    -- },
+
+    ---------------------------------------------------------------------------
+    -- floating-toc
+    ---------------------------------------------------------------------------
+    {
+        "lum1nar/float-toc.nvim",
+        config = function()
+            require("lum1na.config.float-toc")
+        end,
+
+    },
 })
