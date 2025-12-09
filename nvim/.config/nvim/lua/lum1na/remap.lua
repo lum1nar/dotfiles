@@ -14,3 +14,35 @@ vim.keymap.set("n", "=ap", "ma=ap'a")
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
 vim.keymap.set("n", "Q", "<nop>")
+
+-- Create a new Obsidian note with template
+vim.keymap.set("n", "<leader>nc", function()
+    -- Ask for filename
+    local name = vim.fn.input("New note name: ")
+    if name == nil or name == "" then
+        print("Canceled")
+        return
+    end
+
+    -- [[]] is multiple-line string
+    local template = ([[
+%s
+
+標籤 :
+
+參考資料
+
+    ]]):format(os.date("%Y-%m-%d %H:%M"))
+
+    -- Expand ~
+    local dir = vim.fn.expand("~/obsidian/4 - 筆記/")
+    local filepath = dir .. name .. ".md"
+
+    -- write template
+    -- 1st parameter of writeFile should be an array of strings
+    -- so we use vim.split to create the array
+    vim.fn.writefile(vim.split(template, "\n"), filepath)
+
+    -- Open the file
+    vim.cmd("edit " .. filepath)
+end)
