@@ -3,4 +3,4 @@ require("float-toc").setup({
     indent_width = 4,
 })
 
-vim.keymap.set("n", "<leader>t", "<cmd>lua require('float-toc').toggle()<cr>")
+vim.keymap.set("n", "<leader>t", "<cmd>FloatTOC<cr>")
