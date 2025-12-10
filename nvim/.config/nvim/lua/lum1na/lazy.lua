@@ -283,6 +283,9 @@ return require("lazy").setup({
     -------------------------------------------------------------------------
     {
         "lum1nar/float-toc.nvim",
+        opts = {
+            -- your options here
+        },
         config = function()
             require("lum1na.config.float-toc")
         end,

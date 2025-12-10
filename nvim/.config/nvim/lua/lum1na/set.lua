@@ -31,3 +31,11 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.opt.fillchars = { eob = " " }
+
+vim.g.clipboard = {
+    name = "osc52",
+    copy = {
+        ["+"] = "osc52",
+        ["*"] = "osc52",
+    },
+}
