@@ -12,7 +12,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "=ap", "ma=ap'a")
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank thorugh OSC52" })
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Create a new Obsidian note with template

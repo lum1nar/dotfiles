@@ -32,10 +32,15 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.fillchars = { eob = " " }
 
+-- 使用 OSC 52
 vim.g.clipboard = {
-    name = "osc52",
+    name = "OSC 52",
     copy = {
-        ["+"] = "osc52",
-        ["*"] = "osc52",
+        ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+        ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+    },
+    paste = {
+        ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+        ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
     },
 }
