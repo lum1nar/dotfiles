@@ -52,7 +52,7 @@ local servers = {
 
 local linter_formatters = {
     'black',    -- python
-    'prettier', -- markdown
+    'prettier', -- Multiple filetypes
 }
 
 require('mason-lspconfig').setup({
@@ -67,6 +67,8 @@ require("mason-tool-installer").setup({
     automatic_installation = true,
 })
 
+local util = require('lspconfig.util')
+
 -- ==================================================
 -- Formatter via none-ls (for servers that don't support it)
 -- ==================================================
@@ -79,7 +81,7 @@ local formatting_sources = {
 
     -- Markdown, HTML, CSS, JS, TS, Json
     none_ls.builtins.formatting.prettier.with({
-        filetypes = { "markdown", "html", "css", "javascript", "typescript", "json" },
+        filetypes = { "markdown", "html", "css", "javascript", "typescript", "json", "jsx", "tsx" },
     }),
 }
 
@@ -89,7 +91,7 @@ none_ls.setup({
 
 -- Format on save
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.py", "*.js", "*.ts", "*.lua", "*.c", "*.html", "*.css", "*.json", "*.md" },
+    pattern = { "*.py", "*.js", "*.ts", "*.lua", "*.c", "*.html", "*.css", "*.json", "*.md", "*.jsx", "*.tsx" },
     callback = function()
         -- record current position, 0 is the window ID
         local pos = vim.api.nvim_win_get_cursor(0)
