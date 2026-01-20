@@ -38,16 +38,17 @@ lsp.nvim_workspace()
 -- Auto Install LSP, linter and formatter
 require('mason').setup()
 local servers = {
-    'bashls',   -- bash-language-server
-    'pyright',  -- python
-    'clangd',   -- c
-    'lua_ls',   -- lua-language-server
-    'marksman', -- markdown formatter
-    'vtsls',    -- typescript-language-server
-    'html',     -- html-lsp
-    'cssls',    -- css-lsp
-    'emmet_ls', -- emmet-lsp
-    'jsonls',   -- json-lsp
+    'bashls',      -- bash-language-server
+    'pyright',     -- python
+    'clangd',      -- c
+    'lua_ls',      -- lua-language-server
+    'marksman',    -- markdown formatter
+    'vtsls',       -- typescript-language-server
+    'html',        -- html-lsp
+    'cssls',       -- css-lsp
+    'emmet_ls',    -- emmet-lsp
+    'jsonls',      -- json-lsp
+    'tailwindcss', -- tailwindcss-lsp
 }
 
 local linter_formatters = {
