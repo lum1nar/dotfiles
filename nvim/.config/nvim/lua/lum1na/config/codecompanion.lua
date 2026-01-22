@@ -21,7 +21,7 @@ require("codecompanion").setup {
         agent = { adapter = "deepseek" },
     },
     opts = {
-        language = "zh_TW",
+        language = "en",
     },
     extensions = {
         history = {
