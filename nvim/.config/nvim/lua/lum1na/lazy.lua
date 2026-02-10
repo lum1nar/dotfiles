@@ -193,12 +193,19 @@ return require("lazy").setup({
     ---------------------------------------------------------------------------
     -- File explorers
     ---------------------------------------------------------------------------
-    { -- 直接載入
+    {
         "nvim-tree/nvim-tree.lua",
         dependencies = { "nvim-tree/nvim-web-devicons" },
+        keys = {
+            {
+                "<leader>pt",
+                "<cmd>NvimTreeToggle<CR>",
+                desc = "Toggle Nvim Tree",
+            },
+        },
         config = function()
             require("lum1na.config.nvim-tree")
-        end
+        end,
     },
 
     { -- 直接載入
@@ -219,7 +226,7 @@ return require("lazy").setup({
         end
     },
 
-    { "ThePrimeagen/vim-be-good",             cmd = "VimBeGood" },
+    -- { "ThePrimeagen/vim-be-good",             cmd = "VimBeGood" },
 
     { -- 直接載入
         "voldikss/vim-floaterm",
@@ -236,7 +243,7 @@ return require("lazy").setup({
         end
     },
 
-    { "nvimtools/none-ls.nvim", event = "BufReadPre" },
+    { "nvimtools/none-ls.nvim",               event = "BufReadPre" },
 
     ---------------------------------------------------------------------------
     -- Color picker
@@ -261,14 +268,14 @@ return require("lazy").setup({
     ---------------------------------------------------------------------------
     -- No Neck Pain
     ---------------------------------------------------------------------------
-    {
-        "shortcuts/no-neck-pain.nvim",
-        version = "*",
-        config = function()
-            require("lum1na.config.no-neck-pain")
-        end,
-
-    },
+    -- {
+    --     "shortcuts/no-neck-pain.nvim",
+    --     version = "*",
+    --     config = function()
+    --         require("lum1na.config.no-neck-pain")
+    --     end,
+    --
+    -- },
 
     ---------------------------------------------------------------------------
     -- floating-toc
@@ -291,4 +298,25 @@ return require("lazy").setup({
         end,
 
     },
+    {
+        "lum1nar/peep.nvim",
+        config = function()
+            require("peep").setup({
+                colors = {
+                    label_main = { fg = "#A72703", bg = "#FCB53B", },
+                    label_sub = { fg = "#FCB53B", bg = "#44415a", },
+                    line_aux = { fg = "#9893a5", },
+                },
+                peep = {
+                    duration = 700,
+                    column = false,
+                    auxline_icon = "·",
+                    key_trigger = true,
+                    trigger_keys = { "y", "d", "c", "v", "V" },
+                }
+            })
+            vim.keymap.set({ "n", "v" }, "<leader><leader>", function() require("peep").peep() end, { desc = "Peep" })
+        end
+    },
+
 })
