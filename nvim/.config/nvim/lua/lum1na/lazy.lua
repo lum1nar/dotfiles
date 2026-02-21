@@ -123,13 +123,13 @@ return require("lazy").setup({
         end
     },
 
-    { -- 開啟 vim 後載入
-        "folke/which-key.nvim",
-        event = "VeryLazy",
-        config = function()
-            require("lum1na.config.whichkey")
-        end
-    },
+    -- { -- 開啟 vim 後載入
+    --     "folke/which-key.nvim",
+    --     event = "VeryLazy",
+    --     config = function()
+    --         require("lum1na.config.whichkey")
+    --     end
+    -- },
 
     {
         "sphamba/smear-cursor.nvim",
@@ -237,10 +237,15 @@ return require("lazy").setup({
 
     { --
         'brianhuster/live-preview.nvim',
-        event = "VeryLazy",
-        config = function()
-            require('lum1na.config.live-preview')
-        end
+        lazy = true,
+        keys = {
+            {
+                "<leader>h",
+                function() vim.cmd([[LivePreview start]]) end,
+                desc = "Live Preview",
+            },
+        },
+
     },
 
     { "nvimtools/none-ls.nvim",               event = "BufReadPre" },
@@ -298,6 +303,32 @@ return require("lazy").setup({
         end,
 
     },
+    -- {
+    --     dir = "~/nvim-plugin/peep.nvim/",
+    --     name = "Peep",
+    --     config = function()
+    --         require("peep").setup({
+    --             colors = {
+    --                 label_main = { fg = "#A72703", bg = "#FCB53B", },
+    --                 label_sub = { fg = "#FCB53B", bg = "#44415a", },
+    --                 line_aux = { fg = "#9893a5", },
+    --                 line_preview = { fg = "#7aa2f7" }
+    --             },
+    --
+    --             peep = {
+    --                 duration = 700,
+    --                 column = false,
+    --                 auxline_icon = "·",
+    --                 key_trigger = true,
+    --                 trigger_keys = { "y", "d", "c", "v", "V" },
+    --                 line_preview = true
+    --             }
+    --         })
+    --         vim.keymap.set({ "n", "v" }, "<leader><leader>", function() require("peep").peep() end, { desc = "Peep" })
+    --     end
+    --
+    -- },
+
     {
         "lum1nar/peep.nvim",
         config = function()
@@ -306,17 +337,38 @@ return require("lazy").setup({
                     label_main = { fg = "#A72703", bg = "#FCB53B", },
                     label_sub = { fg = "#FCB53B", bg = "#44415a", },
                     line_aux = { fg = "#9893a5", },
+                    line_preview = { fg = "#7aa2f7" }
                 },
+
                 peep = {
                     duration = 700,
                     column = false,
                     auxline_icon = "·",
                     key_trigger = true,
                     trigger_keys = { "y", "d", "c", "v", "V" },
+                    line_preview = true
                 }
             })
             vim.keymap.set({ "n", "v" }, "<leader><leader>", function() require("peep").peep() end, { desc = "Peep" })
         end
     },
+    {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        branch = "main",
+        init = function()
+            -- Disable entire built-in ftplugin mappings to avoid conflicts.
+            -- See https://github.com/neovim/neovim/tree/master/runtime/ftplugin for built-in ftplugins.
+            vim.g.no_plugin_maps = true
+
+            -- Or, disable per filetype (add as you like)
+            -- vim.g.no_python_maps = true
+            -- vim.g.no_ruby_maps = true
+            -- vim.g.no_rust_maps = true
+            -- vim.g.no_go_maps = true
+        end,
+        config = function()
+            require("lum1na.config.nvim-treesitter-textobjects")
+        end,
+    }
 
 })
