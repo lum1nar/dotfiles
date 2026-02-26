@@ -303,34 +303,10 @@ return require("lazy").setup({
         end,
 
     },
-    -- {
-    --     dir = "~/nvim-plugin/peep.nvim/",
-    --     name = "Peep",
-    --     config = function()
-    --         require("peep").setup({
-    --             colors = {
-    --                 label_main = { fg = "#A72703", bg = "#FCB53B", },
-    --                 label_sub = { fg = "#FCB53B", bg = "#44415a", },
-    --                 line_aux = { fg = "#9893a5", },
-    --                 line_preview = { fg = "#7aa2f7" }
-    --             },
-    --
-    --             peep = {
-    --                 duration = 700,
-    --                 column = false,
-    --                 auxline_icon = "·",
-    --                 key_trigger = true,
-    --                 trigger_keys = { "y", "d", "c", "v", "V" },
-    --                 line_preview = true
-    --             }
-    --         })
-    --         vim.keymap.set({ "n", "v" }, "<leader><leader>", function() require("peep").peep() end, { desc = "Peep" })
-    --     end
-    --
-    -- },
 
     {
         "lum1nar/peep.nvim",
+        dev = true,
         config = function()
             require("peep").setup({
                 colors = {
@@ -352,6 +328,7 @@ return require("lazy").setup({
             vim.keymap.set({ "n", "v" }, "<leader><leader>", function() require("peep").peep() end, { desc = "Peep" })
         end
     },
+
     {
         "nvim-treesitter/nvim-treesitter-textobjects",
         branch = "main",
@@ -370,5 +347,10 @@ return require("lazy").setup({
             require("lum1na.config.nvim-treesitter-textobjects")
         end,
     }
+
+}, {
+    dev = {
+        path = "~/nvim-plugin",
+    },
 
 })
