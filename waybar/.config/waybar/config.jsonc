@@ -1,0 +1,30 @@
+{
+  "style": "~/.config/waybar/style.css",
+  
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  
+  "modules-left": [
+    "custom/cava",
+    "pulseaudio"
+
+  ],
+  
+  "modules-center": [
+    "memory",
+    "cpu",
+    "temperature"
+  ],
+  
+  "modules-right": [
+    // "idle_inhibitor",
+    // "backlight",
+    "network",
+    "clock",
+    "custom/notification",
+    "tray"
+  ],
+
+  "include": "~/.config/waybar/modules.jsonc"
+}

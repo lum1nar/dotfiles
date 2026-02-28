@@ -1,104 +1,117 @@
 [Chinese Version](./README_zh.md)
-![image](./static/nvim_start.png)
 
-# Development Environment Configuration
+# ✨ Modern Development Environment
 
-Modern development setup for shell and editor utilities.
+A clean and minimal development setup built around **Wayland + Neovim + Zsh**.
 
-## Requirements
+Designed for productivity, aesthetics, and smooth workflow.
 
-### Core Applications
+## 🖼 Preview
 
-- **nvim** >= 0.11
-- **lazy.nvim** - Plugin manager
-- **nodejs** >= 20 - JavaScript runtime
-- **ripgrep** - Fast file search
-- **fzf** - Fuzzy Finder
-- **tmux** - Terminal multiplexer
-- **alacritty** - GPU-accelerated terminal
+<p align="center">
+  <img src="./static/waybar.png" width="90%" />
+  <br/><br/>
+  <img src="./static/niri.png" width="90%" />
+  <br/><br/>
+  <img src="./static/nvim.png" width="90%" />
+</p>
 
-### Shell Environment
+# 🖥 Desktop Environment
 
-- **zsh** with **oh-my-zsh**
-- **p10k** - Powerlevel10k theme
-- **zsh-autosuggestions**
-- **zsh-syntax-highlighting**
-- **zsh-vi-mode**
+### System
 
-### Utilities & Fonts
+- **OS:** Ubuntu
+- **Display Server:** Wayland
+- **Window Manager:** Niri
 
-- **stow** - Dotfile management
+### UI Components
+
+- **Waybar** – Status bar
+- **Swaybg** – Wallpaper manager
+
+# 🛠 Core Applications
+
+- **Neovim** >= 0.11
+- **Tmux** – Terminal multiplexer
+- **Alacritty** – GPU accelerated terminal
+- **Zsh** + **Oh My Zsh**
+
+# 🎨 Utilities · Fonts · Theme
+
+- **GNU Stow** – Dotfile management
 - **JetBrainsMono Nerd Font**
-- **0xProto Mono Nerd Font**
-- **Monocraft** - Minecraft-inspired font
+- **Rosé Pine Dawn** – Color scheme
 
-## Neovim Keybindings
+# ⌨ Neovim Keybindings
 
-### Text Manipulation & Navigation
+## 📝 Text Manipulation & Navigation
 
-| Key Combination | Mode   | Description                      |
-| --------------- | ------ | -------------------------------- |
-| `J`             | Visual | Move selection down              |
-| `K`             | Visual | Move selection up                |
-| `space + y`     | Visual | Copy selection                   |
-| `ctrl + w`      | Insert | Delete word to the left          |
-| `ctrl + h`      | Insert | Delete character to the left     |
-| `ctrl + o`      | Normal | Return to previous jump location |
-| `space + f`     | Normal | Format code                      |
-| `gcc`           | Normal | Toggle comment                   |
+| Key         | Mode   | Action                   |
+| ----------- | ------ | ------------------------ |
+| `J`         | Visual | Move selection down      |
+| `K`         | Visual | Move selection up        |
+| `space + y` | Visual | Copy to system clipboard |
+| `ctrl + w`  | Insert | Delete word left         |
+| `ctrl + h`  | Insert | Delete character left    |
+| `ctrl + o`  | Normal | Jump back                |
+| `space + f` | Normal | Format code              |
+| `gcc`       | Normal | Toggle comment           |
 
-### Project & File Management
+## 📁 Project & File Management
 
-| Key Combination | Mode   | Description                |
-| --------------- | ------ | -------------------------- |
-| `space + p + f` | Normal | Find project files         |
-| `space + p + r` | Normal | Find recently opened files |
-| `space + p + s` | Normal | Search files by content    |
-| `space + p + b` | Normal | Open file browser          |
-| `space + u`     | Normal | Open undotree              |
+| Key             | Mode   | Action             |
+| --------------- | ------ | ------------------ |
+| `space + p + f` | Normal | Find project files |
+| `space + p + l` | Normal | Find git files     |
+| `space + p + r` | Normal | Recent files       |
+| `space + p + s` | Normal | Live grep          |
+| `space + p + b` | Normal | File browser       |
+| `space + p + t` | Normal | File tree          |
+| `space + u`     | Normal | Toggle undotree    |
 
-### Code Intelligence & LSP
+## 🧠 LSP & Code Intelligence
 
-| Key Combination            | Mode           | Description                        |
-| -------------------------- | -------------- | ---------------------------------- |
-| `ctrl + n` / `tab`         | Insert         | Next completion item               |
-| `ctrl + p` / `shift + tab` | Insert         | Previous completion item           |
-| `ctrl + y` / `Enter`       | Insert         | Accept LSP completion              |
-| `ctrl + l`                 | Insert, Visual | Go to next snippet placeholder     |
-| `ctrl + h`                 | Insert, Visual | Go to previous snippet placeholder |
-| `space + d + d`            | Normal         | Go to definition under cursor      |
-| `space + d + f`            | Normal         | Find references                    |
-| `space + d + n`            | Normal         | Go to next error                   |
-| `space + d + p`            | Normal         | Go to previous error               |
+| Key                        | Mode          | Action                       |
+| -------------------------- | ------------- | ---------------------------- |
+| `ctrl + n` / `tab`         | Insert        | Next completion              |
+| `ctrl + p` / `shift + tab` | Insert        | Previous completion          |
+| `ctrl + y` / `Enter`       | Insert        | Confirm completion           |
+| `ctrl + l`                 | Insert/Visual | Next snippet placeholder     |
+| `ctrl + h`                 | Insert/Visual | Previous snippet placeholder |
+| `space + d + d`            | Normal        | Go to definition             |
+| `space + d + f`            | Normal        | Find references              |
+| `space + d + n`            | Normal        | Next diagnostic              |
+| `space + d + p`            | Normal        | Previous diagnostic          |
 
-### AI Integration
+## ▶ Execution
 
-| Key Combination | Mode    | Description                     |
-| --------------- | ------- | ------------------------------- |
-| `space + c + c` | NORMAL  | Open AI chat                    |
-| `space + c + a` | NORMAL  | Open AI actions                 |
-| `space + c + h` | NORMAL  | Open AI Chat History            |
-| `gcs`           | In CHAT | Create summary for current chat |
-| `gbs`           | In CHAT | Browse saved chat summary       |
+| Key         | Mode   | Action                     |
+| ----------- | ------ | -------------------------- |
+| `space + r` | Normal | Run current file (.c, .py) |
 
-### Focus & Execution
+# 🔧 Git Configuration
 
-| Key Combination | Mode   | Description                    |
-| --------------- | ------ | ------------------------------ |
-| `space + z + z` | Normal | Toggle zen mode                |
-| `space + r`     | Normal | Execute current file (.c, .py) |
-
-## Git Configuration
-
-### Set Neovim as your default Git editor:
+### Set Neovim as default editor
 
 ```bash
 git config --global core.editor "nvim"
 ```
 
-### Add DeepSeek API
+# 🔐 Environment Variables
 
-```bash
-#~/.zshrc.local
+Add your DeepSeek API key:
+
+```
+ ~/.zshrc.local
 export DEEPSEEK_API_KEY="YOUR_API_KEY"
+```
+
+# 📦 Dotfile Management
+
+This setup uses GNU Stow to manage configuration files.
+Example:
+
+```
+stow nvim
+stow zsh
 ```
