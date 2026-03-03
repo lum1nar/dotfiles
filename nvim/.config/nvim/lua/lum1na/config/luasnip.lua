@@ -14,3 +14,7 @@ require("luasnip.loaders.from_vscode").load_standalone({
     path = "~/.config/nvim/lua/lum1na/snippets/css.code-snippets",
     lazy = true
 })
+require("luasnip.loaders.from_vscode").load_standalone({
+    path = "~/.config/nvim/lua/lum1na/snippets/plaintext.code-snippets",
+    lazy = true
+})
