@@ -12,8 +12,19 @@ require('telescope').setup {
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Find Files' })
+vim.keymap.set('n', '<C-f>', builtin.find_files, { desc = 'Find Files', noremap = true })
+
 vim.keymap.set('n', '<leader>pr', builtin.oldfiles, { desc = 'Find Recent Files' })
+vim.keymap.set('n', '<C-b>', builtin.oldfiles, { desc = 'Find Recent Files', noremap = true })
+
 vim.keymap.set('n', '<leader>pp', builtin.git_files, { desc = 'Find Git files' })
+vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Find Git files' })
+
+vim.keymap.set('n', '<leader>ps', function()
+    local search_term = vim.fn.input("Grep > ")
+    builtin.grep_string({ search = search_term })
+end, { desc = 'Telescope Search Files Containing Given Text' })
+
 vim.keymap.set('n', '<leader>ns', function()
     builtin.live_grep({ cwd = "~/obsidian/4 - 筆記/" })
 end, { desc = 'Find Note Content' })
@@ -21,10 +32,6 @@ end, { desc = 'Find Note Content' })
 vim.keymap.set('n', '<leader>nf', function()
     builtin.find_files({ cwd = "~/obsidian/4 - 筆記/" })
 end, { desc = 'Find Note Name' })
-
-vim.keymap.set('n', '<leader>ps', function()
-    local search_term = vim.fn.input("Grep > ")
-    builtin.grep_string({ search = search_term })
-end, { desc = 'Telescope Search Files Containing Given Text' }
-
-)
+vim.keymap.set('n', '<C-n>', function()
+    builtin.find_files({ cwd = "~/obsidian/4 - 筆記/" })
+end, { desc = 'Find Note Name' })

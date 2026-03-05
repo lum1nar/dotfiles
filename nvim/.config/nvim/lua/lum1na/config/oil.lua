@@ -202,3 +202,4 @@ require("oil").setup({
 })
 
 vim.keymap.set("n", "<leader>po", "<CMD>Oil<CR>", { desc = "Open parent directory with oil" })
+vim.keymap.set("n", "<C-o>", "<CMD>Oil<CR>", { desc = "Open parent directory with oil" })

@@ -123,6 +123,7 @@ alias gd='git diff'
 alias fcd='cd $(find ~ -type d -print | fzf)'
 alias vr='nvim $(find ~ -type f \( ! -path "*/.git/*" \) -print | fzf )'
 alias v='nvim $(find . -type f \( ! -path "*/.git/*" \) -print | fzf --preview "cat {}")'
+alias note='vim "$(find ~/obsidian/4\ -\ 筆記 | fzf)"'
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
