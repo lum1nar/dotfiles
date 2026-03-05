@@ -266,7 +266,6 @@ return require("lazy").setup({
                 desc = "Color pick under cursor",
             },
         },
-        ---@type oklch.Opts
         opts = {},
     },
 
@@ -363,6 +362,14 @@ return require("lazy").setup({
         -- Completion for `blink.cmp`
         -- dependencies = { "saghen/blink.cmp" },
     },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+            require("lum1na.config.lualine")
+        end
+
+    }
 
 }, {
     dev = {

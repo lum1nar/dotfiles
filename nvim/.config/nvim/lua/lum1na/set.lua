@@ -10,6 +10,8 @@ vim.opt.expandtab = true
 
 vim.opt.cursorline = true
 
+vim.opt.showmode = false
+
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
