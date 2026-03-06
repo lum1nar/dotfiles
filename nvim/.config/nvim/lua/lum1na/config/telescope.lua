@@ -6,6 +6,7 @@ require('telescope').setup {
     pickers = {
         find_files = {
             hidden = true, -- 開啟隱藏檔案
+            no_ignore = true
         }
     }
 }
