@@ -16,7 +16,7 @@ vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Find Files' })
 vim.keymap.set('n', '<C-f>', builtin.find_files, { desc = 'Find Files', noremap = true })
 
 vim.keymap.set('n', '<leader>pr', builtin.oldfiles, { desc = 'Find Recent Files' })
-vim.keymap.set('n', '<C-b>', builtin.oldfiles, { desc = 'Find Recent Files', noremap = true })
+vim.keymap.set('n', '<C-h>', builtin.oldfiles, { desc = 'Find Recent Files', noremap = true })
 
 vim.keymap.set('n', '<leader>pp', builtin.git_files, { desc = 'Find Git files' })
 vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Find Git files' })
