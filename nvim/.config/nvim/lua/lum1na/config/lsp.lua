@@ -23,8 +23,7 @@ require("lspconfig").lua_ls.setup {
             },
             telemetry = {
                 enable = false,
-            },
-        },
+            }, },
     },
 }
 
@@ -49,6 +48,7 @@ local servers = {
     'emmet_ls',    -- emmet-lsp
     'jsonls',      -- json-lsp
     'tailwindcss', -- tailwindcss-lsp
+    'prismals',    -- prisma-language-server
     -- 'docker_language_server', -- docker-lsp
 
 }
@@ -56,6 +56,7 @@ local servers = {
 local linter_formatters = {
     'black',    -- python
     'prettier', -- Multiple filetypes
+    'shfmt',    -- Bash
 }
 
 require('mason-lspconfig').setup({
@@ -84,8 +85,11 @@ local formatting_sources = {
 
     -- Markdown, HTML, CSS, JS, TS, Json
     none_ls.builtins.formatting.prettier.with({
-        filetypes = { "markdown", "html", "css", "javascript", "typescript", "json", "jsx", "tsx", "yaml" },
+        filetypes = { "markdown", "html", "css", "javascript", "typescript", "json", "jsx", "tsx", "yaml", "prisma" },
     }),
+
+    -- Bash
+    none_ls.builtins.formatting.shfmt,
 }
 
 none_ls.setup({
@@ -94,7 +98,7 @@ none_ls.setup({
 
 -- Format on save
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.py", "*.js", "*.ts", "*.lua", "*.c", "*.html", "*.css", "*.json", "*.md", "*.jsx", "*.tsx", "*.yaml" },
+    pattern = { "*.py", "*.js", "*.ts", "*.lua", "*.c", "*.html", "*.css", "*.json", "*.md", "*.jsx", "*.tsx", "*.yaml", "*.prisma", "*.sh" },
     callback = function()
         -- record current position, 0 is the window ID
         local pos = vim.api.nvim_win_get_cursor(0)
