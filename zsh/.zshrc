@@ -105,6 +105,15 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
+
+# Custom function
+zfzf() {
+  local dir
+  # 用 zoxide 列出所有常用路徑，再用 fzf 選
+  dir=$(zoxide query -ls | awk '{print $2}' | fzf +m) || return
+  cd "$dir" || return
+}
+
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
 # users are encouraged to define aliases within a top-level file in
@@ -120,10 +129,8 @@ alias ga='git add --all'
 alias gc='git commit'
 alias gs='git status'
 alias gd='git diff'
-alias fcd='cd $(find ~ -type d -print | fzf)'
-alias vr='nvim $(find ~ -type f \( ! -path "*/.git/*" \) -print | fzf )'
-alias v='nvim $(find . -type f \( ! -path "*/.git/*" \) -print | fzf --preview "cat {}")'
 alias note='vim "$(find ~/obsidian/4\ -\ 筆記 | fzf)"'
+alias zz="zfzf"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -207,3 +214,8 @@ mi=01;31:\
 *.pptx=01;31"
 
 export PATH=/home/lum1na/.local/bin:/home/lum1na/.nvm/versions/node/v20.19.5/bin:/home/lum1na/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+
+# Initialization Zoxide
+eval "$(zoxide init zsh)"
+
