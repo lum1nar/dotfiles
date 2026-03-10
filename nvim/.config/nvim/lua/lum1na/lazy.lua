@@ -158,20 +158,6 @@ return require("lazy").setup({
     },
 
     ---------------------------------------------------------------------------
-    -- Markdown Rendering
-    ---------------------------------------------------------------------------
-    -- { -- 打開 markdown 才載入
-    --     "MeanderingProgrammer/render-markdown.nvim",
-    --     ft = { "markdown", "md" },
-    --     dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' }, -- if you use the mini.nvim suite
-    --     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.icons' },        -- if you use standalone mini plugins
-    --     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-    --     config = function()
-    --         require("lum1na.config.render-markdown")
-    --     end
-    -- },
-
-    ---------------------------------------------------------------------------
     -- CodeCompanion + History
     ---------------------------------------------------------------------------
     { -- 指令輸入才載入
@@ -226,8 +212,6 @@ return require("lazy").setup({
         end
     },
 
-    -- { "ThePrimeagen/vim-be-good",             cmd = "VimBeGood" },
-
     { -- 直接載入
         "voldikss/vim-floaterm",
         config = function()
@@ -245,7 +229,6 @@ return require("lazy").setup({
                 desc = "Live Preview",
             },
         },
-
     },
 
     { "nvimtools/none-ls.nvim",               event = "BufReadPre" },
@@ -269,31 +252,12 @@ return require("lazy").setup({
         opts = {},
     },
 
-    ---------------------------------------------------------------------------
-    -- No Neck Pain
-    ---------------------------------------------------------------------------
-    -- {
-    --     "shortcuts/no-neck-pain.nvim",
-    --     version = "*",
-    --     config = function()
-    --         require("lum1na.config.no-neck-pain")
-    --     end,
-    --
-    -- },
-
-    ---------------------------------------------------------------------------
-    -- floating-toc
-    ---------------------------------------------------------------------------
-    -- {
-    --     dir = "~/nvim/myplugin/float-toc",
-    --     name = "float-toc"
-    -- },
-
     -------------------------------------------------------------------------
     -- float-toc
     -------------------------------------------------------------------------
     {
         "lum1nar/float-toc.nvim",
+        dev = false,
         opts = {
             -- your options here
         },
@@ -305,7 +269,7 @@ return require("lazy").setup({
 
     {
         "lum1nar/peep.nvim",
-        dev = true,
+        dev = false,
         config = function()
             require("peep").setup({
                 colors = {
