@@ -49,6 +49,7 @@ local servers = {
     'jsonls',      -- json-lsp
     'tailwindcss', -- tailwindcss-lsp
     'prismals',    -- prisma-language-server
+    'fish',        -- fish-language-server
     -- 'docker_language_server', -- docker-lsp
 
 }
@@ -85,7 +86,7 @@ local formatting_sources = {
 
     -- Markdown, HTML, CSS, JS, TS, Json
     none_ls.builtins.formatting.prettier.with({
-        filetypes = { "markdown", "html", "css", "javascript", "typescript", "json", "jsx", "tsx", "yaml", "prisma" },
+        filetypes = { "markdown", "html", "css", "javascript", "typescript", "json", "jsx", "tsx", "yaml", "prisma", "fish" },
     }),
 
     -- Bash
@@ -98,7 +99,7 @@ none_ls.setup({
 
 -- Format on save
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.py", "*.js", "*.ts", "*.lua", "*.c", "*.html", "*.css", "*.json", "*.md", "*.jsx", "*.tsx", "*.yaml", "*.prisma", "*.sh" },
+    pattern = { "*.py", "*.js", "*.ts", "*.lua", "*.c", "*.html", "*.css", "*.json", "*.md", "*.jsx", "*.tsx", "*.yaml", "*.prisma", "*.sh", "*.fish" },
     callback = function()
         -- record current position, 0 is the window ID
         local pos = vim.api.nvim_win_get_cursor(0)
