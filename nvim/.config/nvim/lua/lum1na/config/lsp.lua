@@ -49,7 +49,6 @@ local servers = {
     'jsonls',      -- json-lsp
     'tailwindcss', -- tailwindcss-lsp
     'prismals',    -- prisma-language-server
-    'fish',        -- fish-language-server
     -- 'docker_language_server', -- docker-lsp
 
 }
