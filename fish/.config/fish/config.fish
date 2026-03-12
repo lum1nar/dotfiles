@@ -3,6 +3,8 @@ set -x EDITOR nvim
 
 # Alias
 alias vim='nvim'
+alias ll="ls -lah"
+# alias ls="ls -a"
 alias gl='git log --graph --oneline --all'
 alias ga='git add --all'
 alias gc='git commit'

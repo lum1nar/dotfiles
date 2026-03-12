@@ -1,0 +1,5 @@
+pane	0	1	0	:-	0	~/dotfiles	:/home/lum1na/dotfiles	1	fish	:
+pane	0	2	1	:*	0	~/.t/resurrect	:/home/lum1na/dotfiles/tmux/.tmux/resurrect	1	fish	:fish
+window	0	1	:fish	0	:-	ba7d,127x43,0,0,0	:
+window	0	2	:fish	1	:*	ba7e,127x43,0,0,1	:
+state	0	
