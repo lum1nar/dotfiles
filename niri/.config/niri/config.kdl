@@ -289,7 +289,7 @@ hotkey-overlay {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -638,6 +638,8 @@ binds {
 window-rule {
   // Rounded corners for a modern look.
   geometry-corner-radius 20
+  draw-border-with-background false
+  opacity 0.97
 
   // Clips window contents to the rounded corner boundaries.
   clip-to-geometry true
@@ -650,8 +652,7 @@ debug {
 
 // Niri resurrect
 spawn-at-startup "firefox"
-spawn-at-startup "alacritty" "--class" "term-left"
-spawn-at-startup "alacritty" "--class" "term-right"
+spawn-at-startup "alacritty"
 spawn-at-startup "spotify"
 
 workspace "browser"
@@ -666,16 +667,11 @@ window-rule {
 
 
 window-rule {
-    match app-id="term-left"
+    match app-id="Alacritty"
     open-on-workspace "terminal"
-    default-column-width { proportion 0.333333 ;}
+    open-maximized true
 }
 
-window-rule {
-    match app-id="term-right"
-    open-on-workspace "terminal"
-    default-column-width { proportion 0.666667 ;}
-}
 
 window-rule {
     match app-id="spotify"

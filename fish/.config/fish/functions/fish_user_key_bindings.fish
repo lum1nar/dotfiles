@@ -6,3 +6,6 @@ bind -M default \cz zz
 
 bind -M insert \cv vim
 bind -M default \cv vim
+
+bind -M insert \cn note
+bind -M default \cn note

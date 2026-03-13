@@ -1,0 +1,14 @@
+pane	0	1	0	:	0	~/atlas	:/home/lum1na/atlas	0	fish	:
+pane	0	1	0	:	1	~/atlas	:/home/lum1na/atlas	1	fish	:[fish] <defunct>
+pane	0	2	0	:-	0	~/atlas	:/home/lum1na/atlas	1	fish	:[fish] <defunct>
+pane	0	2	0	:-	1	~/atlas	:/home/lum1na/atlas	0	fish	:
+pane	0	3	1	:*	0	~	:/home/lum1na	0	fish	:
+pane	0	3	1	:*	1	~	:/home/lum1na	1	fish	:
+pane	0	4	0	:	0	~	:/home/lum1na	1	fish	:
+pane	0	5	0	:	0	~/dotfiles	:/home/lum1na/dotfiles	1	fish	:
+window	0	1	:FE	0	:	df94,192x43,0,0{56x43,0,0,2,135x43,57,0,9}	off
+window	0	2	:BE	0	:-	f01d,192x43,0,0{56x43,0,0,1,135x43,57,0,10}	off
+window	0	3	:Shell	1	:*	5dc8,192x43,0,0{90x43,0,0,3,101x43,91,0,11}	off
+window	0	4	:Notes	0	:	b9c1,192x43,0,0,4	off
+window	0	5	:Dotfiles	0	:	b9c2,192x43,0,0,5	off
+state	0	
