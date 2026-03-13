@@ -107,6 +107,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 dynamic_title = true
 opacity = 0.98
 startup_mode = "Windowed"
+option_as_alt = "Both"
 
 
 [window.padding]
