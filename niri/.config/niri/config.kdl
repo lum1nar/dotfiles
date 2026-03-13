@@ -669,7 +669,7 @@ window-rule {
 window-rule {
     match app-id="Alacritty"
     open-on-workspace "terminal"
-    open-maximized true
+    default-column-width { proportion 0.8 ;}
 }
 
 

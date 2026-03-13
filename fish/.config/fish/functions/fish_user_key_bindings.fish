@@ -9,3 +9,6 @@ bind -M default \cv vim
 
 bind -M insert \cn note
 bind -M default \cn note
+
+bind -M insert \cr fzf_history
+bind -M default \cr fzf_history
