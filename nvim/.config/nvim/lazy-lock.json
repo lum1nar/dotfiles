@@ -41,5 +41,6 @@
   "smear-cursor.nvim": { "branch": "main", "commit": "abfa5835920b1d76c0e24e1465a618ad914be90a" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "undotree": { "branch": "master", "commit": "0f1c9816975b5d7f87d5003a19c53c6fd2ff6f7f" },
-  "vim-floaterm": { "branch": "master", "commit": "a720490bd9dc02c5492e800aa08d4802f22b01f8" }
+  "vim-floaterm": { "branch": "master", "commit": "a720490bd9dc02c5492e800aa08d4802f22b01f8" },
+  "vimtex": { "branch": "master", "commit": "82d2305ff71dfb3bd91602534cc9bb9a195bcb38" }
 }
