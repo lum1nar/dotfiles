@@ -2,10 +2,10 @@
 set -x EDITOR nvim
 
 # Open Tmux By Default
-if status is-interactive
-    and not set -q TMUX
-    exec tmux
-end
+# if status is-interactive
+#     and not set -q TMUX
+#     exec tmux
+# end
 
 # Alias
 alias vim='nvim'
