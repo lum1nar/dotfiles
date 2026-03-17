@@ -6,6 +6,7 @@ local servers = {
 	"lua_ls", -- lua-language-server
 	"marksman", -- markdown lsp
 	"vtsls", -- typescript-language-server
+	"eslint", -- eslint-lsp
 	"html", -- html-lsp
 	"cssls", -- css-lsp
 	"emmet_ls", -- emmet-lsp
