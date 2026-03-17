@@ -32,4 +32,10 @@ for line in (cat ~/.env)
 end
 
 set SPACEFISH_PROMPT_ORDER user dir host git package node docker ruby golang php rust haskell julia aws conda pyenv kubecontext exec_time line_sep battery jobs exit_code char
+
+# Show full directory name
 set SPACEFISH_DIR_TRUNC 0
+
+# if test -f ~/.config/fish/fzf-git.fish
+#     source ~/.config/fish/fzf-git.fish
+# end
