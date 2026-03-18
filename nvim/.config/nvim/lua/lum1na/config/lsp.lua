@@ -50,6 +50,9 @@ require("blink.cmp").setup({
 					-- and search for possible languages in: https://github.com/rafamadriz/friendly-snippets/blob/main/package.json
 					-- the following is just an example, you should only enable the frameworks that you use
 					extended_filetypes = {
+						typescript = { "javascript" },
+						typescriptreact = { "javascript" },
+						javascriptreact = { "javascript" },
 						markdown = { "jekyll" },
 						sh = { "shelldoc" },
 						php = { "phpdoc" },
