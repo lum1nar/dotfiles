@@ -6,8 +6,21 @@ return require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd("colorscheme rose-pine")
+			vim.cmd("colorscheme rose-pine-moon")
 			require("lum1na.config.rose-pine")
+		end,
+	},
+	{
+		"serhez/teide.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		config = function()
+			-- vim.cmd([[colorscheme teide-dimmed]])
+			require("lum1na.config.teide")
+			-- vim.schedule(function()
+			-- 	vim.cmd("colorscheme teide-dimmed")
+			-- end)
 		end,
 	},
 	{
@@ -253,6 +266,7 @@ return require("lazy").setup({
 		dependencies = {
 			"mason-org/mason-lspconfig.nvim",
 			"mason-org/mason.nvim",
+			"nvimtools/none-ls.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			"rafamadriz/friendly-snippets",
 			"stevearc/conform.nvim",

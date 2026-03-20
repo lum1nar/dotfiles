@@ -1,1 +1,2 @@
-require("lualine").setup()
+-- Lua
+require("lualine").setup({})

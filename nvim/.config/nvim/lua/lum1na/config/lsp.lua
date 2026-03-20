@@ -22,7 +22,19 @@ local linter_formatters = {
 	"prettier", -- Multiple filetypes
 	"shfmt", -- Bash
 	"stylua", -- lua
+	"pgformatter", -- postgres formatter
+	"sqlfluff", -- postgres linter
 }
+
+local null_ls = require("null-ls")
+
+null_ls.setup({
+	sources = {
+		null_ls.builtins.diagnostics.sqlfluff.with({
+			extra_args = { "--dialect", "postgres" }, -- change to your dialect
+		}),
+	},
+})
 
 require("mason").setup({
 	registries = { "github:crashdummyy/mason-registry", "github:mason-org/mason-registry" },
@@ -89,8 +101,8 @@ vim.diagnostic.config({
 		},
 	},
 	update_in_insert = false,
-	virtual_text = false,
-	virtual_lines = { current_line = true },
+	virtual_text = true,
+	-- virtual_lines = { current_line = true },
 })
 
 vim.lsp.config["lua_ls"] = {
@@ -131,6 +143,7 @@ require("conform").setup({
 		sh = { "shfmt" },
 		fish = { "prettier" },
 		lua = { "stylua" },
+		sql = { "pg_format" },
 	},
 
 	formatters = {
