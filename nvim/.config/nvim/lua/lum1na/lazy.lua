@@ -6,8 +6,18 @@ return require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd("colorscheme rose-pine-moon")
 			require("lum1na.config.rose-pine")
+			-- vim.cmd("colorscheme rose-pine-moon")
+		end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		config = function()
+			require("lum1na.config.tokyonight")
+			vim.cmd("colorscheme tokyonight-moon")
 		end,
 	},
 	{
@@ -273,6 +283,15 @@ return require("lazy").setup({
 			{ "saghen/blink.cmp", build = "cargo build --release" },
 		},
 		event = "VeryLazy",
+	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
 	},
 }, {
 	dev = {

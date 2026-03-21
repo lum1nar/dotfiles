@@ -195,7 +195,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [window]
 dynamic_title = true
-opacity = 0.98
+opacity = 0.9
 startup_mode = "Windowed"
 option_as_alt = "Both"
 
