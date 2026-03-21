@@ -60,7 +60,7 @@ dashboard.section.datetime = {
 	},
 }
 
-dashboard.section.footer.val = "山高萬仞，只登一步"
+dashboard.section.footer.val = "What are we breaking today?"
 dashboard.section.footer.opts = { position = "center", hl = "Comment" }
 
 -- 設定 layout
