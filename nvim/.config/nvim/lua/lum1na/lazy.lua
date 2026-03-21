@@ -41,15 +41,6 @@ return require("lazy").setup({
 		end,
 	},
 	{
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.8",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("lum1na.config.telescope")
-		end,
-		event = VeryLazy,
-	},
-	{
 		"nvim-treesitter/nvim-treesitter",
 		event = { "BufReadPre", "BufNewFile" },
 		run = ":TSUpdate",
@@ -291,6 +282,38 @@ return require("lazy").setup({
 			-- your configuration comes here
 			-- or leave it empty to use the default settings
 			-- refer to the configuration section below
+		},
+	},
+	{
+		"ibhagwan/fzf-lua",
+		-- optional for icon support
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		-- or if using mini.icons/mini.nvim
+		-- dependencies = { "nvim-mini/mini.icons" },
+		---@module "fzf-lua"
+		---@type fzf-lua.Config|{}
+		---@diagnostic disable: missing-fields
+		opts = {},
+		---@diagnostic enable: missing-fields
+
+		config = function()
+			require("lum1na.config.fzf-lua")
+		end,
+	},
+	-- lazy.nvim
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {
+			-- add any options here
+		},
+		dependencies = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
 		},
 	},
 }, {
