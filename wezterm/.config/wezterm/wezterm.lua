@@ -17,7 +17,7 @@ config.font = wezterm.font("0xProto Nerd Font")
 --
 config.front_end = "Software"
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.95
 
 config.underline_thickness = "1.5pt"
 

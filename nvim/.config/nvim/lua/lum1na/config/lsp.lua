@@ -105,6 +105,8 @@ vim.diagnostic.config({
 	-- virtual_lines = { current_line = true },
 })
 
+vim.keymap.set("n", "<leader><leader>", "<cmd> lua vim.diagnostic.open_float() <CR>")
+
 vim.lsp.config["lua_ls"] = {
 	cmd = { "lua-language-server" },
 	filetypes = { "lua" },
