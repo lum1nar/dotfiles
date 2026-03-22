@@ -19,6 +19,9 @@ alias gd='git diff'
 
 # vi-mode
 fish_vi_key_bindings
+function fish_vi_cursor
+    echo -ne "\e[2 q"
+end
 
 # zoxide
 zoxide init fish | source
@@ -31,7 +34,7 @@ for line in (cat ~/.env)
     set -x (string split '=' $line)
 end
 
-set SPACEFISH_PROMPT_ORDER user dir host git package node docker ruby golang php rust haskell julia aws conda pyenv kubecontext exec_time line_sep battery jobs exit_code char
+set SPACEFISH_PROMPT_ORDER vi_mode user dir host git package node docker ruby golang php rust haskell julia aws conda pyenv kubecontext exec_time line_sep battery jobs exit_code char
 
 # Show full directory name
 set SPACEFISH_DIR_TRUNC 0
