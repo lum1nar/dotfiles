@@ -88,7 +88,7 @@ output "HDMI-A-1" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@144.000"
+    mode "2560x1440@143.912"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
     scale 1.2
@@ -171,7 +171,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#56949A"
+        active-color "#48584E"
 
         // Color of the ring on inactive monitors.
         //
