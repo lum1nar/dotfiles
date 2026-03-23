@@ -638,7 +638,7 @@ window-rule {
   // Rounded corners for a modern look.
   geometry-corner-radius 20
   draw-border-with-background false
-  opacity 0.97
+  opacity 0.98
 
   // Clips window contents to the rounded corner boundaries.
   clip-to-geometry true

@@ -1,76 +1,76 @@
 # Colors section of "Alacritty - TOML configuration file format"
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#colors
 #
-# [colors.primary]
-# foreground = "#575279"
-# background = "#fcf1e1"
-# dim_foreground = "#797593"
-# bright_foreground = "#575279"
-# [colors.cursor]
-# text = "#575279"
-# cursor = "#d7827d"
-#
-# [colors.vi_mode_cursor]
-# text = "#575279"
-# cursor = "#d7827d"
-#
-# [colors.search.matches]
-# foreground = "#797593"
-# background = "#f2e9e1"
-#
-# [colors.search.focused_match]
-# foreground = "#faf4ed"
-# background = "#d7827e"
-#
-# [colors.hints.start]
-# foreground = "#797593"
-# background = "#fffaf3"
-#
-# [colors.hints.end]
-# foreground = "#9893a5"
-# background = "#fffaf3"
-#
-# [colors.line_indicator]
-# foreground = "None"
-# background = "None"
-#
-# [colors.footer_bar]
-# foreground = "#575279"
-# background = "#fffaf3"
-#
-# [colors.selection]
-# text = "#575279"
-# background = "#dfdad9"
-#
-# [colors.normal]
-# black = "#f2e9e1"
-# red = "#b4637a"
-# green = "#286983"
-# yellow = "#ea9d34"
-# blue = "#56949f"
-# magenta = "#907aa9"
-# cyan = "#d7827e"
-# white = "#575279"
-#
-# [colors.bright]
-# black = "#9893a5"
-# red = "#b4637a"
-# green = "#286983"
-# yellow = "#ea9d34"
-# blue = "#56949f"
-# magenta = "#907aa9"
-# cyan = "#d7827e"
-# white = "#575279"
-#
-# [colors.dim]
-# black = "#9893a5"
-# red = "#b4637a"
-# green = "#286983"
-# yellow = "#ea9d34"
-# blue = "#56949f"
-# magenta = "#907aa9"
-# cyan = "#d7827e"
-# white = "#575279"
+[colors.primary]
+foreground = "#575279"
+background = "#fcf1e1"
+dim_foreground = "#797593"
+bright_foreground = "#575279"
+[colors.cursor]
+text = "#575279"
+cursor = "#d7827d"
+
+[colors.vi_mode_cursor]
+text = "#575279"
+cursor = "#d7827d"
+
+[colors.search.matches]
+foreground = "#797593"
+background = "#f2e9e1"
+
+[colors.search.focused_match]
+foreground = "#faf4ed"
+background = "#d7827e"
+
+[colors.hints.start]
+foreground = "#797593"
+background = "#fffaf3"
+
+[colors.hints.end]
+foreground = "#9893a5"
+background = "#fffaf3"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.footer_bar]
+foreground = "#575279"
+background = "#fffaf3"
+
+[colors.selection]
+text = "#575279"
+background = "#dfdad9"
+
+[colors.normal]
+black = "#f2e9e1"
+red = "#b4637a"
+green = "#286983"
+yellow = "#ea9d34"
+blue = "#56949f"
+magenta = "#907aa9"
+cyan = "#d7827e"
+white = "#575279"
+
+[colors.bright]
+black = "#9893a5"
+red = "#b4637a"
+green = "#286983"
+yellow = "#ea9d34"
+blue = "#56949f"
+magenta = "#907aa9"
+cyan = "#d7827e"
+white = "#575279"
+
+[colors.dim]
+black = "#9893a5"
+red = "#b4637a"
+green = "#286983"
+yellow = "#ea9d34"
+blue = "#56949f"
+magenta = "#907aa9"
+cyan = "#d7827e"
+white = "#575279"
 
 
 # Rose pine moon
@@ -147,10 +147,10 @@
 # cyan = "#ea9a97"
 # white = "#e0def4"
 
-[general]
-import = [
-    "~/.config/alacritty/themes/themes/everforest_dark_medium.toml"
-]
+# [general]
+# import = [
+#     "~/.config/alacritty/themes/themes/rose_pine_dawn.toml.toml"
+# ]
 
 [cursor]
 style = "Block"
@@ -158,37 +158,37 @@ style = "Block"
 [font]
 size = 14.0
 
-# [font.bold]
-# family = "JetBrainsMono Nerd Font Mono"
-# style = "Bold"
-#
-# [font.bold_italic]
-# family = "JetBrainsMono Nerd Font Mono"
-# style = "Bold Italic"
-#
-# [font.italic]
-# family = "JetBrainsMono Nerd Font Mono"
-# style = "Bold Italic"
-#
-# [font.normal]
-# family = "JetBrainsMono Nerd Font Mono"
-# style = "Bold"
-
-[font.normal]
-family = "0xProto Nerd Font Mono"
-style = "Regular"
-
 [font.bold]
-family = "0xProto Nerd Font Mono"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Bold"
 
-[font.italic]
-family = "0xProto Nerd Font Mono"
-style = "Italic"
-
 [font.bold_italic]
-family = "0xProto Nerd Font Mono"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold"
+
+# [font.normal]
+# family = "0xProto Nerd Font Mono"
+# style = "Regular"
+#
+# [font.bold]
+# family = "0xProto Nerd Font Mono"
+# style = "Bold"
+#
+# [font.italic]
+# family = "0xProto Nerd Font Mono"
+# style = "Italic"
+#
+# [font.bold_italic]
+# family = "0xProto Nerd Font Mono"
+# style = "Bold Italic"
 
 [scrolling]
 history = 10000
@@ -200,7 +200,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [window]
 dynamic_title = true
-opacity = 0.95
+opacity = 0.98
 startup_mode = "Windowed"
 option_as_alt = "Both"
 

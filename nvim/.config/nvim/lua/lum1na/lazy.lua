@@ -1,15 +1,15 @@
 return require("lazy").setup({
 
 	--------------------------------------------------------------------------- Colorscheme ------------------------------------------------------------------------
-	-- {
-	-- 	"rose-pine/neovim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("lum1na.config.rose-pine")
-	-- 		-- vim.cmd("colorscheme rose-pine-dawn")
-	-- 	end,
-	-- },
+	{
+		"rose-pine/neovim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("lum1na.config.rose-pine")
+			vim.cmd("colorscheme rose-pine-dawn")
+		end,
+	},
 	-- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	-- {
 	-- 	"folke/tokyonight.nvim",
@@ -21,17 +21,17 @@ return require("lazy").setup({
 	-- 		-- vim.cmd("colorscheme tokyonight-moon")
 	-- 	end,
 	-- },
-	{
-		"sainnhe/everforest",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			-- Optionally configure and load the colorscheme
-			-- directly inside the plugin declaration.
-			require("lum1na.config.everforest")
-			vim.cmd.colorscheme("everforest")
-		end,
-	},
+	-- {
+	-- 	"sainnhe/everforest",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		-- Optionally configure and load the colorscheme
+	-- 		-- directly inside the plugin declaration.
+	-- 		require("lum1na.config.everforest")
+	-- 		vim.cmd.colorscheme("everforest")
+	-- 	end,
+	-- },
 	{
 		"serhez/teide.nvim",
 		lazy = false,
