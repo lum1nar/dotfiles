@@ -105,8 +105,6 @@ vim.diagnostic.config({
 	-- virtual_lines = { current_line = true },
 })
 
-vim.keymap.set("n", "<leader><leader>", "<cmd> lua vim.diagnostic.open_float() <CR>")
-
 vim.lsp.config["lua_ls"] = {
 	cmd = { "lua-language-server" },
 	filetypes = { "lua" },
@@ -214,5 +212,9 @@ end, { desc = "Format code" })
 -- Diagnostics
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, bufopts)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, bufopts)
+vim.keymap.set("n", "<leader>f", "<cmd> lua vim.diagnostic.open_float() <CR>")
 -- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, bufopts)
 -- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, bufopts)
+
+vim.keymap.set("n", "gai", require("fzf-lua").lsp_incoming_calls, { desc = "LSP Incoming Calls" })
+vim.keymap.set("n", "gao", require("fzf-lua").lsp_outgoing_calls, { desc = "LSP Outgoing Calls" })
