@@ -16,7 +16,6 @@ local servers = {
 	"docker_language_server", -- docker-lsp
 	"fish_lsp", -- fish-lsp
 }
-
 local linter_formatters = {
 	"black", -- python
 	"prettier", -- Multiple filetypes
@@ -27,7 +26,6 @@ local linter_formatters = {
 }
 
 local null_ls = require("null-ls")
-
 null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.sqlfluff.with({
@@ -75,7 +73,10 @@ require("blink.cmp").setup({
 		},
 	},
 	completion = {
-		documentation = { auto_show = true },
+		-- Show documentation when selecting a completion item
+		documentation = { auto_show = true, auto_show_delay_ms = 500 },
+		-- Display a preview of the selected item on the current line
+		-- ghost_text = { enabled = true },
 	},
 	keymap = {
 		preset = "none",
@@ -83,6 +84,15 @@ require("blink.cmp").setup({
 		["<C-k>"] = { "select_prev", "fallback" },
 		["<CR>"] = { "select_and_accept", "fallback" },
 	},
+})
+
+-- Enable border for all the floating window
+vim.o.winborder = "rounded"
+
+-- Float Window Highlight Group
+local float_border_fg = "#575279"
+vim.api.nvim_set_hl(0, "FloatBorder", {
+	fg = float_border_fg, -- 邊框顏色
 })
 
 vim.diagnostic.config({
@@ -100,10 +110,19 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.WARN] = "!",
 		},
 	},
+	float = {
+		border = "rounded",
+		source = "always",
+	},
 	update_in_insert = false,
-	virtual_text = true,
-	-- virtual_lines = { current_line = true },
+	virtual_text = false,
+	virtual_lines = { current_line = true },
 })
+
+-- Blink Highlight Group
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#fcf1e1", fg = "#575279" })
+vim.api.nvim_set_hl(0, "BlinkCmpDoc", { bg = "#fcf1e1", fg = "#575279" })
+vim.api.nvim_set_hl(0, "BlinkCmpDocSeparator", { bg = "#fcf1e1", fg = "#575279" })
 
 vim.lsp.config["lua_ls"] = {
 	cmd = { "lua-language-server" },
@@ -212,7 +231,7 @@ end, { desc = "Format code" })
 -- Diagnostics
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, bufopts)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, bufopts)
-vim.keymap.set("n", "<leader>f", "<cmd> lua vim.diagnostic.open_float() <CR>")
+vim.keymap.set("n", "<leader>d", "<cmd> lua vim.diagnostic.open_float() <CR>")
 -- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, bufopts)
 -- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, bufopts)
 

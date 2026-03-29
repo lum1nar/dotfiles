@@ -1,0 +1,18 @@
+pane	0	1	0	:	0	~/a/tinywins-web	:/home/lum1na/atlas/tinywins-web	1	fish	:
+pane	0	1	0	:	1	~/a/tinywins-web	:/home/lum1na/atlas/tinywins-web	0	fish	:
+pane	0	2	1	:*	0	docker compose up -- ~/a/tinywins-api	:/home/lum1na/atlas/tinywins-api	0	docker	:docker compose up --build
+pane	0	2	1	:*	1	~/a/tinywins-api	:/home/lum1na/atlas/tinywins-api	0	fish	:
+pane	0	2	1	:*	2	~/a/t/src	:/home/lum1na/atlas/tinywins-api/src	1	fish	:
+pane	0	3	0	:	0	~	:/home/lum1na	0	fish	:
+pane	0	3	0	:	1	~	:/home/lum1na	1	fish	:
+pane	0	4	0	:	0	~/d/n/.c/nvim	:/home/lum1na/dotfiles/nvim/.config/nvim	1	fish	:
+pane	0	5	0	:-	0	~	:/home/lum1na	1	fish	:
+pane	0	6	0	:	0	~/c/c/CompOrg2025_HW0	:/home/lum1na/clone/comporg/CompOrg2025_HW0	1	fish	:
+pane	0	6	0	:	1	nvim array_arith.c ~/c/c/C/CO_StudentID_HW0	:/home/lum1na/clone/comporg/CompOrg2025_HW0/CO_StudentID_HW0	0	nvim	:nvim array_arith.c
+window	0	1	:FE	0	:	4dcf,173x43,0,0{54x43,0,0,1,118x43,55,0,2}	off
+window	0	2	:BE	1	:*	07ba,173x43,0,0{54x43,0,0[54x21,0,0,3,54x21,0,22,4],118x43,55,0,5}	off
+window	0	3	:Shell	0	:	f5a7,173x43,0,0{80x43,0,0,6,92x43,81,0,7}	off
+window	0	4	:Dotfiles	0	:	b9c5,173x43,0,0,8	off
+window	0	5	:Notes	0	:-	b9c6,173x43,0,0,9	off
+window	0	6	:CompOrg	0	:	c3cf,173x43,0,0{49x43,0,0,10,123x43,50,0,11}	off
+state	0	
