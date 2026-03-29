@@ -74,7 +74,8 @@ require("blink.cmp").setup({
 	},
 	completion = {
 		-- Show documentation when selecting a completion item
-		documentation = { auto_show = true, auto_show_delay_ms = 500 },
+		documentation = { auto_show = true, auto_show_delay_ms = 500, window = { border = "rounded" } },
+		menu = { border = "rounded" },
 		-- Display a preview of the selected item on the current line
 		-- ghost_text = { enabled = true },
 	},
@@ -87,7 +88,8 @@ require("blink.cmp").setup({
 })
 
 -- Enable border for all the floating window
-vim.o.winborder = "rounded"
+-- not really ideal?
+-- vim.o.winborder = "rounded"
 
 -- Float Window Highlight Group
 local float_border_fg = "#575279"
