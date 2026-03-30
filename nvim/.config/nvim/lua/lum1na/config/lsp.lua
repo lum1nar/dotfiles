@@ -89,7 +89,7 @@ require("blink.cmp").setup({
 
 -- Enable border for all the floating window
 -- not really ideal?
--- vim.o.winborder = "rounded"
+vim.o.winborder = "rounded"
 
 -- Float Window Highlight Group
 local float_border_fg = "#575279"

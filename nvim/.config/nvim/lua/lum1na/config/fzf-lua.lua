@@ -20,7 +20,9 @@ fzf.setup({
 })
 
 vim.keymap.set("n", "<C-f>", fzf.files, { desc = "Find [F]iles", noremap = true })
-vim.keymap.set("n", "<C-h>", fzf.oldfiles, { desc = "Find [H]istory Files", noremap = true })
+vim.keymap.set("n", "<C-h>", function()
+	fzf.combine({ pickers = "buffers;oldfiles" })
+end, { desc = "Find [H]istory Files and Buffers", noremap = true })
 vim.keymap.set("n", "<C-p>", fzf.git_files, { desc = "Find [P]roject files" })
 vim.keymap.set("n", "<C-g>", fzf.live_grep_native, { desc = "Live [G]rep file" })
 
