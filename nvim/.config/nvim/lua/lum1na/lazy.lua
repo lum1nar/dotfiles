@@ -263,7 +263,28 @@ return require("lazy").setup({
 		config = function()
 			require("lum1na.config.lualine")
 		end,
+		opts = function(_, opts)
+			-- 確保 sections 和 lualine_c 存在
+			opts.sections = opts.sections or {}
+			opts.sections.lualine_c = opts.sections.lualine_c or {}
+			local trouble = require("trouble")
+			local symbols = trouble.statusline({
+				mode = "lsp_document_symbols",
+				groups = {},
+				title = false,
+				filter = { range = true },
+				format = "{kind_icon}{symbol.name:Normal}",
+				-- The following line is needed to fix the background color
+				-- Set it to the lualine section you want to use
+				hl_group = "lualine_c_normal",
+			})
+			table.insert(opts.sections.lualine_c, {
+				symbols.get,
+				cond = symbols.has,
+			})
+		end,
 	},
+
 	{
 		"lervag/vimtex",
 		lazy = false, -- we don't want to lazy load VimTeX
@@ -383,6 +404,10 @@ return require("lazy").setup({
 			},
 		},
 	},
+
+	-- Run Workspace Diagnostics
+	{ "artemave/workspace-diagnostics.nvim" },
+
 	{
 		"Bekaboo/dropbar.nvim",
 		-- optional, but required for fuzzy finder support

@@ -148,6 +148,12 @@ vim.lsp.config["lua_ls"] = {
 	},
 }
 
+vim.lsp.config["vtsls"] = {
+	on_attach = function(client, bufnr)
+		require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+	end,
+}
+
 require("conform").setup({
 	formatters_by_ft = {
 		python = { "black" },
