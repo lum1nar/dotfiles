@@ -15,6 +15,7 @@ local servers = {
 	"prismals", -- prisma-language-server
 	"docker_language_server", -- docker-lsp
 	"fish_lsp", -- fish-lsp
+	"jdtls", -- java-lsp
 }
 local linter_formatters = {
 	"black", -- python
