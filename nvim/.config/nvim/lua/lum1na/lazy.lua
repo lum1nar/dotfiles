@@ -32,19 +32,19 @@ return require("lazy").setup({
 	-- 		vim.cmd.colorscheme("everforest")
 	-- 	end,
 	-- },
-	{
-		"serhez/teide.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-		config = function()
-			-- vim.cmd([[colorscheme teide-dimmed]])
-			require("lum1na.config.teide")
-			-- vim.schedule(function()
-			-- 	vim.cmd("colorscheme teide-dimmed")
-			-- end)
-		end,
-	},
+	-- {
+	-- 	"serhez/teide.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	opts = {},
+	-- 	config = function()
+	-- 		-- vim.cmd([[colorscheme teide-dimmed]])
+	-- 		require("lum1na.config.teide")
+	-- 		-- vim.schedule(function()
+	-- 		-- 	vim.cmd("colorscheme teide-dimmed")
+	-- 		-- end)
+	-- 	end,
+	-- },
 	{
 		"goolord/alpha-nvim",
 		lazy = false,
@@ -73,13 +73,6 @@ return require("lazy").setup({
 			require("lum1na.config.undotree")
 		end,
 		event = VeryLazy,
-	},
-	{
-		"rcarriga/nvim-notify",
-		priority = 1000,
-		config = function()
-			require("lum1na.config.nvim-notify")
-		end,
 	},
 	{
 		"karb94/neoscroll.nvim",

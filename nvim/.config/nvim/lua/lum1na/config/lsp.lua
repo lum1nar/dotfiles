@@ -6,7 +6,6 @@ local servers = {
 	"lua_ls", -- lua-language-server
 	"marksman", -- markdown lsp
 	"vtsls", -- typescript-language-server
-	"eslint", -- eslint-lsp
 	"html", -- html-lsp
 	"cssls", -- css-lsp
 	"emmet_ls", -- emmet-lsp
@@ -16,6 +15,7 @@ local servers = {
 	"docker_language_server", -- docker-lsp
 	"fish_lsp", -- fish-lsp
 	"jdtls", -- java-lsp
+	"biome", -- ts linter
 }
 local linter_formatters = {
 	"black", -- python
@@ -158,10 +158,10 @@ vim.lsp.config["vtsls"] = {
 require("conform").setup({
 	formatters_by_ft = {
 		python = { "black" },
-		javascript = { "prettier" },
-		typescript = { "prettier" },
-		javascriptreact = { "prettier" },
-		typescriptreact = { "prettier" },
+		javascript = { "biome", "biome-organize-imports" },
+		typescript = { "biome", "biome-organize-imports" },
+		javascriptreact = { "biome", "biome-organize-imports" },
+		typescriptreact = { "biome", "biome-organize-imports" },
 		html = { "prettier" },
 		css = { "prettier" },
 		json = { "prettier" },
