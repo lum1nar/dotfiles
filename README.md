@@ -14,7 +14,7 @@
 - **Desktop Shell:** [Noctalia](https://github.com/m00nman/noctalia)
 - **Terminal:** Alacritty
 - **Shell:** Fish
-- **Editor:** Neovim (managed via Lazy.nvim)
+- **Editor:** Neovim
 - **File Manager:** Thunar / Ranger
 
 # Add Your LLM API key:
