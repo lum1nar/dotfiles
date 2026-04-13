@@ -10,7 +10,7 @@
 
 - **OS:** [Arch Linux](https://archlinux.org/)
 - **Display Server:** Wayland
-- **Window Manager:** [Niri](https://github.com/YaLTeR/niri) (Scrollable tiling compositor)
+- **Window Manager:** [Niri](https://github.com/YaLTeR/niri)
 - **Desktop Shell:** [Noctalia](https://github.com/m00nman/noctalia)
 - **Terminal:** Alacritty
 - **Shell:** Fish
