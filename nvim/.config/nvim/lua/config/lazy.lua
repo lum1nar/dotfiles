@@ -1,0 +1,65 @@
+local signs = require("utils").signs
+
+-- load lazy
+require("lazy").setup("plugins", {
+	install = { colorscheme = { "rose-pine" } },
+	defaults = { lazy = true },
+	checker = { enabled = false },
+	performance = {
+		cache = { enabled = true },
+		rtp = {
+			disabled_plugins = {
+				"2html_plugin",
+				"getscript",
+				"getscriptPlugin",
+				"gzip",
+				"logipat",
+				"matchit",
+				"matchparen",
+				"netrw",
+				"netrwPlugin",
+				"netrwSettings",
+				"netrwFileHandlers",
+				"rrhelper",
+				"spellfile_plugin",
+				"tar",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"vimball",
+				"vimballPlugin",
+				"zip",
+				"zipPlugin",
+			},
+		},
+	},
+	debug = false,
+	ui = {
+		size = { width = 0.8, height = 0.8 },
+		icons = {
+			loaded = signs.PassCheck,
+			not_loaded = signs.QuestionMark,
+			cmd = signs.Cmd,
+			config = signs.Config,
+			event = signs.Event,
+			ft = signs.File,
+			init = signs.Config,
+			keys = signs.Keyboard,
+			plugin = signs.Package,
+			runtime = signs.Vim,
+			source = signs.Code,
+			start = signs.Init,
+			task = signs.CheckAlt,
+			lazy = signs.Loading,
+			list = {
+				"●",
+				"➜",
+				"★",
+				"‒",
+			},
+		},
+	},
+	dev = {
+		path = "~/nvim-plugin",
+	},
+})
