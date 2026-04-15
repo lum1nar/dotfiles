@@ -19,7 +19,7 @@
 
 # Add Your LLM API key:
 
-```
+```bash
  ~/.env
 OPENROUTER_API_KEY="YOUR_API_KEY"
 ```
@@ -29,7 +29,7 @@ OPENROUTER_API_KEY="YOUR_API_KEY"
 This setup uses GNU Stow to manage configuration files.
 Example:
 
-```
+```bash
 stow nvim
 stow zsh
 ```

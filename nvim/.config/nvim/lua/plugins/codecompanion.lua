@@ -12,9 +12,9 @@ return {
 					layout = "vertical", -- float|vertical|horizontal|tab|buffer
 					full_height = true, -- for vertical layout
 					position = nil, -- left|right|top|bottom (nil will default depending on vim.opt.splitright|vim.opt.splitbelow)
-
 					-- NOTE: You can set these to 0 for auto width/height
-					width = 0.25, ---@return number|fun(): number
+
+					width = 0.35, ---@return number|fun(): number
 					height = 0.8, ---@return number|fun(): number
 
 					border = "single",
@@ -29,14 +29,10 @@ return {
 				},
 			},
 		},
-		interactions = {
-			chat = {
-				adapter = "openrouter",
-			},
-			inline = {
-				adapter = "openrouter",
-			},
-		},
+		interactions = { chat = {
+			adapter = "openrouter",
+			adapter = "openrouter",
+		}, inline = {} },
 		adapters = {
 			http = {
 				openrouter = function()
@@ -65,18 +61,24 @@ return {
 	},
 	keys = {
 		{
-			"<leader>aa",
+			"<C-a>",
 			"<cmd>CodeCompanionActions<cr>",
 			desc = "AI Actions",
 		},
 		{
-			"<leader>ac",
+			"<leader>a",
 			"<cmd>CodeCompanionChat Toggle<cr>",
 			desc = "AI Chat Toggle",
 		},
+		-- {
+		-- 	"<leader>av",
+		-- 	"<cmd>CodeCompanionChat Add<cr>",
+		-- 	mode = "v",
+		-- 	desc = "Paste Selection to Chat Buffer",
+		-- },
 		{
-			"<leader>av",
-			"<cmd>CodeCompanionChat Add<cr>",
+			"ga",
+			"<cmd>CodeCompanionChat Add<cr><esc>",
 			mode = "v",
 			desc = "Paste Selection to Chat Buffer",
 		},
