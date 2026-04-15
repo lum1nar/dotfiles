@@ -9,22 +9,8 @@ return {
 		},
 	},
 	{
-		"OXY2DEV/markview.nvim",
 		ft = { "markdown", "codecompanion" },
-		opts = {
-			preview = {
-				filetypes = { "markdown", "codecompanion" },
-				ignore_buftypes = {},
-			},
-		},
-		config = function()
-			local presets = require("markview.presets")
-
-			require("markview").setup({
-				markdown = {
-					headings = presets.headings.slanted,
-				},
-			})
-		end,
+		"MeanderingProgrammer/render-markdown.nvim",
+		opts = {},
 	},
 }
