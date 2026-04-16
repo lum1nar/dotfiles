@@ -11,6 +11,10 @@ return {
 	{
 		ft = { "markdown", "codecompanion" },
 		"MeanderingProgrammer/render-markdown.nvim",
-		opts = {},
+		opts = {
+			code = {
+				disable_background = {},
+			},
+		},
 	},
 }
