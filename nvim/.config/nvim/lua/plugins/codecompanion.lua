@@ -9,12 +9,12 @@ return {
 					buflisted = false, -- List the chat buffer in the buffer list?
 					sticky = false, -- Chat window follows when switching tabs
 
-					layout = "vertical", -- float|vertical|horizontal|tab|buffer
+					layout = "float", -- float|vertical|horizontal|tab|buffer
 					full_height = true, -- for vertical layout
 					position = nil, -- left|right|top|bottom (nil will default depending on vim.opt.splitright|vim.opt.splitbelow)
 					-- NOTE: You can set these to 0 for auto width/height
 
-					width = 0.35, ---@return number|fun(): number
+					width = 0.6, ---@return number|fun(): number
 					height = 0.8, ---@return number|fun(): number
 
 					border = "single",
@@ -30,7 +30,6 @@ return {
 			},
 		},
 		interactions = { chat = {
-			adapter = "openrouter",
 			adapter = "openrouter",
 		}, inline = {} },
 		adapters = {

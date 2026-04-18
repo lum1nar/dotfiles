@@ -2,7 +2,7 @@ local signs = require("utils").signs
 
 -- load lazy
 require("lazy").setup("plugins", {
-	install = { colorscheme = { "rose-pine" } },
+	-- install = { colorscheme = { "rose-pine" } },
 	defaults = { lazy = true },
 	checker = { enabled = false },
 	performance = {

@@ -18,6 +18,9 @@ vim.g.clipboard = {
 	},
 }
 
+-- what to save in sessions
+vim.o.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize"
+
 -- enable current line highlighting
 opt.cursorline = true
 
