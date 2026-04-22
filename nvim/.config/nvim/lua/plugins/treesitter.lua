@@ -1,13 +1,33 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		branch = "master",
+		branch = "main",
 		build = ":TSUpdate",
 		-- Do not lazy load tree-sitter
 		lazy = false,
 		opts = {
-			-- A list of parser names, or "all" (the listed parsers MUST always be installed)
-			ensure_installed = {
+			highlight = {
+				enable = true,
+
+				disable = { "dockerfile" },
+				-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+				-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+				-- Using this option may slow down your editor, and you may see some duplicate highlights.
+				-- Instead of true it can also be a list of languages
+				additional_vim_regex_highlighting = false,
+			},
+		},
+		init = function()
+			vim.api.nvim_create_autocmd("FileType", {
+				callback = function()
+					-- Enable treesitter highlighting and disable regex syntax
+					pcall(vim.treesitter.start)
+					-- Enable treesitter-based indentation
+					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				end,
+			})
+
+			local ensureInstalled = {
 				"lua",
 				"vim",
 				"vimdoc",
@@ -25,32 +45,18 @@ return {
 				"yaml",
 				"latex",
 				"sql",
-			},
+			}
 
-			-- Install parsers synchronously (only applied to `ensure_installed`)
-			sync_install = false,
+			local alreadyInstalled = require("nvim-treesitter.config").get_installed()
 
-			-- Automatically install missing parsers when entering buffer
-			-- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-			--
-			auto_install = true,
-
-			highlight = {
-				enable = true,
-
-				disable = { "dockerfile" },
-				-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-				-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-				-- Using this option may slow down your editor, and you may see some duplicate highlights.
-				-- Instead of true it can also be a list of languages
-				additional_vim_regex_highlighting = false,
-			},
-			-- lazy plugin manager calls "nvim-treesitter".setup(opts) rather than the config setup as shown below
-			-- that's why it won't automatically install parsers
-			config = function(_, opts)
-				require("nvim-treesitter.configs").setup(opts)
-			end,
-		},
+			local parsersToInstall = vim.iter(ensureInstalled)
+				:filter(function(parser)
+					return not vim.tbl_contains(alreadyInstalled, parser)
+				end)
+				:totable()
+			require("nvim-treesitter").install(parsersToInstall)
+			-- ...
+		end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",

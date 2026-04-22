@@ -1,0 +1,18 @@
+pane	0	1	0	:	0	~/a/tinywins-web	:/home/lum1na/atlas/tinywins-web	1	fish	:
+pane	0	1	0	:	1	~/a/tinywins-web	:/home/lum1na/atlas/tinywins-web	0	fish	:
+pane	0	2	1	:*	0	~/a/socket-programming	:/home/lum1na/atlas/tinywins-api	1	fish	:
+pane	0	2	1	:*	1	~/a/socket-programming	:/home/lum1na/atlas/tinywins-api	0	fish	:
+pane	0	2	1	:*	2	~/a/socket-programming	:/home/lum1na/atlas/tinywins-api	0	fish	:
+pane	0	3	0	:	0	~/P/Screenshots	:/home/lum1na/Pictures/Screenshots	1	fish	:
+pane	0	3	0	:	1	~	:/home/lum1na	0	fish	:
+pane	0	4	0	:	0	~/d/n/.c/nvim	:/home/lum1na/dotfiles/nvim/.config/nvim	1	fish	:
+pane	0	5	0	:	0	~	:/home/lum1na	1	fish	:
+pane	0	6	0	:-	0	vim src/main.c ~/c/c/CO2026PA2	:/home/lum1na/clone/comporg/CO2026PA2	1	nvim	:nvim src/main.c
+pane	0	6	0	:-	1	docker exec -it tiny ~/c/c/C/src	:/home/lum1na/clone/comporg/CO2026PA2/src	0	docker	:docker exec -it tinywins-api-db-1 bin/bash
+window	0	1	:FE	0	:	9e0a,208x50,0,0{72x50,0,0,1,135x50,73,0,2}	off
+window	0	2	:BE	1	:*	78c3,208x50,0,0{161x50,0,0,3,46x50,162,0[46x25,162,0,12,46x24,162,26,13]}	off
+window	0	3	:Shell	0	:	5d67,208x50,0,0{98x50,0,0,6,109x50,99,0,7}	off
+window	0	4	:Dotfiles	0	:	b0a5,208x50,0,0,8	off
+window	0	5	:Notes	0	:	b0a6,208x50,0,0,9	off
+window	0	6	:CompOrg	0	:-	a3f3,208x50,0,0{154x50,0,0,10,53x50,155,0,11}	off
+state	0	
