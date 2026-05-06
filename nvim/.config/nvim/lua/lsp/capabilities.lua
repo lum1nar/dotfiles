@@ -9,25 +9,6 @@ vim.lsp.config("*", {
 	root_markers = { ".git" },
 })
 
-vim.lsp.config("lua_ls", {
-	settings = {
-		Lua = {
-			workspace = { checkThirdParty = false },
-			codeLens = { enable = true },
-			completion = { callSnippet = "Replace" },
-			diagnostics = {
-				globals = { "vim" }, -- suppress undefined global vim diagnostics
-			},
-
-			hint = {
-				enable = true,
-				arrayIndex = "Disable",
-			},
-			doc = { privateName = { "^_" } },
-		},
-	},
-})
-
 vim.lsp.config("tailwindcss", {
 	filetypes = {
 		"html",

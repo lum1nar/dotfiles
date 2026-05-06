@@ -42,3 +42,6 @@ set SPACEFISH_DIR_TRUNC 0
 # if test -f ~/.config/fish/fzf-git.fish
 #     source ~/.config/fish/fzf-git.fish
 # end
+
+# use uv installed tools
+fish_add_path $HOME/.local/bin

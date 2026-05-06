@@ -43,8 +43,8 @@ return {
 		},
 		keymap = {
 			fzf = {
-				["tab"] = "down",
-				["shift-tab"] = "up",
+				-- ["tab"] = "down",
+				-- ["shift-tab"] = "up",
 			},
 		},
 		fzf_colors = {

@@ -1,0 +1,64 @@
+return {
+	-- 	"milanglacier/minuet-ai.nvim",
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		require("minuet").setup({
+	-- 			-- Your configuration options here
+	-- 			provider = "openai_compatible",
+	-- 			request_timeout = 2.5,
+	-- 			throttle = 1500, -- Increase to reduce costs and avoid rate limits
+	-- 			debounce = 600, -- Increase to reduce costs and avoid rate limits
+	-- 			provider_options = {
+	-- 				openai_compatible = {
+	-- 					api_key = "OPENROUTER_API_KEY",
+	-- 					end_point = "https://openrouter.ai/api/v1/chat/completions",
+	-- 					model = "deepseek/deepseek-v4-flash",
+	-- 					name = "Openrouter",
+	-- 					optional = {
+	-- 						max_tokens = 86,
+	-- 						top_p = 0.9,
+	-- 						provider = {
+	-- 							-- Prioritize throughput for faster completion
+	-- 							sort = "throughput",
+	-- 						},
+	-- 						-- disable thinking to avoid first token latency
+	-- 						reasoning_effort = "none",
+	-- 					},
+	-- 				},
+	-- 			},
+	-- 			duet = {
+	-- 				provider = "openai_compatible",
+	-- 				provider_options = {
+	-- 					openai_compatible = {
+	-- 						model = "deepseek/deepseek-v4-flash",
+	-- 						optional = {
+	-- 							-- Disable thinking is recommended.
+	-- 							reasoning_effort = "none",
+	-- 							-- prioritize throughput for faster completion
+	-- 							provider = {
+	-- 								sort = "throughput",
+	-- 							},
+	-- 						},
+	-- 					},
+	-- 				},
+	-- 			},
+	-- 			virtualtext = {
+	-- 				auto_trigger_ft = { "*" },
+	-- 				keymap = {
+	-- 					-- accept whole completion
+	-- 					accept = "<C-a>",
+	-- 					-- accept one line
+	-- 					accept_line = "<C-l>",
+	-- 					-- accept n lines (prompts for number)
+	-- 					-- e.g. "A-z 2 CR" will accept 2 lines
+	-- 					accept_n_lines = "<A-z>",
+	-- 					-- Cycle to prev completion item, or manually invoke completion
+	-- 					prev = "<A-[>",
+	-- 					-- Cycle to next completion item, or manually invoke completion
+	-- 					next = "<A-]>",
+	-- 					dismiss = "<A-e>",
+	-- 				},
+	-- 			},
+	-- 		})
+	-- 	end,
+}
