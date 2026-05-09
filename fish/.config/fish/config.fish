@@ -45,3 +45,4 @@ set SPACEFISH_DIR_TRUNC 0
 
 # use uv installed tools
 fish_add_path $HOME/.local/bin
+

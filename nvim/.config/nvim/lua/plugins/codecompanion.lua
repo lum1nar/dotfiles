@@ -106,7 +106,7 @@ return {
 					-- Summary system
 					summary = {
 						-- Keymap to generate summary for current chat (default: "gcs")
-						create_summary_keymap = "gcs",
+						create_summary_keymap = "ggs",
 						-- Keymap to browse summaries (default: "gbs")
 						browse_summaries_keymap = "gbs",
 

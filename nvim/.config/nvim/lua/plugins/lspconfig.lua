@@ -57,6 +57,7 @@ return {
 				"fish_lsp", -- fish-lsp
 				"jdtls", -- java-lsp
 				"biome", -- ts linter
+				"rust_analyzer", -- rust lsp
 				-- "copilot",
 			},
 			automatic_enable = true,

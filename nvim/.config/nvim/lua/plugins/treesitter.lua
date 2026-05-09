@@ -46,6 +46,7 @@ return {
 				"yaml",
 				"latex",
 				"sql",
+				"rust",
 			}
 
 			local alreadyInstalled = require("nvim-treesitter.config").get_installed()

@@ -47,28 +47,28 @@ return {
 			-- refer to the configuration section below
 		},
 	},
-	{
-		"lum1nar/peep.nvim",
-		dev = false,
-		lazy = false,
-		opts = {
-			colors = {
-				label_main = { fg = "#A72703", bg = "#FCB53B" },
-				label_sub = { fg = "#FCB53B", bg = "#44415a" },
-				line_aux = { fg = "#9893a5" },
-				line_preview = { fg = "#7aa2f7" },
-			},
-
-			peep = {
-				duration = 700,
-				column = false,
-				auxline_icon = "·",
-				key_trigger = true,
-				trigger_keys = { "y", "d", "c", "v", "V" },
-				line_preview = true,
-			},
-		},
-	},
+	-- {
+	-- 	"lum1nar/peep.nvim",
+	-- 	dev = false,
+	-- 	lazy = false,
+	-- 	opts = {
+	-- 		colors = {
+	-- 			label_main = { fg = "#A72703", bg = "#FCB53B" },
+	-- 			label_sub = { fg = "#FCB53B", bg = "#44415a" },
+	-- 			line_aux = { fg = "#9893a5" },
+	-- 			line_preview = { fg = "#7aa2f7" },
+	-- 		},
+	--
+	-- 		peep = {
+	-- 			duration = 700,
+	-- 			column = false,
+	-- 			auxline_icon = "·",
+	-- 			key_trigger = true,
+	-- 			trigger_keys = { "y", "d", "c", "v", "V" },
+	-- 			line_preview = true,
+	-- 		},
+	-- 	},
+	-- },
 	{
 		"folke/lazydev.nvim",
 		ft = "lua", -- only load on lua files
