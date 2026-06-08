@@ -12,12 +12,12 @@ return {
 				window = {
 					buflisted = false, -- List the chat buffer in the buffer list?
 					sticky = false, -- Chat window follows when switching tabs
-					layout = "float", -- float|vertical|horizontal|tab|buffer
+					layout = "vertical", -- float|vertical|horizontal|tab|buffer
 					full_height = true, -- for vertical layout
 					position = nil, -- left|right|top|bottom (nil will default depending on vim.opt.splitright|vim.opt.splitbelow)
 					-- NOTE: You can set these to 0 for auto width/height
 
-					width = 0.5, ---@return number|fun(): number
+					width = 0.4, ---@return number|fun(): number
 					height = 0.8, ---@return number|fun(): number
 					border = "single",
 					relative = "editor", -- Ensure that long paragraphs of markdown are wrapped
@@ -143,11 +143,11 @@ return {
 		},
 	},
 	keys = {
-		{
-			"<C-a>",
-			"<cmd>CodeCompanionActions<cr>",
-			desc = "AI Actions",
-		},
+		-- {
+		-- 	"<C-a>",
+		-- 	"<cmd>CodeCompanionActions<cr>",
+		-- 	desc = "AI Actions",
+		-- },
 		{
 			"<leader>a",
 			"<cmd>CodeCompanionChat Toggle<cr>",

@@ -12,10 +12,10 @@ return {
 				accept = "<Tab>",
 				accept_word = false,
 				accept_line = false,
-				next = "<C-s>",
+				next = "<M-]>",
 				prev = "<M-[>",
 				dismiss = "<C-]>",
-				toggle_auto_trigger = false,
+				toggle_auto_trigger = "<C-s>",
 			},
 		},
 		nes = {

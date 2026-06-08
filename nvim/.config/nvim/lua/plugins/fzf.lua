@@ -29,10 +29,10 @@ return {
 			["--layout"] = "reverse",
 		},
 		winopts = {
-			height = 0.80,
-			width = 0.87,
+			height = 0.60,
+			width = 0.4,
 			preview = {
-				horizontal = "right:55%",
+				horizontal = "right:40%",
 			},
 		},
 		files = {
