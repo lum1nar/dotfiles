@@ -9,7 +9,7 @@ return {
 		},
 	},
 	{
-		ft = { "markdown", "codecompanion" },
+		ft = { "markdown", "codecompanion", "codecompanion_input" },
 		"MeanderingProgrammer/render-markdown.nvim",
 		opts = {
 			heading = {
@@ -25,7 +25,7 @@ return {
 				min_width = 30,
 			},
 			code = {
-				disable_background = {},
+				disable_background = { "diff" },
 				-- position = "right",
 				width = "block",
 				right_pad = 10,

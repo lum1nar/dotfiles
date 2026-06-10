@@ -3,12 +3,14 @@ return {
 	dependencies = {
 		--other plugins
 		"ravitemer/codecompanion-history.nvim",
+		-- "mrjones2014/codecompanion-ui.nvim",
+		{ "lum1nar/codecompanion-ui.nvim", branch = "fix/choices-table-check" },
 	},
 	version = "^19.0.0",
 	opts = {
 		display = {
 			chat = {
-				auto_scroll = false,
+				auto_scroll = true,
 				window = {
 					buflisted = false, -- List the chat buffer in the buffer list?
 					sticky = false, -- Chat window follows when switching tabs
@@ -35,6 +37,15 @@ return {
 		interactions = {
 			chat = {
 				adapter = "openrouter",
+				tools = {
+					["insert_edit_into_file"] = {
+						opts = {
+							require_approval_before = {
+								buffer = true,
+							},
+						},
+					},
+				},
 			},
 		},
 		adapters = {
@@ -49,6 +60,16 @@ return {
 						schema = {
 							model = {
 								default = "google/gemini-3-flash-preview",
+								-- choices = {
+								-- 	["o3-mini-2025-01-31"] = { opts = { can_reason = true } },
+								-- 	["o1-2024-12-17"] = { opts = { can_reason = true } },
+								-- 	["o1-mini-2024-09-12"] = { opts = { can_reason = true } },
+								-- 	"claude-3.5-sonnet",
+								-- 	"claude-3.7-sonnet",
+								-- 	"claude-3.7-sonnet-thought",
+								-- 	"gpt-4o-2024-08-06",
+								-- 	"gemini-2.0-flash-001",
+								-- },
 							},
 						},
 					})
@@ -137,6 +158,63 @@ return {
 						-- Index all existing memories on startup
 						-- (requires VectorCode 0.6.12+ for efficient incremental indexing)
 						index_on_startup = false,
+					},
+				},
+			},
+
+			ui = {
+				enabled = true,
+				-- the default settings are shown here;
+				-- you only need to specify non-default options
+				opts = {
+					input = {
+						height = 10,
+						-- Placeholder shown when the input buffer is empty
+						placeholder = "Type your message...",
+						-- set to `{}` to disable,
+						-- see `./lua/codecompanion-ui/components.lua`
+						-- for built in components and their options.
+						-- feel free to put up a PR with more components!
+						winbar = {
+							{
+								component = "mode",
+								display_names = {},
+								icons = {
+									default = "󰺴",
+									acceptEdits = "󱐋",
+									plan = "󰙬",
+									dontAsk = "󰝟",
+									bypassPermissions = "",
+								},
+							},
+							{ component = "adapter" },
+							{ component = "model" },
+							{
+								component = "spinner",
+								interval_ms = 100,
+								frames = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
+								text = "Processing...",
+							},
+							"%=",
+							-- shows some status messages from the plugin briefly
+							-- I recommend keeping this enabled
+							{ component = "messages" },
+						},
+					},
+					chat = {
+						-- Chat window width as a fraction of the screen (0.0-1.0)
+						width = 0.35,
+						-- Winbar for the chat (output) window.
+						-- Same format as input.winbar.
+						winbar = {
+							winbar = {
+								{
+									component = "chat_title",
+									icon = "󰭹",
+									default = "[No Title]",
+								},
+							},
+						},
 					},
 				},
 			},

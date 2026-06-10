@@ -3,6 +3,10 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	lazy = false,
 	opts = function(_, opts)
+		opts.options = opts.options or {}
+		opts.options.disabled_filetypes = {
+			statusline = { "codecompanion", "codecompanion_input", "neo-tree" },
+		}
 		-- 確保 sections 和 lualine_c 存在
 		opts.sections = opts.sections or {}
 		opts.sections.lualine_c = opts.sections.lualine_c or {}
