@@ -1,5 +1,4 @@
 local wk = require("which-key")
-local utils = require("utils")
 
 -- Better window navigation
 vim.keymap.set("n", "<C-j>", "<C-w>j")
@@ -14,8 +13,8 @@ vim.keymap.set("n", "<S-Left>", "<CMD>vertical resize -2<CR>")
 vim.keymap.set("n", "<S-Right>", "<CMD>vertical resize +2<CR>")
 
 -- Switch buffers with tab
-vim.keymap.set("n", "<S-TAB>", "<CMD>BufferLineCyclePrev<CR>")
-vim.keymap.set("n", "<TAB>", "<CMD>BufferLineCycleNext<CR>")
+vim.keymap.set("n", "<S-TAB>", "<CMD>bprev<CR>")
+vim.keymap.set("n", "<TAB>", "<CMD>bnext<CR>")
 
 -- Clear search with <esc>
 vim.keymap.set({ "i", "n" }, "<esc>", "<CMD>noh<CR><esc>")
@@ -94,11 +93,12 @@ vim.keymap.set("n", "<leader>nc", createNote, { desc = "Create New Note" })
 
 wk.add({
 	{ "<leader>b", group = "buffer" },
-	{ "<leader>bc", "<CMD>BufferLineCloseOthers<CR>", desc = "delete all buffers but current" },
+	-- { "<leader>bc", "<CMD>BufferLineCloseOthers<CR>", desc = "delete all buffers but current" },
 	{ "<leader>bd", "<CMD>bp|bd #<CR>", desc = "delete buffer" },
-	{ "<leader>bp", "<CMD>BufferLineTogglePin<CR>", desc = "pin buffer" },
-	{ "<leader>bl", "<CMD>BufferLineMoveNext<CR>", desc = "move buffer right" },
-	{ "<leader>bh", "<CMD>BufferLineMovePrev<CR>", desc = "move buffer left" },
+	-- { "<leader>bp", "<CMD>BufferLineTogglePin<CR>", desc = "pin buffer" },
+	-- { "<leader>bl", "<CMD>BufferLineMoveNext<CR>", desc = "move buffer right" },
+	-- { "<leader>bh", "<CMD>BufferLineMovePrev<CR>", desc = "move buffer left" },
+
 	{ "<leader>f", group = "file" },
 	{ "<leader>ff", "<CMD>FzfLua files<CR>", desc = "find file" },
 	{ "<leader>fp", "<CMD>FzfLua git_files<CR>", desc = "find project file" },
@@ -114,32 +114,37 @@ wk.add({
 	},
 	{ "<leader>ft", "<CMD>FloatTOC<CR>", desc = "Toggle Floating TOC" },
 	{ "<leader>fr", "<CMD>FzfLua combine pickers=buffers;oldfiles<CR>", desc = "open recent file" },
+
 	{ "<leader>h", group = "help" },
 	{ "<leader>hc", "<CMD>FzfLua commands<CR>", desc = "commands" },
 	{ "<leader>hh", "<CMD>:checkhealth<CR>", desc = "check health" },
 	{ "<leader>hk", "<CMD>FzfLua keymaps<CR>", desc = "keymaps" },
 	{ "<leader>hp", "<CMD>Lazy<CR>", desc = "package manager" },
 	{ "<leader>hs", "<CMD>FzfLua highlights<CR>", desc = "search highlight groups" },
+
 	{ "<leader>g", group = "git" },
 	{ "<leader>gc", "<CMD>FzfLua git_commits<CR>", desc = "commits" },
 	{ "<leader>gs", "<CMD>FzfLua git_status<CR>", desc = "status" },
 	{ "<leader>n", group = "filetree" },
 	{ "<leader>nn", "<CMD>Neotree<CR>", desc = "file explorer" },
 	{ "<leader>nr", "<CMD>Neotree reveal<CR>", desc = "reveal" },
+
 	{ "<leader>s", group = "search" },
 	{ "<leader>sb", "<CMD>FzfLua blines<CR>", desc = "buffer" },
 	{ "<leader>sg", "<CMD>FzfLua live_grep<CR>", desc = "grep" },
 	{ "<leader>sh", "<CMD>FzfLua command_history<CR>", desc = "command history" },
 	{ "<leader>sm", "<CMD>FzfLua marks<CR>", desc = "jump to mark" },
-	{ "<leader>ss", utils.lsp_document_symbols, desc = "goto symbol" },
+
 	{ "<leader>w", group = "window" },
 	{ "<leader>ws", "<C-W>s", desc = "split below" },
 	{ "<leader>wv", "<C-W>v", desc = "split right" },
 	{ "<leader>w=", "<C-W>=", desc = "balance" },
 	{ "<leader>wd", "<C-W>c", desc = "delete window" },
 	{ "<leader>ww", "<C-W>p", desc = "other window" },
+
 	{ "<leader>c", group = "code" },
 	{ "<leader>u", "<CMD>UndotreeToggle<CR>", desc = "toggle undo tree" },
+
 	{ "<leader>x", group = "trouble" },
 	{ "<leader>a", group = "ai" },
 })

@@ -1,4 +1,4 @@
-local signs = require("utils").signs
+local signs = tools.ui.signs
 
 return {
 	"mason-org/mason.nvim",

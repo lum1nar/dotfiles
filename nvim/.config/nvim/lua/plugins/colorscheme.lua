@@ -6,8 +6,7 @@
 -- 		require("rose-pine").setup({
 -- 			variant = "dawn", -- auto, main, moon, or dawn
 -- 			dark_variant = "main", -- main, moon, or dawn
--- 			dim_inactive_windows = false,
--- 			extend_background_behind_borders = true,
+-- 			dim_inactive_windows = false, extend_background_behind_borders = true,
 --
 -- 			enable = {
 -- 				terminal = true,
@@ -86,11 +85,47 @@
 -- 	end,
 -- }
 return {
-	"folke/tokyonight.nvim",
-	lazy = false,
-	priority = 1000,
-	opts = {},
-	config = function()
-		vim.cmd("colorscheme tokyonight-storm")
-	end,
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		config = function()
+			vim.cmd("colorscheme tokyonight-storm")
+		end,
+	},
+	-- {
+	-- 	"mcauley-penney/techbase.nvim",
+	-- 	opts = {
+	-- 		italic_comments = false,
+	--
+	-- 		-- set to true to make the background, floating windows, statusline,
+	-- 		-- signcolumn, foldcolumn, and tabline transparent
+	-- 		transparent = false,
+	--
+	-- 		-- allows you to override any highlight group for finer-grained control
+	-- 		hl_overrides = {},
+	-- 	},
+	-- 	-- init = function()
+	-- 	-- 	vim.cmd.colorscheme("techbase")
+	-- 	-- end,
+	-- 	priority = 1000,
+	-- },
+	-- {
+	-- 	"gbprod/nord.nvim",
+	-- 	opts = {
+	-- 		italic_comments = false,
+	--
+	-- 		-- set to true to make the background, floating windows, statusline,
+	-- 		-- signcolumn, foldcolumn, and tabline transparent
+	-- 		transparent = false,
+	--
+	-- 		-- allows you to override any highlight group for finer-grained control
+	-- 		hl_overrides = {},
+	-- 	},
+	-- 	init = function()
+	-- 		vim.cmd.colorscheme("nord")
+	-- 	end,
+	-- 	priority = 1000,
+	-- },
 }

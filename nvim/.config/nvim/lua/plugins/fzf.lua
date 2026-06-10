@@ -18,21 +18,22 @@ return {
 			desc = "find references",
 		},
 	},
-	config = function(_, opts)
-		local fzf = require("fzf-lua")
-		fzf.setup(opts)
-		fzf.register_ui_select()
-	end,
+	-- config = function(_, opts)
+	-- 	local fzf = require("fzf-lua")
+	-- 	fzf.setup(opts)
+	-- 	fzf.register_ui_select()
+	-- end,
 	opts = {
-		"default-title",
 		fzf_opts = {
-			["--layout"] = "reverse",
+			["--layout"] = "default",
 		},
 		winopts = {
 			height = 0.60,
-			width = 0.4,
+			width = 0.6,
+			border = "none",
 			preview = {
 				horizontal = "right:40%",
+				border = "none",
 			},
 		},
 		files = {

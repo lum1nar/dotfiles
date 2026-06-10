@@ -33,8 +33,8 @@ return {
 		},
 		completion = {
 			-- Show documentation when selecting a completion item
-			documentation = { auto_show = true, auto_show_delay_ms = 500, window = { border = "rounded" } },
-			menu = { border = "rounded" },
+			documentation = { auto_show = true, auto_show_delay_ms = 500, window = { border = "none" } },
+			menu = { border = "none" },
 			-- Display a preview of the selected item on the current line
 			ghost_text = { enabled = true },
 		},

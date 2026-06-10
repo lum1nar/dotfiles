@@ -21,7 +21,7 @@ return {
 
 					width = 0.4, ---@return number|fun(): number
 					height = 0.8, ---@return number|fun(): number
-					border = "single",
+					border = "none",
 					relative = "editor", -- Ensure that long paragraphs of markdown are wrapped
 					opts = {
 						breakindent = true,

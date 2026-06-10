@@ -7,11 +7,11 @@ function M.on_attach(client, bufnr)
 	-- set up lsp key mappings
 	M.set_keys(bufnr)
 	-- set up workspace_diagnostics
-	if client.name == "copilot" then
-		return
-	else
-		require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
-	end
+	-- if client.name == "copilot" then
+	-- 	return
+	-- else
+	-- 	require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+	-- end
 end
 
 function M.format()
@@ -51,7 +51,7 @@ function M.set_keys(buffer)
 		{
 			"K",
 			function()
-				vim.lsp.buf.hover({ border = "rounded" })
+				vim.lsp.buf.hover({ border = "none" })
 			end,
 			desc = "hover",
 			buffer = buffer,
@@ -59,7 +59,7 @@ function M.set_keys(buffer)
 		{
 			"<leader>cs",
 			function()
-				vim.lsp.buf.signature_help({ border = "rounded" })
+				vim.lsp.buf.signature_help({ border = "none" })
 			end,
 			desc = "signature help",
 			mode = { "n" },

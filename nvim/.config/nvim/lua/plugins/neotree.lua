@@ -1,5 +1,4 @@
-local utils = require("utils")
-local signs = utils.signs
+local signs = tools.ui.signs
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	branch = "v3.x",
@@ -9,8 +8,6 @@ return {
 		"nvim-tree/nvim-web-devicons", -- optional, but recommended
 	},
 	cmd = { "Neotree" },
-	---@module 'neo-tree'
-	---@type neotree.Config
 	opts = {
 		close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
 		popup_border_style = "NC", -- or "" to use 'winborder' on Neovim v0.11+
@@ -52,6 +49,7 @@ return {
 				folder_closed = "",
 				folder_open = "",
 				folder_empty = "󰜌",
+				folder_empty_open = "󰜌",
 				provider = function(icon, node, state) -- default icon provider utilizes nvim-web-devicons if available
 					if node.type == "file" or node.type == "terminal" then
 						local success, web_devicons = pcall(require, "nvim-web-devicons")

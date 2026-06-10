@@ -12,8 +12,6 @@ return {
 			[[ 乀(_,ل ل       じし_,)ノ ]],
 		}
 
-		local fzf = require("fzf-lua")
-
 		dashboard.section.buttons.val = {
 			dashboard.button("r", "  Recently Used Files", "<CMD>FzfLua combine pickers=buffers;oldfiles<CR>"),
 			dashboard.button("f", "  Find File", "<CMD>FzfLua files<CR>"),
@@ -40,10 +38,5 @@ return {
 		dashboard.section.buttons.opts.position = "center"
 
 		alpha.setup(dashboard.opts)
-
-		-- open neotree in alpha screen
-		vim.schedule(function()
-			vim.cmd("Neotree show")
-		end)
 	end,
 }
