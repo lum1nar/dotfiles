@@ -274,6 +274,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "fcitx5"
 spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "sunshine"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -431,11 +432,11 @@ binds {
     Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
     Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
-    Mod+Shift+1 { spawn-sh "/home/lum1na/atlas/whispering/target/release/whispering start > /tmp/niri.log 2>&1 3>&1" ; }
-    Mod+Shift+2  {  spawn-sh "/home/lum1na/atlas/whispering/target/release/whispering stt > /tmp/niri.log 2>&1 3>&1";  } 
-    Mod+Shift+3  {  spawn-sh "/home/lum1na/atlas/whispering/target/release/whispering ask > /tmp/niri.log 2>&1 3>&1";  } 
+    // Mod+Shift+1 { spawn-sh "/home/lum1na/atlas/whispering/target/release/whispering start > /tmp/niri.log 2>&1 3>&1" ; }
+    // Mod+Shift+2  {  spawn-sh "/home/lum1na/atlas/whispering/target/release/whispering stt > /tmp/niri.log 2>&1 3>&1";  } 
+    // Mod+Shift+3  {  spawn-sh "/home/lum1na/atlas/whispering/target/release/whispering ask > /tmp/niri.log 2>&1 3>&1";  } 
+    Mod+Shift+3  {  spawn-sh "/home/lum1na/atlas/screen-recorder/target/release/screen-recorder";  } 
 
-    Mod+Shift+6 {spawn-sh "whispering";}
 
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
@@ -661,6 +662,7 @@ spawn-at-startup "spotify"
 workspace "browser"
 workspace "terminal" 
 workspace "spotify" 
+workspace "game" 
 
 window-rule {
     match at-startup=true app-id=r#"^firefox$"#
@@ -676,6 +678,12 @@ window-rule {
 }
 
 
+// window-rule {
+//     match app-id=r"steam_app_4704690"
+//     open-on-workspace "game"
+//     open-fullscreen true
+//     // default-column-width { proportion 1.0 ;}
+// }
 
 window-rule {
     match app-id="Spotify"

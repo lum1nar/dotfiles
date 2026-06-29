@@ -92,6 +92,7 @@ return {
 		opts = {},
 		config = function()
 			vim.cmd("colorscheme tokyonight-storm")
+			vim.api.nvim_set_hl(0, "TabLine", { fg = "#a9b1d6", bg = "#1f2235" })
 		end,
 	},
 	-- {

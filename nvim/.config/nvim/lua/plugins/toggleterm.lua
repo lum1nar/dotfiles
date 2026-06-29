@@ -4,7 +4,7 @@ return {
 	lazy = false,
 	opts = {
 		--[[ things you want to change go here]]
-		direction = "float",
+		direction = "horizontal",
 	},
 	keys = {
 

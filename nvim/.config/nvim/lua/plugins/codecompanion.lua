@@ -4,13 +4,13 @@ return {
 		--other plugins
 		"ravitemer/codecompanion-history.nvim",
 		-- "mrjones2014/codecompanion-ui.nvim",
-		{ "lum1nar/codecompanion-ui.nvim", branch = "fix/choices-table-check" },
+		-- { "lum1nar/codecompanion-ui.nvim", branch = "fix/choices-table-check" },
 	},
 	version = "^19.0.0",
 	opts = {
 		display = {
 			chat = {
-				auto_scroll = true,
+				auto_scroll = false,
 				window = {
 					buflisted = false, -- List the chat buffer in the buffer list?
 					sticky = false, -- Chat window follows when switching tabs
@@ -19,8 +19,8 @@ return {
 					position = nil, -- left|right|top|bottom (nil will default depending on vim.opt.splitright|vim.opt.splitbelow)
 					-- NOTE: You can set these to 0 for auto width/height
 
-					width = 0.4, ---@return number|fun(): number
-					height = 0.8, ---@return number|fun(): number
+					width = 0.35, ---@return number|fun(): number
+					height = 1, ---@return number|fun(): number
 					border = "none",
 					relative = "editor", -- Ensure that long paragraphs of markdown are wrapped
 					opts = {
@@ -36,7 +36,7 @@ return {
 
 		interactions = {
 			chat = {
-				adapter = "openrouter",
+				adapter = "deepseek",
 				tools = {
 					["insert_edit_into_file"] = {
 						opts = {
@@ -50,6 +50,20 @@ return {
 		},
 		adapters = {
 			http = {
+				deepseek = function()
+					return require("codecompanion.adapters").extend("openai_compatible", {
+						env = {
+							url = "https://api.deepseek.com",
+							api_key = "DEEPSEEK_API_KEY",
+							chat_url = "/chat/completions",
+						},
+						schema = {
+							model = {
+								default = "deepseek-v4-flash",
+							},
+						},
+					})
+				end,
 				openrouter = function()
 					return require("codecompanion.adapters").extend("openai_compatible", {
 						env = {
@@ -59,7 +73,8 @@ return {
 						},
 						schema = {
 							model = {
-								default = "google/gemini-3-flash-preview",
+								-- default = "google/gemini-3-flash-preview",
+								default = "deepseek/deepseek-v4-flash",
 								-- choices = {
 								-- 	["o3-mini-2025-01-31"] = { opts = { can_reason = true } },
 								-- 	["o1-2024-12-17"] = { opts = { can_reason = true } },
@@ -127,7 +142,7 @@ return {
 					-- Summary system
 					summary = {
 						-- Keymap to generate summary for current chat (default: "gcs")
-						create_summary_keymap = "ggs",
+						create_summary_keymap = "gcs",
 						-- Keymap to browse summaries (default: "gbs")
 						browse_summaries_keymap = "gbs",
 
@@ -162,62 +177,62 @@ return {
 				},
 			},
 
-			ui = {
-				enabled = true,
-				-- the default settings are shown here;
-				-- you only need to specify non-default options
-				opts = {
-					input = {
-						height = 10,
-						-- Placeholder shown when the input buffer is empty
-						placeholder = "Type your message...",
-						-- set to `{}` to disable,
-						-- see `./lua/codecompanion-ui/components.lua`
-						-- for built in components and their options.
-						-- feel free to put up a PR with more components!
-						winbar = {
-							{
-								component = "mode",
-								display_names = {},
-								icons = {
-									default = "󰺴",
-									acceptEdits = "󱐋",
-									plan = "󰙬",
-									dontAsk = "󰝟",
-									bypassPermissions = "",
-								},
-							},
-							{ component = "adapter" },
-							{ component = "model" },
-							{
-								component = "spinner",
-								interval_ms = 100,
-								frames = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
-								text = "Processing...",
-							},
-							"%=",
-							-- shows some status messages from the plugin briefly
-							-- I recommend keeping this enabled
-							{ component = "messages" },
-						},
-					},
-					chat = {
-						-- Chat window width as a fraction of the screen (0.0-1.0)
-						width = 0.35,
-						-- Winbar for the chat (output) window.
-						-- Same format as input.winbar.
-						winbar = {
-							winbar = {
-								{
-									component = "chat_title",
-									icon = "󰭹",
-									default = "[No Title]",
-								},
-							},
-						},
-					},
-				},
-			},
+			-- ui = {
+			-- 	enabled = true,
+			-- 	-- the default settings are shown here;
+			-- 	-- you only need to specify non-default options
+			-- 	opts = {
+			-- 		input = {
+			-- 			height = 10,
+			-- 			-- Placeholder shown when the input buffer is empty
+			-- 			placeholder = "Type your message...",
+			-- 			-- set to `{}` to disable,
+			-- 			-- see `./lua/codecompanion-ui/components.lua`
+			-- 			-- for built in components and their options.
+			-- 			-- feel free to put up a PR with more components!
+			-- 			winbar = {
+			-- 				{
+			-- 					component = "mode",
+			-- 					display_names = {},
+			-- 					icons = {
+			-- 						default = "󰺴",
+			-- 						acceptEdits = "󱐋",
+			-- 						plan = "󰙬",
+			-- 						dontAsk = "󰝟",
+			-- 						bypassPermissions = "",
+			-- 					},
+			-- 				},
+			-- 				{ component = "adapter" },
+			-- 				{ component = "model" },
+			-- 				{
+			-- 					component = "spinner",
+			-- 					interval_ms = 100,
+			-- 					frames = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
+			-- 					text = "Processing...",
+			-- 				},
+			-- 				"%=",
+			-- 				-- shows some status messages from the plugin briefly
+			-- 				-- I recommend keeping this enabled
+			-- 				{ component = "messages" },
+			-- 			},
+			-- 		},
+			-- 		chat = {
+			-- 			-- Chat window width as a fraction of the screen (0.0-1.0)
+			-- 			width = 0.35,
+			-- 			-- Winbar for the chat (output) window.
+			-- 			-- Same format as input.winbar.
+			-- 			winbar = {
+			-- 				winbar = {
+			-- 					{
+			-- 						component = "chat_title",
+			-- 						icon = "󰭹",
+			-- 						default = "[No Title]",
+			-- 					},
+			-- 				},
+			-- 			},
+			-- 		},
+			-- 	},
+			-- },
 		},
 	},
 	keys = {

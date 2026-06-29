@@ -84,7 +84,7 @@ opt.backup = false -- 停用備份檔
 -- ── 視覺化輔助 ───────────────────────────────────────────
 opt.termguicolors = true -- 啟用 24-bit 真彩色（需終端機支援）
 opt.wrap = false -- 停用自動換行
-o.colorcolumn = "+0" -- 在 textwidth 位置顯示欄位提示線（+0 表示與 textwidth 對齊）
+-- o.colorcolumn = "+0" -- 在 textwidth 位置顯示欄位提示線（+0 表示與 textwidth 對齊）
 o.signcolumn = "yes:1" -- 固定顯示符號欄（寬 1），避免畫面跳動
 o.synmaxcol = 1000 -- 只對前 1000 欄進行語法高亮，避免長行卡頓
 o.emoji = true -- 將 Emoji 字元視為全形字處理
@@ -144,7 +144,7 @@ o.redrawtime = 150 -- 語法高亮重繪的最大允許時間（毫秒），超�
 o.modeline = false -- 停用 modeline（禁止檔案內嵌入 vim 設定指令，提升安全性）
 o.modelines = 0 -- modeline 偵測行數設為 0（徹底停用）
 o.nrformats = "alpha" -- Ctrl-A/X 遞增遞減時，支援字母（a→b）而非八進位
-o.virtualedit = "all" -- 允許游標移動到沒有實際字元的位置（虛擬編輯模式）
+-- o.virtualedit = "all" -- 允許游標移動到沒有實際字元的位置（虛擬編輯模式）
 o.fileignorecase = true -- 檔案名稱自動補全時忽略大小寫
 
 -- ── 停用內建 Provider ────────────────────────────────────

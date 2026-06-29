@@ -96,3 +96,30 @@ aucmd("BufWritePre", {
 	end,
 	desc = "Format current file before saving",
 })
+
+-- CodeCompanion chat treesitter management
+-- Stop treesitter while waiting for a response, re-enable after
+grp = augrp("CodeCompanion", { clear = true })
+local cc_chat_bufnr = nil
+
+aucmd("User", {
+	group = grp,
+	pattern = "CodeCompanionChatSubmitted",
+	callback = function()
+		cc_chat_bufnr = vim.api.nvim_get_current_buf()
+		pcall(vim.treesitter.stop, cc_chat_bufnr)
+	end,
+	desc = "Disable treesitter in chat buffer while waiting for response",
+})
+
+aucmd("User", {
+	group = grp,
+	pattern = "CodeCompanionChatDone",
+	callback = function()
+		if cc_chat_bufnr and vim.api.nvim_buf_is_valid(cc_chat_bufnr) then
+			pcall(vim.treesitter.start, cc_chat_bufnr)
+		end
+		cc_chat_bufnr = nil
+	end,
+	desc = "Re-enable treesitter in chat buffer after response received",
+})
