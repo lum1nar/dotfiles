@@ -1,12 +1,6 @@
 # Environment variables
 set -x EDITOR nvim
 
-# Open Tmux By Default
-# if status is-interactive
-#     and not set -q TMUX
-#     exec tmux
-# end
-
 # Alias
 alias vim='nvim'
 alias ll="ls -lah"
@@ -23,9 +17,6 @@ function fish_vi_cursor
     echo -ne "\e[2 q"
 end
 
-# zoxide
-zoxide init fish | source
-
 # Read .env file
 # echo (cat ~/.env)
 for line in (cat ~/.env)
@@ -34,10 +25,6 @@ for line in (cat ~/.env)
     set -x (string split '=' $line)
 end
 
-set SPACEFISH_PROMPT_ORDER vi_mode user dir host git package node docker ruby golang php rust haskell julia aws conda pyenv kubecontext exec_time line_sep battery jobs exit_code char
-
-# Show full directory name
-set SPACEFISH_DIR_TRUNC 0
 
 # if test -f ~/.config/fish/fzf-git.fish
 #     source ~/.config/fish/fzf-git.fish
@@ -46,4 +33,11 @@ set SPACEFISH_DIR_TRUNC 0
 # use uv installed tools
 fish_add_path $HOME/.local/bin
 
+# opencode
+fish_add_path /Users/lum1na/.opencode/bin
 
+# starfish
+starship init fish | source
+
+# zoxide
+zoxide init fish | source
