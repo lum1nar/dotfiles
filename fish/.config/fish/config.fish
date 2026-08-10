@@ -33,8 +33,6 @@ end
 # use uv installed tools
 fish_add_path $HOME/.local/bin
 
-# opencode
-fish_add_path /Users/lum1na/.opencode/bin
 
 # starfish
 starship init fish | source
