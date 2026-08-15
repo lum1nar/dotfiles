@@ -8,7 +8,7 @@ return {
 			statusline = { "codecompanion", "codecompanion_input", "neo-tree" },
 		}
 
-		opts.options.component_separators = "│"
+		opts.options.component_separators = ""
 		opts.options.section_separators = ""
 
 		-- 確保 sections 和 lualine_c 存在

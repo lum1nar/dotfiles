@@ -94,9 +94,9 @@ return {
 					-- 	end,
 					-- },
 				},
-				{
-					text = { " " },
-				},
+				-- {
+				-- 	text = { " " },
+				-- },
 				{
 					text = { require("statuscol.builtin").foldfunc },
 					condition = {
