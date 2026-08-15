@@ -15,14 +15,14 @@ return {
 		event = "VeryLazy",
 		opts = {},
 	},
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-		main = "ibl",
-		opts = {
-			scope = { enabled = false },
-		},
-	},
+	-- {
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	event = { "BufReadPre", "BufNewFile" },
+	-- 	main = "ibl",
+	-- 	opts = {
+	-- 		scope = { enabled = false },
+	-- 	},
+	-- },
 	{
 		"folke/todo-comments.nvim",
 		event = "VeryLazy",
@@ -64,6 +64,36 @@ return {
 				-- Load luvit types when the `vim.uv` word is found
 				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
 			},
+		},
+	},
+	{
+		"mcauley-penney/visual-whitespace.nvim",
+		-- lazy = false,
+		event = "ModeChanged *:[vV\22]", -- optionally, lazy load on entering visual mode
+		opts = {
+			-- your opts here ...
+			--   enabled = true,
+			highlight = { link = "Visual", default = true },
+			match_types = {
+				space = true,
+				tab = true,
+				nbsp = true,
+				lead = false,
+				trail = false,
+			},
+			list_chars = {
+				space = "·",
+				tab = "↦",
+				nbsp = "␣",
+				lead = "‹",
+				trail = "›",
+			},
+			fileformat_chars = {
+				unix = "↲",
+				mac = "←",
+				dos = "↙",
+			},
+			ignore = { filetypes = {}, buftypes = {} },
 		},
 	},
 }

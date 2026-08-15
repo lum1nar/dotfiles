@@ -27,18 +27,18 @@ vim.lsp.config("tailwindcss", {
 	},
 })
 
--- vim.lsp.config("html", {
--- 	filetypes = {
--- 		"html",
--- 		"javascriptreact",
--- 		"typescriptreact",
--- 		"tsx",
--- 		"svelte",
--- 		"vue",
--- 	},
--- })
+vim.lsp.config("html", {
+	filetypes = {
+		"html",
+		"javascriptreact",
+		"typescriptreact",
+		"tsx",
+		"svelte",
+		"vue",
+	},
+})
 
-vim.lsp.config("emmet_ls", {
+vim.lsp.config("emmet_language_server", {
 	filetypes = {
 		"html",
 		"css",

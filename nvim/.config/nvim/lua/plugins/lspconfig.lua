@@ -49,7 +49,7 @@ return {
 				-- "vtsls", -- typescript-language-server
 				"html", -- html-lsp
 				"cssls", -- css-lsp
-				"emmet_ls", -- emmet-lsp
+				"emmet_language_server", -- emmet-lsp
 				"jsonls", -- json-lsp
 				"tailwindcss", -- tailwindcss-lsp
 				"prismals", -- prisma-language-server

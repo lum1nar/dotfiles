@@ -28,11 +28,11 @@ return {
 			["--layout"] = "default",
 		},
 		winopts = {
-			height = 0.60,
-			width = 0.6,
+			height = 0.75,
+			width = 0.8,
 			border = "none",
 			preview = {
-				horizontal = "right:40%",
+				horizontal = "right:50%",
 				border = "none",
 			},
 		},

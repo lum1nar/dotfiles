@@ -42,7 +42,7 @@ return {
 			preset = "none",
 			["<C-j>"] = { "select_next", "fallback" },
 			["<C-k>"] = { "select_prev", "fallback" },
-			["<CR>"] = { "select_and_accept", "fallback" },
+			["<Tab>"] = { "select_and_accept", "fallback" },
 		},
 
 		signature = { enabled = false },
