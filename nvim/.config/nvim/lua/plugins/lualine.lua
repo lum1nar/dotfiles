@@ -7,6 +7,10 @@ return {
 		opts.options.disabled_filetypes = {
 			statusline = { "codecompanion", "codecompanion_input", "neo-tree" },
 		}
+
+		opts.options.component_separators = "│"
+		opts.options.section_separators = ""
+
 		-- 確保 sections 和 lualine_c 存在
 		opts.sections = opts.sections or {}
 		opts.sections.lualine_c = opts.sections.lualine_c or {}
