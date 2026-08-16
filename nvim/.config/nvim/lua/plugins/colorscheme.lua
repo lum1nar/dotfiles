@@ -85,16 +85,16 @@
 -- 	end,
 -- }
 return {
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	opts = {},
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme tokyonight-storm")
-	-- 		vim.api.nvim_set_hl(0, "TabLine", { fg = "#a9b1d6", bg = "#1f2235" })
-	-- 	end,
-	-- },
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		config = function()
+			-- vim.cmd("colorscheme tokyonight-storm")
+			vim.api.nvim_set_hl(0, "TabLine", { fg = "#a9b1d6", bg = "#1f2235" })
+		end,
+	},
 	{
 		"mcauley-penney/techbase.nvim",
 		opts = {
@@ -112,21 +112,24 @@ return {
 		end,
 		priority = 1000,
 	},
+	{
+		"gbprod/nord.nvim",
+		lazy = false,
+		opts = {
+			italic_comments = false,
+
+			-- set to true to make the background, floating windows, statusline,
+			-- signcolumn, foldcolumn, and tabline transparent
+			transparent = false,
+
+			-- allows you to override any highlight group for finer-grained control
+			hl_overrides = {},
+		},
+		-- init = function()
+		-- 	vim.cmd.colorscheme("nord")
+		-- end,
+		priority = 1000,
+	},
 	-- {
-	-- 	"gbprod/nord.nvim",
-	-- 	opts = {
-	-- 		italic_comments = false,
-	--
-	-- 		-- set to true to make the background, floating windows, statusline,
-	-- 		-- signcolumn, foldcolumn, and tabline transparent
-	-- 		transparent = false,
-	--
-	-- 		-- allows you to override any highlight group for finer-grained control
-	-- 		hl_overrides = {},
-	-- 	},
-	-- 	init = function()
-	-- 		vim.cmd.colorscheme("nord")
-	-- 	end,
-	-- 	priority = 1000,
-	-- },
+	-- }
 }
