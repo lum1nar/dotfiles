@@ -9,15 +9,11 @@ return {
 		},
 	},
 	{
-		ft = { "markdown", "codecompanion", "codecompanion_input" },
 		"MeanderingProgrammer/render-markdown.nvim",
+		ft = { "markdown", "Avante", "copilot-chat", "opencode_output" },
 		opts = {
-			win_options = {
-				conceallevel = {
-					default = vim.o.conceallevel,
-					rendered = 3,
-				},
-			},
+			anti_conceal = { enabled = false },
+			file_types = { "markdown", "opencode_output" },
 			heading = {
 				icons = {
 					"  󰲡 ",

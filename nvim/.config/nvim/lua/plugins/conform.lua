@@ -15,24 +15,13 @@ return {
 			json = { "prettierd" },
 			jsonc = { "prettierd" }, -- e.g. package.json is a JSON with Comments file
 			yaml = { "prettierd" },
-			-- markdown = { "prettierd" },
+			markdown = { "prettierd" },
 			prisma = { "prettierd" },
 			sh = { "shfmt" },
 			fish = { "prettierd" },
 			lua = { "stylua" },
 			sql = { "pg_format" },
 		},
-
-		-- formatters = {
-		-- 	prettierd = {
-		-- 		command = "prettierd",
-		-- 		args = { "--stdin-filepath", "$FILENAME" },
-		-- 		cwd = require("conform.util").root_file({
-		-- 			"package.json",
-		-- 			".prettierdrc",
-		-- 		}),
-		-- 	},
-		-- },
 
 		format_on_save = {
 			timeout_ms = 1000,
