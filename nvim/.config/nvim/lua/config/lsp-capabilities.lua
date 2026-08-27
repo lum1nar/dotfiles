@@ -15,7 +15,7 @@ vim.lsp.config("tailwindcss", {
 		"css",
 		"javascriptreact",
 		"typescriptreact",
-		"astro",
+		-- "astro",
 		"svelte",
 		"vue",
 	},

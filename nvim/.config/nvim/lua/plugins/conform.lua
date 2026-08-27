@@ -9,31 +9,33 @@ return {
 			typescript = { "biome", "biome-organize-imports" },
 			javascriptreact = { "biome", "biome-organize-imports" },
 			typescriptreact = { "biome", "biome-organize-imports" },
-			html = { "prettier" },
-			css = { "prettier" },
-			json = { "prettier" },
-			jsonc = { "prettier" }, -- e.g. package.json is a JSON with Comments file
-			yaml = { "prettier" },
-			markdown = { "prettier" },
-			prisma = { "prettier" },
+			html = { "prettierd" },
+			css = { "prettierd" },
+			astro = { "prettierd" },
+			json = { "prettierd" },
+			jsonc = { "prettierd" }, -- e.g. package.json is a JSON with Comments file
+			yaml = { "prettierd" },
+			-- markdown = { "prettierd" },
+			prisma = { "prettierd" },
 			sh = { "shfmt" },
-			fish = { "prettier" },
+			fish = { "prettierd" },
 			lua = { "stylua" },
 			sql = { "pg_format" },
 		},
 
 		-- formatters = {
-		-- 	prettier = {
-		-- 		command = "prettier",
+		-- 	prettierd = {
+		-- 		command = "prettierd",
 		-- 		args = { "--stdin-filepath", "$FILENAME" },
 		-- 		cwd = require("conform.util").root_file({
 		-- 			"package.json",
-		-- 			".prettierrc",
+		-- 			".prettierdrc",
 		-- 		}),
 		-- 	},
 		-- },
 
-		format_after_save = {
+		format_on_save = {
+			timeout_ms = 1000,
 			lsp_fallback = true,
 		},
 	},

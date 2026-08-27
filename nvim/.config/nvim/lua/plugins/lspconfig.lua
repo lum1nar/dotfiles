@@ -4,6 +4,7 @@ local manual_installed = {
 	"stylua",
 	"shfmt",
 	"prettier",
+	"prettierd",
 	"black",
 }
 
@@ -44,6 +45,7 @@ return {
 				"bashls", -- bash-language-server
 				"pyright", -- python
 				"clangd", -- c
+				-- "astro", -- astro
 				"lua_ls", -- lua-language-server
 				"marksman", -- markdown lsp
 				-- "vtsls", -- typescript-language-server

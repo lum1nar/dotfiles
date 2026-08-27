@@ -37,5 +37,6 @@ return {
 		"javascriptreact",
 		"typescript",
 		"typescriptreact",
+		"astro",
 	},
 }

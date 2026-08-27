@@ -89,13 +89,13 @@ aucmd("BufWinLeave", {
 })
 
 grp = augrp("Saving", { clear = true })
-aucmd("BufWritePre", {
-	group = grp,
-	callback = function(args)
-		require("conform").format({ bufnr = args.buf })
-	end,
-	desc = "Format current file before saving",
-})
+-- aucmd("BufWritePre", {
+-- 	group = grp,
+-- 	callback = function(args)
+-- 		require("conform").format({ bufnr = args.buf })
+-- 	end,
+-- 	desc = "Format current file before saving",
+-- })
 
 -- CodeCompanion chat treesitter management
 -- Stop treesitter while waiting for a response, re-enable after

@@ -12,6 +12,12 @@ return {
 		ft = { "markdown", "codecompanion", "codecompanion_input" },
 		"MeanderingProgrammer/render-markdown.nvim",
 		opts = {
+			win_options = {
+				conceallevel = {
+					default = vim.o.conceallevel,
+					rendered = 3,
+				},
+			},
 			heading = {
 				icons = {
 					"  󰲡 ",
@@ -25,7 +31,7 @@ return {
 				min_width = 30,
 			},
 			code = {
-				disable_background = { "diff" },
+				-- disable_background = { "diff" },
 				-- position = "right",
 				width = "block",
 				right_pad = 10,

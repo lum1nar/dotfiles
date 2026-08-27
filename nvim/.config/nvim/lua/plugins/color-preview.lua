@@ -12,6 +12,5 @@ return {
 			desc = "Color pick under cursor",
 		},
 	},
-	---@type oklch.Opts
 	opts = {},
 }

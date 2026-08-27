@@ -70,7 +70,7 @@ opt.completeopt = "menu,menuone,noselect"
 
 -- ── 折疊 ────────────────────────────────────────────────
 o.foldcolumn = "1" -- 左側折疊欄寬 1 個字元
-o.foldenable = false -- 預設不啟用折疊（開檔時不自動折疊）
+o.foldenable = true -- 預設不啟用折疊（開檔時不自動折疊）
 o.foldlevel = 99 -- 折疊層級設得極高，使所有折疊預設展開
 
 -- ── 復原 ────────────────────────────────────────────────
@@ -105,10 +105,10 @@ o.winborder = "none" -- 浮動視窗不顯示邊框
 opt.fillchars = {
 	eob = " ", -- 緩衝區結尾後的空行，以空格取代預設的 "~"
 	diff = "╱", -- diff 模式中刪除行的填充字元
-	fold = " ", -- 折疊行的填充字元
-	foldclose = tools.ui.icons.r_chev, -- 折疊關閉時的圖示（向右箭頭）
-	foldopen = tools.ui.icons.d_chev, -- 折疊開啟時的圖示（向下箭頭）
-	foldsep = " ", -- 折疊分隔線的填充字元
+	-- fold = " ", -- 折疊行的填充字元
+	-- foldclose = tools.ui.icons.r_chev, -- 折疊關閉時的圖示（向右箭頭）
+	-- foldopen = tools.ui.icons.d_chev, -- 折疊開啟時的圖示（向下箭頭）
+	-- foldsep = " ", -- 折疊分隔線的填充字元
 	msgsep = "━", -- 訊息分隔線
 	horiz = "━", -- 水平分割線
 	horizup = "┻", -- 水平線向上交叉
@@ -140,10 +140,10 @@ opt.hidden = true -- 允許在未儲存的情況下切換緩衝區（緩衝區�
 opt.mouse = "a" -- 在所有模式下啟用滑鼠支援
 opt.timeoutlen = 300 -- 按鍵組合的等待逾時時間（毫秒），影響 which-key 等外掛觸發速度
 o.updatetime = 250 -- 游標停止移動後觸發 CursorHold 事件的等待時間（毫秒）
-o.redrawtime = 150 -- 語法高亮重繪的最大允許時間（毫秒），超過則停止高亮
+o.redrawtime = 500 -- 語法高亮重繪的最大允許時間（毫秒），超過則停止高亮
 o.modeline = false -- 停用 modeline（禁止檔案內嵌入 vim 設定指令，提升安全性）
 o.modelines = 0 -- modeline 偵測行數設為 0（徹底停用）
-o.nrformats = "alpha" -- Ctrl-A/X 遞增遞減時，支援字母（a→b）而非八進位
+-- o.nrformats = "alpha" -- Ctrl-A/X 遞增遞減時，支援字母（a→b）而非八進位
 -- o.virtualedit = "all" -- 允許游標移動到沒有實際字元的位置（虛擬編輯模式）
 o.fileignorecase = true -- 檔案名稱自動補全時忽略大小寫
 
@@ -158,3 +158,6 @@ opt.viewoptions = {
 	"cursor", -- 儲存游標位置
 	"folds", -- 儲存折疊狀態
 }
+--
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"

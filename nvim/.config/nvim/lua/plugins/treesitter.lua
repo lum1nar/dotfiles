@@ -24,6 +24,8 @@ return {
 					pcall(vim.treesitter.start)
 					-- Enable treesitter-based indentation
 					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+					vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+					vim.wo[0][0].foldmethod = "expr"
 				end,
 			})
 
@@ -47,6 +49,7 @@ return {
 				"latex",
 				"sql",
 				"rust",
+				"astro",
 			}
 
 			local alreadyInstalled = require("nvim-treesitter.config").get_installed()
@@ -57,7 +60,6 @@ return {
 				end)
 				:totable()
 			require("nvim-treesitter").install(parsersToInstall)
-			-- ...
 		end,
 	},
 	{

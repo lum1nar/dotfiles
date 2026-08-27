@@ -5,7 +5,8 @@ return {
 	opts = function(_, opts)
 		opts.options = opts.options or {}
 		opts.options.disabled_filetypes = {
-			statusline = { "codecompanion", "codecompanion_input", "neo-tree" },
+			statusline = { "codecompanion", "codecompanion_input", "neo-tree", "opencode", "opencode_output" },
+			winbar = { "opencode", "opencode_output" },
 		}
 
 		opts.options.component_separators = ""
