@@ -1,20 +1,32 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "default_agent": "build",
-  "instructions": ["Always respond in Traditional Chinese (繁體中文)."],
-  "permission": {
-    "read": "allow",
-    "think": "allow",
-    "other": "allow",
-    "edit": "ask",
-    "bash": "ask",
-  },
-  "model": "deepseek/deepseek-v4-flash",
-  "provider": {
-    "deepseek": {
-      "options": {
-        "apiKey": "{env:DEEPSEEK_API_KEY}",
-      },
+    "$schema": "https://opencode.ai/config.json",
+    "default_agent": "build",
+    "instructions": [
+        "Always respond in Traditional Chinese (繁體中文)."
+    ],
+    "permission": {
+        "read": "allow",
+        "think": "allow",
+        "other": "allow",
+        "edit": "ask",
+        "bash": "ask",
     },
-  },
+    "plugin": [
+        "git+https://github.com/nagisanzenin/engram.git"
+    ],
+    "model": "deepseek/deepseek-v4-flash",
+    "provider": {
+        "deepseek": {
+            "options": {
+                "apiKey": "{env:DEEPSEEK_API_KEY}",
+            },
+            "models": {
+                "deepseek-v4-flash": {
+                    "options": {
+                        "reasoningEffort": "low",
+                    },
+                },
+            },
+        },
+    },
 }

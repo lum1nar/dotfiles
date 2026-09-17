@@ -1,0 +1,36 @@
+{
+  "Create a coding task with acceptance criteria": {
+    "prefix": "task",
+    "body": [
+      "我要做：",
+      "${1:task}",
+      "",
+      "驗收：",
+      "${2:criteria}",
+      "",
+      "規則：",
+      "沒寫死的地方先問我，不要自己猜。",
+      "完成後告訴我做了什麼修改"
+    ],
+    "description": "Create a coding task with acceptance criteria"
+  },
+  "Generate git commit message": {
+    "prefix": "commit",
+    "body": [
+      "請先執行 `git diff`，分析目前的修改內容。",
+      "",
+      "請輸出：",
+      "1. 修改內容摘要",
+      "2. Git commit message",
+      "",
+      "要求：",
+      "- 修改內容摘要只描述 diff 中實際發生的修改。",
+      "- 不要自行推測沒有出現在 diff 中的內容。",
+      "- commit message 使用簡潔的英文。",
+      "- 使用 conventional commits 格式。",
+      "- 不要執行 `git commit`。",
+      "- 請 edit COMMIT_EDITMSG buffer "
+    ],
+    "description": "Review git diff and generate a commit message"
+  }
+}

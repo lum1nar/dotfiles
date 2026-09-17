@@ -91,7 +91,7 @@ output "HDMI-A-1" {
     mode "2560x1440@143.912"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1.2
+    scale 1.5
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -643,7 +643,7 @@ window-rule {
   // Rounded corners for a modern look.
   geometry-corner-radius 20
   draw-border-with-background false
-  opacity 0.98
+  // opacity 0.98
 
   // Clips window contents to the rounded corner boundaries.
   clip-to-geometry true
