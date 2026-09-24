@@ -14,7 +14,7 @@
     "plugin": [
         "git+https://github.com/nagisanzenin/engram.git"
     ],
-    "model": "deepseek/deepseek-v4-flash",
+    "model": "deepseek/deepseek-flash",
     "provider": {
         "deepseek": {
             "options": {

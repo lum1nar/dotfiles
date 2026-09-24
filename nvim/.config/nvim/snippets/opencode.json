@@ -17,19 +17,14 @@
   "Generate git commit message": {
     "prefix": "commit",
     "body": [
-      "請先執行 `git diff`，分析目前的修改內容。",
-      "",
-      "請輸出：",
-      "1. 修改內容摘要",
-      "2. Git commit message",
-      "",
-      "要求：",
-      "- 修改內容摘要只描述 diff 中實際發生的修改。",
-      "- 不要自行推測沒有出現在 diff 中的內容。",
-      "- commit message 使用簡潔的英文。",
-      "- 使用 conventional commits 格式。",
-      "- 不要執行 `git commit`。",
-      "- 請 edit COMMIT_EDITMSG buffer "
+      "看一下 staged diff，寫一個 commit message。",
+      "規則：",
+      "- conventional commits，type(scope): 一句話標題，≤72 字",
+      "- 內文用 bullet，依模組/層分組（每個 bullet 講「做了什麼 + 為什麼」）",
+      "- 只寫 diff 裡真的有的東西，不要推測",
+      "- 不要加 \"This commit...\" 之類的填充",
+      "- 不要執行 git commit",
+      "- 寫進 .git/COMMIT_EDITMSG"
     ],
     "description": "Review git diff and generate a commit message"
   }
