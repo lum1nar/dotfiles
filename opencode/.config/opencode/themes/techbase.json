@@ -1,0 +1,248 @@
+{
+  "$schema": "https://opencode.ai/theme.json",
+  "defs": {
+    "normal_fg": "#CCD5E5",
+    "float_fg": "#D6DDEA",
+    "nontext_fg": "#363848",
+    "comment_fg": "#474B65",
+    "quote_fg": "#7E8193",
+    "float_border_fg": "#2A2F39",
+
+    "normal_bg": "#191d23",
+    "normal_embed_bg": "#20252E",
+    "float_bg": "#1C2127",
+    "float_bg_select": "#1F242D",
+    "panel_bg": "#1B1F25",
+
+    "v_select": "#13214B",
+    "v_select_nontext": "#32416F",
+    "string": "#74BAA8",
+    "raw_string": "#0EC256",
+    "cursor": "#5DCD9A",
+    "operator": "#b09884",
+    "constant": "#BCB6EC",
+    "keyword": "#A9B9EF",
+    "important": "#6A8BE3",
+    "search": "#E9B872",
+    "number": "#B85B53",
+
+    "info": "#1A8C9B",
+    "warn": "#FFA630",
+    "error": "#F71735",
+
+    "git_add_bg": "#1E3A34",
+    "git_delete_bg": "#3A1A21",
+    "git_change_bg": "#1F2B5C",
+    "git_add_fg": "#9FDACC",
+    "git_delete_fg": "#FFC0C5",
+    "git_change_fg": "#B7C4FF",
+    "git_add_col": "#366A4C",
+    "git_delete_col": "#942B27",
+    "git_change_col": "#3F58BB"
+  },
+  "theme": {
+    "primary": {
+      "dark": "important",
+      "light": "important"
+    },
+    "secondary": {
+      "dark": "keyword",
+      "light": "keyword"
+    },
+    "accent": {
+      "dark": "cursor",
+      "light": "cursor"
+    },
+    "error": {
+      "dark": "error",
+      "light": "error"
+    },
+    "warning": {
+      "dark": "warn",
+      "light": "warn"
+    },
+    "success": {
+      "dark": "cursor",
+      "light": "cursor"
+    },
+    "info": {
+      "dark": "info",
+      "light": "info"
+    },
+    "text": {
+      "dark": "normal_fg",
+      "light": "normal_fg"
+    },
+    "textMuted": {
+      "dark": "comment_fg",
+      "light": "comment_fg"
+    },
+    "background": {
+      "dark": "normal_bg",
+      "light": "normal_bg"
+    },
+    "backgroundPanel": {
+      "dark": "panel_bg",
+      "light": "panel_bg"
+    },
+    "backgroundElement": {
+      "dark": "normal_embed_bg",
+      "light": "normal_embed_bg"
+    },
+    "border": {
+      "dark": "float_border_fg",
+      "light": "float_border_fg"
+    },
+    "borderActive": {
+      "dark": "nontext_fg",
+      "light": "nontext_fg"
+    },
+    "borderSubtle": {
+      "dark": "float_border_fg",
+      "light": "float_border_fg"
+    },
+
+    "diffAdded": {
+      "dark": "git_add_fg",
+      "light": "git_add_fg"
+    },
+    "diffRemoved": {
+      "dark": "git_delete_fg",
+      "light": "git_delete_fg"
+    },
+    "diffContext": {
+      "dark": "quote_fg",
+      "light": "quote_fg"
+    },
+    "diffHunkHeader": {
+      "dark": "quote_fg",
+      "light": "quote_fg"
+    },
+    "diffHighlightAdded": {
+      "dark": "string",
+      "light": "string"
+    },
+    "diffHighlightRemoved": {
+      "dark": "number",
+      "light": "number"
+    },
+    "diffAddedBg": {
+      "dark": "git_add_bg",
+      "light": "git_add_bg"
+    },
+    "diffRemovedBg": {
+      "dark": "git_delete_bg",
+      "light": "git_delete_bg"
+    },
+    "diffContextBg": {
+      "dark": "normal_embed_bg",
+      "light": "normal_embed_bg"
+    },
+    "diffLineNumber": {
+      "dark": "nontext_fg",
+      "light": "nontext_fg"
+    },
+    "diffAddedLineNumberBg": {
+      "dark": "git_add_col",
+      "light": "git_add_col"
+    },
+    "diffRemovedLineNumberBg": {
+      "dark": "git_delete_col",
+      "light": "git_delete_col"
+    },
+
+    "markdownText": {
+      "dark": "normal_fg",
+      "light": "normal_fg"
+    },
+    "markdownHeading": {
+      "dark": "keyword",
+      "light": "keyword"
+    },
+    "markdownLink": {
+      "dark": "important",
+      "light": "important"
+    },
+    "markdownLinkText": {
+      "dark": "string",
+      "light": "string"
+    },
+    "markdownCode": {
+      "dark": "string",
+      "light": "string"
+    },
+    "markdownBlockQuote": {
+      "dark": "quote_fg",
+      "light": "quote_fg"
+    },
+    "markdownEmph": {
+      "dark": "operator",
+      "light": "operator"
+    },
+    "markdownStrong": {
+      "dark": "search",
+      "light": "search"
+    },
+    "markdownHorizontalRule": {
+      "dark": "nontext_fg",
+      "light": "nontext_fg"
+    },
+    "markdownListItem": {
+      "dark": "important",
+      "light": "important"
+    },
+    "markdownListEnumeration": {
+      "dark": "constant",
+      "light": "constant"
+    },
+    "markdownImage": {
+      "dark": "important",
+      "light": "important"
+    },
+    "markdownImageText": {
+      "dark": "string",
+      "light": "string"
+    },
+    "markdownCodeBlock": {
+      "dark": "normal_fg",
+      "light": "normal_fg"
+    },
+
+    "syntaxComment": {
+      "dark": "comment_fg",
+      "light": "comment_fg"
+    },
+    "syntaxKeyword": {
+      "dark": "keyword",
+      "light": "keyword"
+    },
+    "syntaxFunction": {
+      "dark": "important",
+      "light": "important"
+    },
+    "syntaxVariable": {
+      "dark": "float_fg",
+      "light": "float_fg"
+    },
+    "syntaxString": {
+      "dark": "string",
+      "light": "string"
+    },
+    "syntaxNumber": {
+      "dark": "number",
+      "light": "number"
+    },
+    "syntaxType": {
+      "dark": "constant",
+      "light": "constant"
+    },
+    "syntaxOperator": {
+      "dark": "operator",
+      "light": "operator"
+    },
+    "syntaxPunctuation": {
+      "dark": "normal_fg",
+      "light": "normal_fg"
+    }
+  }
+}
