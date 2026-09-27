@@ -103,7 +103,6 @@ vim.g.opencode_opts = {
 vim.keymap.set({ "n", "t" }, "<C-.>", function()
 	require("snacks.terminal").toggle(opencode_cmd, snacks_terminal_opts)
 end, { desc = "Toggle OpenCode" })
-
 -- Optionally show the terminal when OpenCode starts executing
 vim.api.nvim_create_autocmd("User", {
 	pattern = { "OpencodeEvent:session.execution.started" },
@@ -113,4 +112,11 @@ vim.api.nvim_create_autocmd("User", {
 			win:show()
 		end
 	end,
+})
+
+-- Re-read modified files from disk: when Neovim regains focus, or a buffer is
+-- (re)entered, check whether the file changed and prompt to reload it, so
+-- edits made by external tools don't leave stale buffers behind.
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
+	command = "checktime",
 })
