@@ -161,5 +161,3 @@ opt.viewoptions = {
 --
 -- vim.opt.foldmethod = "expr"
 -- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
---
-o.autoread = true

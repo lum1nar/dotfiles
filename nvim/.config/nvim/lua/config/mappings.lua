@@ -12,6 +12,9 @@ vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j")
 vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k")
 vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l")
 
+-- Switch to Normal mode in Terminal
+vim.keymap.set("t", "<C-[>", "<C-\\><C-n>")
+
 -- Resize window using <Shift+> arrow keys
 vim.keymap.set("n", "<S-Up>", "<CMD>resize +2<CR>")
 vim.keymap.set("n", "<S-Down>", "<CMD>resize -2<CR>")

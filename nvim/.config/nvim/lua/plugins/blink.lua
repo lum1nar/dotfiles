@@ -7,14 +7,9 @@ return {
 	},
 	opts = {
 		sources = {
-			-- Either enable LSP (and optionally buffer) source globally
-			default = { "lsp", "buffer" },
-
 			per_filetype = {
 				codecompanion = { "codecompanion" },
-				opencode_ask = { "lsp", "buffer" },
 			},
-
 			providers = {
 				snippets = {
 					opts = {
@@ -34,7 +29,6 @@ return {
 						},
 					},
 				},
-				lsp = { fallbacks = {} },
 			},
 		},
 		completion = {
