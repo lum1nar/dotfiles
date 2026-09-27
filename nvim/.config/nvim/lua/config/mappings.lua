@@ -6,6 +6,12 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
+-- Terminal buffer navigation
+vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
+vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j")
+vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k")
+vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l")
+
 -- Resize window using <Shift+> arrow keys
 vim.keymap.set("n", "<S-Up>", "<CMD>resize +2<CR>")
 vim.keymap.set("n", "<S-Down>", "<CMD>resize -2<CR>")
@@ -36,8 +42,8 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank thorugh OSC52"
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
--- Open filetree
-vim.keymap.set("n", "<C-n>", "<CMD>Neotree toggle<CR>")
+-- -- Open filetree
+-- vim.keymap.set("n", "<C-n>", "<CMD>Neotree toggle<CR>")
 
 -- Move lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -94,15 +100,15 @@ vim.keymap.set("n", "<leader>nc", createNote, { desc = "Create New Note" })
 wk.add({
 	{ "<leader>b", group = "buffer" },
 	-- { "<leader>bc", "<CMD>BufferLineCloseOthers<CR>", desc = "delete all buffers but current" },
-	{ "<leader>bd", "<CMD>bp|bd #<CR>", desc = "delete buffer" },
+	-- { "<leader>bd", "<CMD>bp|bd #<CR>", desc = "delete buffer" },
 	-- { "<leader>bp", "<CMD>BufferLineTogglePin<CR>", desc = "pin buffer" },
 	-- { "<leader>bl", "<CMD>BufferLineMoveNext<CR>", desc = "move buffer right" },
 	-- { "<leader>bh", "<CMD>BufferLineMovePrev<CR>", desc = "move buffer left" },
 
-	{ "<leader>f", group = "file" },
-	{ "<leader>ff", "<CMD>FzfLua files<CR>", desc = "find file" },
-	{ "<leader>fp", "<CMD>FzfLua git_files<CR>", desc = "find project file" },
-	{ "<leader>fg", "<CMD>FzfLua live_grep<CR>", desc = "find project file with live_grep" },
+	-- { "<leader>f", group = "file" },
+	-- { "<leader>ff", "<CMD>FzfLua files<CR>", desc = "find file" },
+	-- { "<leader>fp", "<CMD>FzfLua git_files<CR>", desc = "find project file" },
+	-- { "<leader>fg", "<CMD>FzfLua live_grep<CR>", desc = "find project file with live_grep" },
 	{
 		"<leader>fn",
 		function()
@@ -113,36 +119,21 @@ wk.add({
 		desc = "find notes",
 	},
 	{ "<leader>ft", "<CMD>FloatTOC<CR>", desc = "Toggle Floating TOC" },
-	{ "<leader>fr", "<CMD>FzfLua combine pickers=buffers;oldfiles<CR>", desc = "open recent file" },
 
-	{ "<leader>h", group = "help" },
-	{ "<leader>hc", "<CMD>FzfLua commands<CR>", desc = "commands" },
-	{ "<leader>hh", "<CMD>:checkhealth<CR>", desc = "check health" },
-	{ "<leader>hk", "<CMD>FzfLua keymaps<CR>", desc = "keymaps" },
-	{ "<leader>hp", "<CMD>Lazy<CR>", desc = "package manager" },
-	{ "<leader>hs", "<CMD>FzfLua highlights<CR>", desc = "search highlight groups" },
+	-- { "<leader>h", group = "help" },
 
 	{ "<leader>g", group = "git" },
-	{ "<leader>gc", "<CMD>FzfLua git_commits<CR>", desc = "commits" },
-	{ "<leader>gs", "<CMD>FzfLua git_status<CR>", desc = "status" },
-	{ "<leader>n", group = "filetree" },
-	{ "<leader>nn", "<CMD>Neotree<CR>", desc = "file explorer" },
-	{ "<leader>nr", "<CMD>Neotree reveal<CR>", desc = "reveal" },
-
 	{ "<leader>s", group = "search" },
-	{ "<leader>sb", "<CMD>FzfLua blines<CR>", desc = "buffer" },
-	{ "<leader>sg", "<CMD>FzfLua live_grep<CR>", desc = "grep" },
-	{ "<leader>sh", "<CMD>FzfLua command_history<CR>", desc = "command history" },
-	{ "<leader>sm", "<CMD>FzfLua marks<CR>", desc = "jump to mark" },
 
-	{ "<leader>w", group = "window" },
-	{ "<leader>ws", "<C-W>s", desc = "split below" },
-	{ "<leader>wv", "<C-W>v", desc = "split right" },
-	{ "<leader>w=", "<C-W>=", desc = "balance" },
-	{ "<leader>wd", "<C-W>c", desc = "delete window" },
-	{ "<leader>ww", "<C-W>p", desc = "other window" },
+	-- { "<leader>w", group = "window" },
+	-- { "<leader>ws", "<C-W>s", desc = "split below" },
+	-- { "<leader>wv", "<C-W>v", desc = "split right" },
+	-- { "<leader>w=", "<C-W>=", desc = "balance" },
+	-- { "<leader>wd", "<C-W>c", desc = "delete window" },
+	-- { "<leader>ww", "<C-W>p", desc = "other window" },
 
 	{ "<leader>c", group = "code" },
+	{ "<leader>t", group = "test" },
 	{ "<leader>u", "<CMD>UndotreeToggle<CR>", desc = "toggle undo tree" },
 
 	{ "<leader>x", group = "trouble" },

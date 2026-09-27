@@ -39,15 +39,15 @@ end
 
 function M.set_keys(buffer)
 	wk.add({
-		{
-			"<leader>ca",
-			function()
-				require("fzf-lua").lsp_code_actions()
-			end,
-			desc = "code action",
-			mode = { "n", "v" },
-			buffer = buffer,
-		},
+		-- {
+		-- 	"<leader>ca",
+		-- 	function()
+		-- 		require("fzf-lua").lsp_code_actions()
+		-- 	end,
+		-- 	desc = "code action",
+		-- 	mode = { "n", "v" },
+		-- 	buffer = buffer,
+		-- },
 		{
 			"K",
 			function()
@@ -56,34 +56,34 @@ function M.set_keys(buffer)
 			desc = "hover",
 			buffer = buffer,
 		},
-		{
-			"<leader>cs",
-			function()
-				vim.lsp.buf.signature_help({ border = "none" })
-			end,
-			desc = "signature help",
-			mode = { "n" },
-			buffer = buffer,
-		},
+		-- {
+		-- 	"<leader>cs",
+		-- 	function()
+		-- 		vim.lsp.buf.signature_help({ border = "none" })
+		-- 	end,
+		-- 	desc = "signature help",
+		-- 	mode = { "n" },
+		-- 	buffer = buffer,
+		-- },
 		{ "<leader>cd", vim.diagnostic.open_float, desc = "line diagnostics", buffer = buffer },
 		{ "<leader>cf", M.format, desc = "format document", buffer = buffer },
 		{ "<leader>ch", M.toggle_hints, desc = "toggle inlay hints", buffer = buffer },
-		{ "<leader>ci", vim.lsp.buf.incoming_calls, desc = "function incoming calls", buffer = buffer },
+		-- { "<leader>ci", vim.lsp.buf.incoming_calls, desc = "function incoming calls", buffer = buffer },
 		{ "<leader>cr", vim.lsp.buf.rename, desc = "rename", buffer = buffer },
 		{ "<leader>ct", M.toggle_diagnostics, desc = "toggle diagnostics", buffer = buffer },
 		-- { "<leader>ci", "<CMD>Mason<CR>", desc = "manage servers", buffer = buffer },
 		-- { "<leader>cl", "<CMD>MasonLog<CR>", desc = "server logs", buffer = buffer },
-		{ "gd", vim.lsp.buf.definition, desc = "goto definition", buffer = buffer },
-		{ "gD", vim.lsp.buf.declaration, desc = "goto declaration", buffer = buffer },
-		{ "gi", vim.lsp.buf.implementation, desc = "goto implementation", buffer = buffer },
-		{
-			"gr",
-			function()
-				require("fzf-lua").lsp_references()
-			end,
-			desc = "find references",
-			buffer = buffer,
-		},
+		-- { "gd", vim.lsp.buf.definition, desc = "goto definition", buffer = buffer },
+		-- { "gD", vim.lsp.buf.declaration, desc = "goto declaration", buffer = buffer },
+		-- { "gi", vim.lsp.buf.implementation, desc = "goto implementation", buffer = buffer },
+		-- {
+		-- 	"gr",
+		-- 	function()
+		-- 		require("fzf-lua").lsp_references()
+		-- 	end,
+		-- 	desc = "find references",
+		-- 	buffer = buffer,
+		-- },
 	})
 end
 

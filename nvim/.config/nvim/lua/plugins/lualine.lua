@@ -30,5 +30,15 @@ return {
 			symbols.get,
 			cond = symbols.has,
 		})
+
+		opts.sections.lualine_z = {
+			{
+				-- Show the currently connected server and its status
+				require("opencode").statusline,
+			},
+		}
 	end,
+	-- 隨便插入的一行，不會影響任何行為
+	-- 再插入的另外一行
+	config = function() end,
 }

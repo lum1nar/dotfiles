@@ -79,47 +79,38 @@ aucmd("LspAttach", {
 	end,
 })
 
----- Upon leaving a buffer
-grp = augrp("Leaving", { clear = true })
+local opencode_cmd = "opencode"
+---@type snacks.terminal.Opts
+local snacks_terminal_opts = {
+	win = {
+		position = "right",
+		enter = true,
+		width = 0.4,
+	},
+}
 
-aucmd("BufWinLeave", {
-	group = grp,
-	command = "silent! mkview",
-	desc = "Create view settings",
-})
+---@type opencode.Opts
+vim.g.opencode_opts = {
+	server = {
+		start = function()
+			require("snacks.terminal").open(opencode_cmd, snacks_terminal_opts)
+		end,
+	},
+}
 
-grp = augrp("Saving", { clear = true })
--- aucmd("BufWritePre", {
--- 	group = grp,
--- 	callback = function(args)
--- 		require("conform").format({ bufnr = args.buf })
--- 	end,
--- 	desc = "Format current file before saving",
--- })
+-- Can also leverage toggle functionality.
+-- If you use <leader> here, remove 't' — otherwise Neovim will add input delay to your <leader> when typing in the terminal to watch for the mapping.
+vim.keymap.set({ "n", "t" }, "<C-.>", function()
+	require("snacks.terminal").toggle(opencode_cmd, snacks_terminal_opts)
+end, { desc = "Toggle OpenCode" })
 
--- CodeCompanion chat treesitter management
--- Stop treesitter while waiting for a response, re-enable after
-grp = augrp("CodeCompanion", { clear = true })
-local cc_chat_bufnr = nil
-
-aucmd("User", {
-	group = grp,
-	pattern = "CodeCompanionChatSubmitted",
+-- Optionally show the terminal when OpenCode starts executing
+vim.api.nvim_create_autocmd("User", {
+	pattern = { "OpencodeEvent:session.execution.started" },
 	callback = function()
-		cc_chat_bufnr = vim.api.nvim_get_current_buf()
-		pcall(vim.treesitter.stop, cc_chat_bufnr)
-	end,
-	desc = "Disable treesitter in chat buffer while waiting for response",
-})
-
-aucmd("User", {
-	group = grp,
-	pattern = "CodeCompanionChatDone",
-	callback = function()
-		if cc_chat_bufnr and vim.api.nvim_buf_is_valid(cc_chat_bufnr) then
-			pcall(vim.treesitter.start, cc_chat_bufnr)
+		local win = require("snacks.terminal").get(opencode_cmd, { create = false })
+		if win then
+			win:show()
 		end
-		cc_chat_bufnr = nil
 	end,
-	desc = "Re-enable treesitter in chat buffer after response received",
 })
