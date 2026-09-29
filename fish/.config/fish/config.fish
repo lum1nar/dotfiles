@@ -39,6 +39,3 @@ starship init fish | source
 
 # zoxide
 zoxide init fish | source
-
-# opencode
-fish_add_path /home/lum1na/.opencode/bin
