@@ -15,20 +15,10 @@ return {
 			anti_conceal = { enabled = false },
 			file_types = { "markdown", "opencode_output" },
 			heading = {
-				icons = {
-					"  󰲡 ",
-					"    󰲣 ",
-					"      󰲥 ",
-					"        󰲧 ",
-					"          󰲩 ",
-					"            󰲫 ",
-				},
 				width = "block",
 				min_width = 30,
 			},
 			code = {
-				-- disable_background = { "diff" },
-				-- position = "right",
 				width = "block",
 				right_pad = 10,
 				language_border = " ",

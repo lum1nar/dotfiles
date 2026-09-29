@@ -115,8 +115,9 @@ wk.add({
 	{
 		"<leader>fn",
 		function()
-			require("fzf-lua").live_grep({
+			Snacks.picker.grep({
 				cwd = vim.fn.expand("~/obsidian/4 - 筆記/"),
+				title = "Find Notes",
 			})
 		end,
 		desc = "find notes",
