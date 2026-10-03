@@ -91,8 +91,8 @@ return {
 		priority = 1000,
 		opts = {},
 		config = function()
-			-- vim.cmd("colorscheme tokyonight-storm")
-			vim.api.nvim_set_hl(0, "TabLine", { fg = "#a9b1d6", bg = "#1f2235" })
+			vim.cmd("colorscheme tokyonight-moon")
+			-- vim.api.nvim_set_hl(0, "TabLine", { fg = "#a9b1d6", bg = "#1f2235" })
 		end,
 	},
 	{
@@ -108,7 +108,7 @@ return {
 			hl_overrides = {},
 		},
 		init = function()
-			vim.cmd.colorscheme("techbase")
+			-- vim.cmd.colorscheme("techbase")
 		end,
 		priority = 1000,
 	},
@@ -129,6 +129,12 @@ return {
 		-- 	vim.cmd.colorscheme("nord")
 		-- end,
 		priority = 1000,
+	},
+	{
+		"serhez/teide.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
 	},
 	-- {
 	-- }

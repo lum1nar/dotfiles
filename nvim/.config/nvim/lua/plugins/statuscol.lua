@@ -97,14 +97,14 @@ return {
 				{
 					text = { " " },
 				},
-				{
-					text = { require("statuscol.builtin").foldfunc },
-					condition = {
-						function()
-							return vim.api.nvim_get_option_value("modifiable", { buf = 0 }) or " "
-						end,
-					},
-				},
+				-- {
+				-- 	text = { require("statuscol.builtin").foldfunc },
+				-- 	condition = {
+				-- 		function()
+				-- 			return vim.api.nvim_get_option_value("modifiable", { buf = 0 }) or " "
+				-- 		end,
+				-- 	},
+				-- },
 				{
 					text = { " " },
 				},

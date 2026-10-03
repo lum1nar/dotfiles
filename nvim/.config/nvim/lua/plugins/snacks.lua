@@ -19,7 +19,7 @@ return {
 			},
 		},
 		explorer = { enabled = true },
-		indent = { enabled = false },
+		indent = { enabled = true },
 		input = { enabled = true },
 		notifier = {
 			enabled = true,
