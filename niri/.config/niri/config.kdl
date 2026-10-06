@@ -5,6 +5,11 @@
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input
+
+environment {
+    PATH "/home/lum1na/.local/bin:/usr/local/bin:/usr/bin"
+}
+
 input {
     keyboard {
         xkb {
@@ -275,6 +280,7 @@ layout {
 spawn-at-startup "fcitx5"
 spawn-at-startup "noctalia"
 spawn-at-startup "sunshine"
+spawn-at-startup "koe-voice"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -432,9 +438,11 @@ binds {
     Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
     Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
-    // Mod+Shift+1 { spawn-sh "/home/lum1na/atlas/whispering/target/release/whispering start > /tmp/niri.log 2>&1 3>&1" ; }
-    // Mod+Shift+2  {  spawn-sh "/home/lum1na/atlas/whispering/target/release/whispering stt > /tmp/niri.log 2>&1 3>&1";  } 
-    // Mod+Shift+3  {  spawn-sh "/home/lum1na/atlas/whispering/target/release/whispering ask > /tmp/niri.log 2>&1 3>&1";  } 
+    // Voice-to-clipboard: press once to record, again to stop + transcribe + copy/paste.
+    // Bare Insert is grabbed globally (apps won't see it) and repeat is off so a
+    // held key cannot fire toggle twice.
+    Insert { spawn-sh "koe-voice toggle"; }
+    // Mod+Shift+1 { spawn-sh "notify-send 1"; }
     // Mod+Shift+3  {  spawn-sh "/home/lum1na/atlas/screen-recorder/target/release/screen-recorder";  } 
 
 

@@ -1,5 +1,6 @@
 # Environment variables
 set -x EDITOR nvim
+set -x WAYLAND_DISPLAY wayland-1
 
 # Alias
 alias vim='nvim'
@@ -25,14 +26,12 @@ for line in (cat ~/.env)
     set -x (string split '=' $line)
 end
 
-
 # if test -f ~/.config/fish/fzf-git.fish
 #     source ~/.config/fish/fzf-git.fish
 # end
 
 # use uv installed tools
 fish_add_path $HOME/.local/bin
-
 
 # starfish
 starship init fish | source
