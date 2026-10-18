@@ -36,6 +36,7 @@ return {
 				"c",
 				"javascript",
 				"json",
+				"xml",
 				"java",
 				"typescript",
 				"tsx",

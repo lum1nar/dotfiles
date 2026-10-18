@@ -1,4 +1,6 @@
 return {
+	-- Local checkout for testing; revert to "sudo-tee/opencode.nvim" when done.
+	-- dir = vim.fn.expand("~/clone/opencode.nvim"),
 	"sudo-tee/opencode.nvim",
 	lazy = false,
 	dependencies = {
@@ -20,4 +22,10 @@ return {
 		},
 	},
 	opts = {},
+	-- config = function(_, opts)
+	-- 	require("opencode").setup(opts)
+	-- 	-- render-markdown resolves code fences via the buffer filetype's treesitter
+	-- 	-- language; map it so opencode_output fences render and highlight.
+	-- 	vim.treesitter.language.register("markdown", "opencode_output")
+	-- end,
 }
